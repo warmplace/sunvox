@@ -1,3 +1,15 @@
+v1.2 (13 jan 2009):
+* added external mod2sunvox utility for MOD/XM -> SunVox files conversion;
+* added synth activity indicators;
+* added CPU usage monitor (not working on PalmOS);
+* added "mute" and "solo" buttons to the window with synth controllers;
+* added "zoom in" and "zoom out" buttons to the timeline window;
+* added "set vibrato phase" controller in the "flanger" synth;
+* improved reverb performance;
+* increased frequency ranges of synths;
+* updated manual;
+* redesigned some GUI elements;
+* fixed different bugs.
 v1.1b (16 nov 2008):
 * added new pattern length - 256;
 * fixed serious bug with pattern removing;

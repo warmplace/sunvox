@@ -97,11 +97,11 @@ Main SunVox features:<br>
 <li>Distortion;</li>
 <li>Echo;</li>
 <li>Filter (Low-pass, High-pass, Band-pass, Notch);</li>
+<li>Vocal Filter;</li>
 <li>Flanger;</li>
 <li>LFO;</li>
 <li>Loop;</li>
 <li>Reverb (with DC Blocking Filter).</li>
-<li>Vocal Filter</li>
 </ul>
 </li><li>Supported platforms: Windows, Linux, PalmOS, WindowsCE.</li>
 <li>Export to WAV.</li>
@@ -177,7 +177,7 @@ FOR T|T, T2 and ZIRE71 USERS: Please, install FHR (Fargo Heap Resizer) before Su
 <font class="title2">Keyboard shortcuts</font><br><br>
 <table>
 <tbody><tr><td>Keys:</td><td>Description:
-</td></tr><tr><td>SPACE</td><td> - record ON/OFF
+</td></tr><tr><td>SPACE</td><td> - recording ON/OFF
 </td></tr><tr><td>q,w,e,r,t,y,u,i....</td><td> - playing notes
 </td></tr><tr><td>CAPSLOCK</td><td> - note OFF
 </td></tr><tr><td>F1...F8</td><td> - set octave number
@@ -412,6 +412,20 @@ Controllers:<br>
 <li>Mono: 00 - Stereo; 01 - Mono.</li>
 </ul>
 
+<font class="title2">Flanger</font><br><br>
+Controllers:<br>
+<ul>
+<li>Dry - amount of original signal in output;</li>
+<li>Wet - amount of signal with echo in output;</li>
+<li>Feedback;</li>
+<li>Delay - delay length; maximal delay - 1/64 second;</li>
+<li>Resonance; use low values for smooth delay changing;</li>
+<li>Vibrato speed;</li>
+<li>Vibrato power;</li>
+<li>Vibrato type: 00 - half of sinus; 01 - sinus;</li>
+<li>Set vibrato phase.</li>
+</ul>
+
 <font class="title2">LFO</font><br><br>
 LFO - Low Frequency Oscillation.<br>
 Controllers:<br>
@@ -458,7 +472,7 @@ Controllers:<br>
 Several words about the hex numbers.<br>
 In mathematics and computer science, hexadecimal (also base-16, hexa,
 or hex) is a numeral system with a radix, or base, of 16. It uses
-sixteen distinct symbols, most often the symbols 0–9 to represent
+sixteen distinct symbols, most often the symbols 0пїЅ9 to represent
 values zero to nine, and A, B, C, D, E, F (or a through f) to represent
 values ten to fifteen.<br><br>
 Hexadecimal (hex) numbers:<br>
@@ -490,17 +504,17 @@ As you can see, event contain several text/numeric fields.<br>
 Event format: <font color="BLUE">NN VV SS CCEE PPPP</font><br>
 Lets see detailed description of each field in the event:<br>
 <ul>
-<li>NN - note</li>
+<li>NN - note (C0,c0,D0,d0,E0,F0,f0,G0,g0,A0,a0,B0,C1,c1,D1, ... B9)</li>
 <li>VV - velocity (00..80)</li>
 <li>SS - synth number (00,01,02,03,04,05,06,07,08,09, ... FF)</li>
 <li>CC - number of controller (01,02,03,04, ... FF)</li>
 <li>EE - standart effect:</li>
 	<ul>
-	<li>01 - slide up (portamento up)</li>
-	<li>02 - slide down (portamento down)</li>
+	<li>01 - slide up (portamento up; sliding speed = PPPP)</li>
+	<li>02 - slide down (portamento down; sliding speed = PPPP)</li>
 	<li>03 - slide to note (sliding speed = PPPP)</li>
 	<li>0A - slide velocity up/down (PPPP = UUDD; UU - up speed; DD - down speed)</li>
-	<li>0F - set playing speed</li>
+	<li>0F - set playing speed (PPPP: 0001..001F - number of ticks per line; 0020..00FF - BPM)</li>
 	</ul>
 <li>PPPP - parameter of a selected effect/controller (0000 - min; 8000 - max)</li>
 </ul>
@@ -517,7 +531,7 @@ C3 10 03 0000 0000
 In this example velocity changed from 10 to 60.<br>
 <br>
 Example of changing cutoff frequency (global controller) of filter from min to max value:<br>
-<font color="BLUE"><pre>NN VV SS CCEE PPPP
+<font color="BLUE"></font><pre><font color="BLUE">NN VV SS CCEE PPPP
 -- -- 01 0200 0000
 -- -- 01 0200 1000
 -- -- 01 0200 2000
@@ -527,20 +541,20 @@ Example of changing cutoff frequency (global controller) of filter from min to m
 -- -- 01 0200 6000
 -- -- 01 0200 7000
 -- -- 01 0200 8000
-</pre></font>
+</font></pre><font color="BLUE"></font>
 Cutoff frequency controller has number 2 in the filter.<br>
 <br>
 Some synths has local controllers.<br>
 Local controller can be changed for separate sound on a separate channel.<br>
 Example: (changing local controller 2 in synth 1)<br>
-<font color="BLUE"></font><pre><font color="BLUE">NN VV SS CCEE PPPP
+<font color="BLUE"><pre>NN VV SS CCEE PPPP
 C3 80 01 0200 0000  //Set local controller 2 to value 0000. Separate sound begins playing here
 -- -- 01 0200 0001  //Set local controller 2 to value 0001
 -- -- 01 0200 0002  //Set local controller 2 to value 0002
 -- -- 01 0200 0003  //Set local controller 2 to value 0003
 -- -- 01 0200 0002  //...
 -- -- 01 0200 0001
-</font></pre><font color="BLUE"></font>
+</pre></font>
 <br><hr>
 
 <a name="config"></a>
@@ -548,16 +562,16 @@ C3 80 01 0200 0000  //Set local controller 2 to value 0000. Separate sound begin
 <font class="title2">Configuration file (sunvox_config.ini)</font><br><br>
 This file must be placed in the same folder with SunVox (for Linux/Windows) or in the root of filesystem (for WinCE devices).<br>
 Typical sunvox_config.ini file looks like this:<br>
-<font color="BLUE"><pre>//----------------------------------------------------------------------------
+<font color="BLUE"></font><pre><font color="BLUE">//----------------------------------------------------------------------------
 width        640         //Screen width
 height       480         //Screen height
 fullscreen               //Set it, if you want fullscreen mode in Linux (SDL)
 buffer       4096        //Sound buffer size (in samples)
-audiodevice  "hw:0,0"	 //ALSA audio device name in Linux
+audiodevice  hw:0,0	 //ALSA audio device name in Linux
 frequency    44100       //Sampling frequency (minimum - 44100)
 noborder                 //Set it, if you want a window without border
 //----------------------------------------------------------------------------
-</pre></font>
+</font></pre><font color="BLUE"></font>
 WARNING: Sound may differ slightly on different sampling frequencies
 <br>
 
@@ -629,7 +643,7 @@ Forgotten pages<br>
 <a href="http://www.warmplace.ru/forgotten/converters/"><font color="blue">2001: Converters</font></a><br>
 <br>
 <table width="100%" background="manual_files/folder_back.gif" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
-Our friends<br>
+Friends<br>
 </td></tr></tbody></table>
 <center>
 <img src="manual_files/bbanner_empty.gif"><br><a href="http://palm.gif.ru/"><img src="manual_files/palmgif.gif" border="0"></a><br>
@@ -640,7 +654,7 @@ Our friends<br>
 Gdoc=document;Grnd = Math.random() * Math.random();Gsrv = "graphoman.com";
 St ="<a href='http://"+Gsrv+"/net/click_in.html?id=29&rnd="+Grnd+"' target='_blank'>";
 St+="<img src='http://"+Gsrv+"/net/show.html?id=29&rnd="+Grnd+"' border=0 width=88 height=31 alt='Сеть Графоман'>";
-St+="</a>";Gdoc.write(St);//--></script><a href="http://graphoman.com/net/click_in.html?id=29&amp;rnd=0.6176218473016688" target="_blank"><img src="manual_files/show.gif" alt="Сеть Графоман" height="31" width="88" border="0"></a><noscript>
+St+="</a>";Gdoc.write(St);//--></script><a href="http://graphoman.com/net/click_in.html?id=29&amp;rnd=0.06830728359999019" target="_blank"><img src="manual_files/show.gif" alt="Сеть Графоман" height="31" width="88" border="0"></a><noscript>
 <a href="http://graphoman.com/net/click_in.html?id=29" target="_blank">
 <img src="http://graphoman.com/net/show.html?id=29" alt="Сеть Графоман" border="0" width="88" height="31">
 </a></noscript><img src="manual_files/bbanner.gif"></center>
