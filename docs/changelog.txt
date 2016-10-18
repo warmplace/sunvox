@@ -1,3 +1,42 @@
+v1.9b (26 jul 2015):
+* special SunVox version (sunvox_no_simd) has been added for Linux x86 machines with old CPUs without SIMD instructions;
+* Project Properties: the new field "Based on SunVox (version)" has been added; change it if you think that some modules use the old buggy algorithm (Compressor for example);
+* bugs fixed.
+v1.9 (19 jul 2015):
+* additional UI language - Russian; you can change it in Preferences -> Interface;
+* PalmOS and Meego are no longer supported, but you can always download SunVox 1.8.1 for these systems from warmplace.ru;
+* Android: SunVox file type association (like in iOS version): now any SunVox-compatible documents (sunvox, sunsynth, midi, xm, mod, xi, etc.) can be opened from other apps (Mail, Browser, etc.);
+* Android and iOS: engine is now optimized for OpenGL ES 2.0;
+* new module - Feedback (see the examples);
+* new module - Filter Pro (High quality IIR filter);
+* number of MIDI slots (in Preferences) has been increased to 4; so you can use four MIDI controllers simultaneously;
+* now any external MIDI knob can be connected to any number of SunVox controllers of any modules;
+* now any SunVox shortcut can be connected to external MIDI button (Note, CC or Program Change);
+* click twice (or right click) on the controller to open the new Controller Properties window;
+* you can do the following operations in the new Controller Properties window: change, reset, randomize, write to pattern, assign MIDI IN;
+* MultiSynth: new controller "Phase" - the starting position of the sample or the starting phase of some Generator;
+* MultiSynth: added support of the "Set Sample Offset" pattern effects 07 and 09;
+* MultiCtl: new controller "Quantization" - the number of quantization levels;
+* Sampler: new controller "Rec threshold" - the level at which the Sampler should start recording;
+* Sampler: ability to import the loop points from WAV;
+* Generator: "P.Modulation" controller has been renamed to "Freq.Modulation input";
+* Filter: new controller "LFO waveform";
+* Amplifier: new controller "Fine volume";
+* Modulator: "Phase Modulation" mode has been added;
+* new functions in the Pattern Editor menu: selection begin, selection end;
+* slightly redesigned Pattern Editor;
+* new pattern effect: 13 - Set Bypass/Solo/Mute (BSM = XYY) flags; example of mute: 13 0001; example of solo: 13 0010;
+* new pattern effect: 14 - Reset Bypass/Solo/Mute (BSM = XYY) flags; example of bypass reset: 14 0100;
+* Song has been renamed to Project;
+* new keyboard shortcut: SHIFT + F12 - go to beginning;
+* new keyboard shortcut: SHIFT + ) - octave up;
+* new keyboard shortcut: SHIFT + ( - octave down;
+* new keyboard shortcut: CTRL + ( - selection begin (pattern editor);
+* new keyboard shortcut: CTRL + ) - selection end (pattern editor);
+* new instruments from NightRadio, Pavel Ti, SolarLune and other authors;
+* new simple song examples: feedback, feedback2, modulator (phase modulation);
+* new song examples: 4004, music_in_our_souls, awakening_city, Transient - Tablerock, SunVox Compo 2015.02 Winners (Sirmooge - Phalanx, Pavel Ti - Boomer, KnyazIvan - Cold Summer);
+* bugs fixed.
 v1.8.1 (29 dec 2014):
 * bigger Compressor visualizer;
 * GPIO module is now available on all devices, but it is fully functional in Linux only;
