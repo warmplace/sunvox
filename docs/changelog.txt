@@ -1,3 +1,19 @@
+v1.7.5 (26 jun 2014):
+* iOS: 64bit CPU support;
+* iOS: SunVox file type association: now any SunVox-compatible documents (sunvox, midi, xm, mod) can be opened from other apps (Mail, Browser, etc.);
+* new module - Pitch Shifter;
+* shortcut configuration (key redefinition) window has been added to the Main Menu -> Preferences -> Interface;
+* customizable curve of the values has been added to MultiCtl module;
+* MIDI Octave Offset option has been added to the MIDI Preferences;
+* avconv (libav) support on systems without ffmpeg;
+* PR (Set note period) command has been renamed to SP (Set pitch);
+* main menu has been divided into two separate menus: the Main Menu (left side) and the Pattern Menu (right side);
+* UI design slightly changed;
+* Play (F9) shortcut has been changed to Play/Stop;
+* new keyboard shortcut: F10 - play from beginning;
+* new simple song examples: crossfader;
+* new song examples: Twistboy - Translucent, unspoken_words;
+* bugs fixed.
 v1.7.4b (4 feb 2014):
 * MetaModule: number of user defined controllers has been increased to 27;
 * Delay: new controller "Delay units" has been added; possible values: sec/16384, ms, Hz, ticks, lines, lines/2, lines/3;
