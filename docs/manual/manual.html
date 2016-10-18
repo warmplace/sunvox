@@ -68,7 +68,7 @@ This manual is not yet complete. But i working on it now. Please send any your c
 <BR>
 <FONT class="title2">Introduction to SunVox</FONT><BR><BR>
 SunVox is a small, fast and powerful music sequencer (<A href="http://en.wikipedia.org/wiki/Tracker">tracker</A>) with modular synthesizers. It is a tool for those people who want to compose music anywhere. 
-SunVox available for desktop PC (Windows, Linux, Mac OS X), pocket computers (Windows Mobile, PalmOS, iPhone) and netbooks.<BR>
+SunVox available for desktop PC (Windows, Linux, Mac OS X), pocket computers (Windows Mobile, PalmOS, iPhone/iPad) and netbooks.<BR>
 <BR>
 Key features:<BR>
 <UL>
@@ -77,27 +77,7 @@ Key features:<BR>
 <LI>Flexible architecture: SunVox can working on variuos devices. For example: 
   PDA with slow CPU - 16bit sound (fixed point arithmetic); or big PC with 
   powerfull CPU: 32bit sound (floating point arithmetic).</LI>
-<!-- <li>SunVox engine (without GUI) is open source and distributed under the terms 
-  of BSD license.</li> -->
-<LI>Built-in synthesizers: 
-<UL>
-<LI>FM synthesizer;</LI>
-<LI>Generator (saw,triangle,square,noise waveforms);</LI>
-<LI>Sampler (supported formats: WAV, XI);</LI>
-<LI>SpectraVoice (FFT-based synth for analog-like pads);</LI>
-<LI>Kicker;</LI>
-<LI>Stereo Delay;</LI>
-<LI>Distortion;</LI>
-<LI>Echo;</LI>
-<LI>Filter (Low-pass, High-pass, Band-pass, Notch);</LI>
-<LI>Vocal Filter;</LI>
-<LI>Flanger;</LI>
-<LI>LFO;</LI>
-<LI>Loop;</LI>
-<LI>Reverb (with DC Blocking Filter).</LI>
-</UL>
-</LI><LI>Supported platforms: Windows, Linux (x86/x86_64), Mac OS X, PalmOS, WindowsCE (Windows Mobile), iPhone.</LI>
-<LI>Export to WAV.</LI>
+<LI>Supported platforms: Windows, Linux (x86/x86_64), Mac OS X, PalmOS, WindowsCE (Windows Mobile), iPhone/iPad.</LI>
 </UL>
 <BR>
 
@@ -176,11 +156,16 @@ FOR T|T, T2 and ZIRE71 USERS: Please, install FHR (Fargo Heap Resizer) before Su
 </TD></TR><TR><TD>F1...F8</TD><TD> - set octave number
 </TD></TR><TR><TD>TAB</TD><TD> - go to the next channel
 </TD></TR><TR><TD>SHIFT + TAB</TD><TD> - go to the previous channel
-</TD></TR><TR><TD>CTRL + X</TD><TD> - cut
-</TD></TR><TR><TD>CTRL + C</TD><TD> - copy
-</TD></TR><TR><TD>CTRL + V</TD><TD> - paste
-</TD></TR><TR><TD>CTRL + A</TD><TD> - select all
-</TD></TR><TR><TD>CTRL + T</TD><TD> - select track
+</TD></TR><TR><TD>CTRL + X</TD><TD> - cut notes (pattern editor)
+</TD></TR><TR><TD>CTRL + C</TD><TD> - copy notes / copy pattern(s) to buffer
+</TD></TR><TR><TD>CTRL + V</TD><TD> - paste notes / paste pattern(s) from buffer
+</TD></TR><TR><TD>CTRL + A</TD><TD> - select all notes / select all patterns
+</TD></TR><TR><TD>CTRL + T</TD><TD> - select track (pattern editor)
+</TD></TR><TR><TD>CTRL + D</TD><TD> - dublicate selected notes / clone pattern(s)
+</TD></TR><TR><TD>CTRL + I</TD><TD> - interpolate value (pattern editor)
+</TD></TR><TR><TD>CTRL + U</TD><TD> - interpolate velocity (pattern editor)
+</TD></TR><TR><TD>CTRL + N</TD><TD> - create a new synth / create a new pattern
+</TD></TR><TR><TD>CTRL + R</TD><TD> - randomize synth controllers (sound network)
 </TD></TR><TR><TD>SHIFT + DELETE</TD><TD> - cut
 </TD></TR><TR><TD>SHIFT + INSERT</TD><TD> - paste
 </TD></TR><TR><TD>SHIFT + '+'</TD><TD> - transpose selected area up
@@ -261,7 +246,8 @@ Controllers:<BR>
 <LI>Polyphony - how many notes synthesizer can sound at one time;</LI>
 <LI>Mode: HQ/HQmono;</LI><LI>M.Release - modulator release;</LI>
 <LI>Sustain: 0 - OFF; 1 - ON;</LI>
-<LI>Phase modulation: 0 - OFF ... 256 - use input signal for phase modulation.</LI>
+<LI>Phase modulation: 0 - OFF ... 256 - use input signal for phase modulation;</LI>
+<LI>Duty cycle (only for rectangular waveform).</LI>
 </UL>
 
 <FONT class="title2">Kicker</FONT><BR><BR>
@@ -288,7 +274,7 @@ Controllers:<BR>
 </UL>
 
 <FONT class="title2">Sampler</FONT><BR><BR>
-Supported file formats: WAV, XI.<BR>
+Supported file formats: WAV, XI, AIFF, RAW.<BR>
 Available local controllers: Pan.<BR>
 Controllers:<BR>
 <UL>
@@ -739,6 +725,7 @@ Art<BR>
 Soft<BR>
 </TD></TR></TBODY></TABLE>
 <A href="http://www.warmplace.ru/soft/palm/"><FONT color="blue">PalmOS</FONT></A><BR>
+<A href="http://www.warmplace.ru/soft/palm/nedosound/"><FONT color="blue">PalmOS nedosound</FONT></A><BR>
 <A href="http://www.warmplace.ru/soft/dos/index_e.php"><FONT color="blue">DOS</FONT></A><BR>
 <A href="http://www.warmplace.ru/soft/ans/index.php"><FONT color="blue">VirtualANS</FONT></A><BR>
 <A href="http://www.warmplace.ru/soft/pixilang/index.php"><FONT color="blue">Pixilang</FONT></A><BR>

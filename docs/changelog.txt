@@ -1,3 +1,20 @@
+v1.5.5 (04 may 2010):
+* added new controller in the "generator": "Duty cycle" (only for rectangular waveform);
+* WAV/AIFF/XI preview in the "load" dialogs of the "sampler";
+* animated visualization of the state of the "sampler";
+* new keyboard shortcut (pattern editor): CTRL + D - duplicate;
+* new keyboard shortcut (pattern editor): CTRL + I - interpolate value;
+* new keyboard shortcut (pattern editor): CTRL + U - interpolate velocity;
+* new keyboard shortcut (sound network): CTRL + N - create a new synth;
+* new keyboard shortcut (sound network): CTRL + R - randomize synth controllers;
+* new keyboard shortcut (timeline): CTRL + N - create a new pattern;
+* new keyboard shortcut (timeline): CTRL + D - clone pattern(s);
+* new keyboard shortcut (timeline): CTRL + C - copy pattern(s) to buffer;
+* new keyboard shortcut (timeline): CTRL + V - paste pattern(s) from buffer;
+* new keyboard shortcut (timeline): CTRL + A - select all patterns;
+* 24bit WAV support;
+* experimental MP3/OGG/FLAC/... support via ffmpeg under the Linux.
+* fixed bug in the "FM" synth.
 v1.5.1 (03 apr 2010):
 * sound engine optimization;
 * new module: DC Blocker (DC Blocking Filter);
