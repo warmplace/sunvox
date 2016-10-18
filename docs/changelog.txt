@@ -1,3 +1,35 @@
+v1.7 (09 apr 2012):
+* ported to Android;
+* ported to Meego;
+* real-time recording of any types of sound events (notes, Touch Theremin, controllers changing); WARNING: recording is not available for PalmOS version;
+* if you want to enable/disable the metronome for recording - go to the Main Menu -> Preferences -> Recording -> Metronome = ON/OFF;
+* new module: Analog Generator with the following features: 32 double alias-free oscillators with internal 12/24dB filters; exponential envelopes; smooth parameters changing;
+* Bypass 'B' button has been added to the window with module's controllers;
+* View 'V' button has been added to the window with module's controllers: with this button you can change the view mode (one, two or four columns);
+* polyphony has been increased from 16 to 32 for the Sampler and the SpectraVoice;
+* number of sample slots has been increased from 16 to 128 for the Sampler;
+* "Roll-off" (dB per octave) controller has been added to the Filter module; available values: 12dB; 24dB; 36dB; 48dB;
+* now you can load samples through the "Load Module" file dialog; Sampler will be created automatically;
+* "Preview" button has been added to the "Load Module" file dialog;
+* mouse wheel is now enabled for any type of controllers and scrollbars;
+* mono mode has been added to the LFO module;
+* new features in the Main menu -> Edit: Shrink pattern and Expand pattern;
+* new standard pattern effects 40...5F - delay an event for selected fraction of the line (from 40 (0%) to 5F (100%));
+* new standard pattern effect 04 - vibrato with parameters FFAA, where the FF - frequency, AA - amplitude;
+* new standard pattern effect 22 - set the controller's value to the random number from 0 to PPPP (parameter);
+* new controller in the Filter module: "Exponential freq" for exponential frequency;
+* new function "Stereo to mono" added to the Sampler (sample editor);
+* new sunvox_config file option: pencontrol - force UI (User Interface) optimization for Pen/Mouse control; 
+* new sunvox_config file option: ppi - pixels per inch; example: ppi 160;
+* new sunvox_config file option: scale - UI scale factor (normal=256); example: scale 128 //reduce the size of UI items in half;
+* new sunvox_config file option: synths_min_num - minimum number of modules on x-axis;
+* new parameters (Control Type and Scale) in the Preferences for the UI scale configuration; use it if you want larger or smaller interface elements;
+* Windows: now DirectSound is default sound system; but if you need ASIO output, just select it in the sunvox_config.ini file (audiodriver asio);
+* iOS: "Create Directory" feature added to the Wi-Fi file browser; 
+* new examples: electrohouse, afternoon, pong, space_trip, 8bit_tales, sfields1, 1bit;
+* new instruments;
+* sound engine optimization;
+* many bugs fixed.
 v1.6.4 (03 aug 2011):
 * new module: Side Chain Compressor;
 * new module: DrumSynth with 120 unique synthetic drum sounds;
@@ -49,7 +81,7 @@ v1.6 (10 dec 2010):
 * added spectrum analyzer;
 * new module: OGG Vorbis Player; note: this module is not available for the PalmOS devices;
 * new module: Amplitude Modulator (multiplier);
-* added new controller in the "Distortion": "Noise";
+* added new controller in "Distortion" module: "Noise";
 * added LFO to the "Filter";
 * improved sound quality of the "FM" module;
 * improved sound quality of the "Kicker" module;
@@ -71,7 +103,7 @@ v1.5.5d (07 may 2010):
 * fixed bug with WAV/AIFF/XI preview;
 * fixed bug with scrollbar.
 v1.5.5 (04 may 2010):
-* added new controller in the "Generator": "Duty cycle" (only for rectangular waveform);
+* added new controller in "Generator" module: "Duty cycle" (only for rectangular waveform);
 * WAV/AIFF/XI preview in the "load" dialogs of the "Sampler";
 * animated visualization of the state of the "Sampler";
 * new keyboard shortcut (pattern editor): CTRL + D - duplicate;
