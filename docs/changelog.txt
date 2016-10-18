@@ -1,3 +1,33 @@
+v1.7.4b (4 feb 2014):
+* MetaModule: number of user defined controllers has been increased to 27;
+* Delay: new controller "Delay units" has been added; possible values: sec/16384, ms, Hz, ticks, lines, lines/2, lines/3;
+* Delay: max delay length has been increased to 1/4 second (PalmOS) and 4 seconds (other systems);
+* Main Menu -> Preferences -> Main: new option "Automatic session restore" has been added; enable it to hide the "Restore Previous Session" dialog;
+* Timeline: new font + text wrapping;
+* bugs fixed.
+v1.7.4 (23 jan 2014):
+* SunVox has been ported to Raspberry Pi;
+* engine optimization;
+* extended Visualization Parameters in the Module Properties: type of the Level Meter, type of the Oscilloscope, background, shadow, etc.;
+* available Level Meter modes: OFF, Mono, Stereo, Color, Glow effect;
+* available Oscilloscope modes: OFF, Points, Lines, Bars, Bars2 (symmetrical), Stereo phase scope (Goniometer), Stereo phase scope x2;
+* default Visualization Parameters can be set in the SunVox Preferences (Main menu -> Preferences -> Modules -> Default visualizer);
+* new module - Sound2Ctl; this module can convert the audio signal to the numeric value of any selected controller;
+* new module - MultiCtl; with this module you can control multiple controllers at once;
+* WaveShaper: new controller "DC filter" (DC Blocking Filter) has been added; enabled by default;
+* Amplifier: new controller "Absolute" has been added; enable it to apply "absolute value" filter to the signal;
+* MultiSynth: new buttons have been added: Options, Reset, Smooth, Load, Save;
+* MultiSynth: now you can switch between different types of Velocity Graphs in the Options menu; it is useful for complex velocity mapping;
+* DrumSynth is now supports Velocity Change commands;
+* "Change font size" option has been changed to "Scale"; and now you can change the pattern editor scale very smoothly on any device;
+* now you can set the name of the pattern, instead of the 16x16 icon;
+* the Scale parameter can be changed for each module separately (in the Module Preferences, or using CTRL + MOUSE WHEEL);
+* now the screen orientation can be changed manually (only for Android, WinCE and PalmOS) in the Preferences -> Interface -> Angle;
+* additional File Browser functions: Remove, Rename, Cut, Copy, Paste, Create Directory;
+* now you can see the file size in the File Browser (except PalmOS);
+* new simple examples: sound2ctl*, drumsynth*;
+* new song examples: moon_secrets, CsardasContinuum (by Frantisek Fuka (Fuxoft)), berlin_fm_-_nt, visualizer_demo, silence_artifacts;
+* bugs fixed.
 v1.7.3c (14 may 2013):
 * additional LFO module waveforms: sin2 (correct sine), saw, saw2;
 * added ability to record into the selected Sampler slot;
@@ -46,7 +76,7 @@ v1.7.2b (22 sep 2012):
 * Android: ability to install on external SD card;
 * Android: added confirmation dialog for BACK button;
 * some bugs fixed.
-v1.7.2 (03 sep 2012):
+v1.7.2 (3 sep 2012):
 * for Android users: if your display flickers sometimes, put option_glnoretain.txt file (with any content) to the following directory: device SD card/Android/data/nightradio.sunvox/files/;
 * now XM and MOD files (formats of old trackers) can be loaded without the converter, through the Main Menu -> Load Song; you can find hundreds of these files on this site: modarchive.org;
 * extended list of effects for XM/MOD to SunVox conversion;
@@ -82,7 +112,7 @@ v1.7.2 (03 sep 2012):
 * keyboard instruments piano04.wav, piano05.wav has been replaced by piano04.sunsynth, piano05.sunsynth;
 * sound engine optimization;
 * many bugs fixed.
-v1.7 (09 apr 2012):
+v1.7 (9 apr 2012):
 * ported to Android;
 * ported to Meego;
 * real-time recording of any types of sound events (notes, Touch Theremin, controllers changing); WARNING: recording is not available for PalmOS version;
@@ -115,7 +145,7 @@ v1.7 (09 apr 2012):
 * new instruments (keyboard): analog10, fm2;
 * sound engine optimization;
 * many bugs fixed.
-v1.6.4 (03 aug 2011):
+v1.6.4 (3 aug 2011):
 * new module: Side Chain Compressor;
 * new module: DrumSynth with 120 unique synthetic drum sounds;
 * new module: Amplifier;
@@ -155,7 +185,7 @@ v1.6.2 (13 may 2011):
 * fixed bug with overload of EQ module;
 * added new songs and instruments (samples);
 * many bugs fixed.
-v1.6.1 (05 jan 2011):
+v1.6.1 (5 jan 2011):
 * Win Mobile: fixed bug with spectrum analyzer freezing.
 v1.6 (10 dec 2010):
 * GUI improvement and optimization;
@@ -183,11 +213,11 @@ v1.6 (10 dec 2010):
 * sunvox_config: added "zoom" option; you can use it for larger pixels on Linux devices with SDL, or on WinCE devices with RAW video driver; example of usage: zoom 2;
 * added new songs and simple examples;
 * many bugs fixed.
-v1.5.5d (07 may 2010):
+v1.5.5d (7 may 2010):
 * fixed bug with cursor on the timeline;
 * fixed bug with WAV/AIFF/XI preview;
 * fixed bug with scrollbar.
-v1.5.5 (04 may 2010):
+v1.5.5 (4 may 2010):
 * added new controller in "Generator" module: "Duty cycle" (only for rectangular waveform);
 * WAV/AIFF/XI preview in the "load" dialogs of the "Sampler";
 * animated visualization of the state of the "Sampler";
@@ -204,7 +234,7 @@ v1.5.5 (04 may 2010):
 * 24bit WAV support;
 * experimental MP3/OGG/FLAC/... support via ffmpeg under the Linux.
 * fixed bug in the "FM" synth.
-v1.5.1 (03 apr 2010):
+v1.5.1 (3 apr 2010):
 * sound engine optimization;
 * new module: DC Blocker (DC Blocking Filter);
 * new module: EQ (3Band Equalizer);
@@ -231,7 +261,7 @@ v1.4.5 (11 oct 2009):
 * improved "transpose" function in the pattern editor;
 * pattern follow mode (only for single pattern playing);
 * sound engine optimization.
-v1.4.1 (02 aug 2009):
+v1.4.1 (2 aug 2009):
 * fixed several bugs in Mac OS X version;
 * removed text console from Windows version.
 v1.4 (24 jul 2009):
@@ -260,7 +290,7 @@ v1.3b (30 mar 2009):
 v1.3 (20 mar 2009):
 * fixed bug with ping-pong loop in the "Sampler";
 * fixed bug with big values in scrollbars;
-* fixed bug with wrong song lenght calculation;
+* fixed bug with wrong song length calculation;
 * fixed bug with panning in the FM synthesizer;
 * new keyboard shortcuts: F9 - play; F11 - play pattern; F12 - stop;
 * added new parameter "P.Modulation" to the "Generator" for phase modulation with input signal;
@@ -314,7 +344,7 @@ v1.1 (26 oct 2008):
 * ALSA support in Linux;
 * redesigned some GUI elements;
 * code optimization.
-v1.0b (08 apr 2008):
+v1.0b (8 apr 2008):
 * fixed bug with crash on some new PalmOS devices.
-v1.0 (05 apr 2008):
+v1.0 (5 apr 2008):
 * the first release.
