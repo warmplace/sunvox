@@ -1,3 +1,24 @@
+v1.3 (20 mar 2009):
+* fixed bug with ping-pong loop in the "sampler";
+* fixed bug with big values in scrollbars;
+* fixed bug with wrong song lenght calculation;
+* fixed bug with panning in the FM synthesizer;
+* new keyboard shortcuts: F9 - play; F11 - play pattern; F12 - stop;
+* added new parameter "P.Modulation" to the "generator" for phase modulation with input signal;
+* added possibility to load samples from RAW and JPEG files;
+* added support of 32-bit (floating point) samples;
+* added new effect 8 - arpeggio;
+* added new effect 9 - set sample offset;
+* added new simple examples: phase_modulation, phase_modulation2, arpeggio;
+* added right-click pop-up menu in the pattern/synth editors;
+* added button for changing the piano keyboard size;
+* added UTF-8 support to engine;
+* pattern icons became resizable in the timeline window;
+* now the timeline and the synths network may be shown at the same time if initial window size is greater than 640x480;
+* inproved ALSA support (thanks to Will Light);
+* updated manual;
+* code optimization;
+* fixed various small bugs.
 v1.2 (13 jan 2009):
 * added external mod2sunvox utility for MOD/XM -> SunVox files conversion;
 * added synth activity indicators;
@@ -9,7 +30,7 @@ v1.2 (13 jan 2009):
 * increased frequency ranges of synths;
 * updated manual;
 * redesigned some GUI elements;
-* fixed different bugs.
+* fixed various small bugs.
 v1.1b (16 nov 2008):
 * added new pattern length - 256;
 * fixed serious bug with pattern removing;
