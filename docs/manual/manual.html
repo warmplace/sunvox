@@ -22,7 +22,7 @@
 		<table width="100%" border="0" cellpadding="0" cellspacing="0">
 			<tbody><tr>
 			<td height="100%" valign="top" background="manual_files/back_menu2.gif">
-				<table height="100%" width="512" align="left" background="manual_files/menu_logo2_docs.html" border="0" cellpadding="0" cellspacing="0">
+				<table height="100%" width="512" align="left" background="manual_files/menu_logo2_doc.jpg" border="0" cellpadding="0" cellspacing="0">
 					<tbody><tr>
 					<td height="8" valign="top" background="manual_files/menu_logo3.jpg">
 						<b><img src="manual_files/empty_box.gif" height="8" width="10">:: warmplace.ru :: SunVox User Manual</b><br>
@@ -618,7 +618,7 @@ the speed to 42 (2A in hex), this will set 42 beats per minute.<br>
 SunVox get its configuration from the sunvox_config.ini file.
 This file must be placed in the same folder with SunVox (for Linux/Windows) or in the root of filesystem (for WinCE devices).<br>
 Typical sunvox_config.ini file looks like this:<br>
-<font color="BLUE"></font><pre><font color="BLUE">//----------------------------------------------------------------------------
+<font color="BLUE"><pre>//----------------------------------------------------------------------------
 // Comments blah blah...
 width        640         //Screen width
 height       480         //Screen height
@@ -626,8 +626,9 @@ height       480         //Screen height
 buffer       4096        //Sound buffer size (in samples)
 audiodevice  hw:0,0	 //ALSA audio device name in Linux
 frequency    44100       //Sampling frequency (minimum - 44100)
+videodriver  gapi        //WinCE: gapi (default); raw (raw hires framebuffer); gdi (compatibility mode).
 //----------------------------------------------------------------------------
-</font></pre><font color="BLUE"></font>
+</pre></font>
 WARNING: Sound may differ slightly on different sampling frequencies
 <br>
 
@@ -652,10 +653,11 @@ Warm Place<br>
 <table width="100%" background="manual_files/folder_back.gif" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
 Music by NightRadio<br>
 </td></tr></tbody></table>
-<a href="http://www.warmplace.ru/music/archive/"><font color="blue">Archive 1997 - 2008</font></a><br>
+<a href="http://www.warmplace.ru/music/archive/"><font color="blue">Archive 1997 - 2009</font></a><br>
 <a href="http://www.warmplace.ru/music/Summerscapes/"><font color="blue">2005: Summerscapes</font></a><br>
 <a href="http://www.warmplace.ru/music/WarmPlace/"><font color="blue">2005: WarmPlace</font></a><br>
 <a href="http://www.warmplace.ru/music/fpages/"><font color="blue">2007: Forgotten Pages</font></a><br>
+<a href="http://www.warmplace.ru/music/btts/"><font color="blue">2009: BTTS</font></a><br>
 <a href="http://www.warmplace.ru/music/comments/"><font color="blue">Comments</font></a><br>
 <br>
 <table width="100%" background="manual_files/folder_back.gif" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
@@ -710,7 +712,7 @@ Friends<br>
 Gdoc=document;Grnd = Math.random() * Math.random();Gsrv = "graphoman.com";
 St ="<a href='http://"+Gsrv+"/net/click_in.html?id=29&rnd="+Grnd+"' target='_blank'>";
 St+="<img src='http://"+Gsrv+"/net/show.html?id=29&rnd="+Grnd+"' border=0 width=88 height=31 alt='Сеть Графоман'>";
-St+="</a>";Gdoc.write(St);//--></script><a href="http://graphoman.com/net/click_in.html?id=29&amp;rnd=0.6193737972806104" target="_blank"><img src="manual_files/show.gif" alt="Сеть Графоман" height="31" width="88" border="0"></a><noscript>
+St+="</a>";Gdoc.write(St);//--></script><a href="http://graphoman.com/net/click_in.html?id=29&amp;rnd=0.026051488761264174" target="_blank"><img src="manual_files/show.gif" alt="Сеть Графоман" height="31" width="88" border="0"></a><noscript>
 <a href="http://graphoman.com/net/click_in.html?id=29" target="_blank">
 <img src="http://graphoman.com/net/show.html?id=29" alt="Сеть Графоман" border="0" width="88" height="31">
 </a></noscript><img src="manual_files/bbanner.gif"></center>

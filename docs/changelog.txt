@@ -1,3 +1,10 @@
+v1.3b (30 mar 2009):
+* fixed bug with incorrect sunvox_config.ini file loading;
+* added new "videodriver" option to the sunvox_config.ini file; possible values for WinCE devices: gapi (default), raw (raw hires framebuffer), gdi (compatibility mode);
+* graphics in PalmOS version changed from grayscale 8bit to colour 16bit;
+* added possibility to change the color (foreground and background) of pattern's icon;
+* code optimization;
+* fixed several bugs.
 v1.3 (20 mar 2009):
 * fixed bug with ping-pong loop in the "sampler";
 * fixed bug with big values in scrollbars;
