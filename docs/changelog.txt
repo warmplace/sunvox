@@ -1,3 +1,7 @@
+v1.5.5d (07 may 2010):
+* fixed bug with cursor on the timeline;
+* fixed bug with WAV/AIFF/XI preview;
+* fixed bug with scrollbar.
 v1.5.5 (04 may 2010):
 * added new controller in the "generator": "Duty cycle" (only for rectangular waveform);
 * WAV/AIFF/XI preview in the "load" dialogs of the "sampler";
