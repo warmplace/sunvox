@@ -1,3 +1,9 @@
+v1.7.2b (22 sep 2012):
+* sampler freeze bug fixed;
+* changes in WinCE file functions;
+* Android: ability to install on external SD card;
+* Android: added confirmation dialog for BACK button;
+* some bugs fixed.
 v1.7.2 (03 sep 2012):
 * for Android users: if your display flickers sometimes, put option_glnoretain.txt file (with any content) to the following directory: device SD card/Android/data/nightradio.sunvox/files/;
 * now XM and MOD files (formats of old trackers) can be loaded without the converter, through the Main Menu -> Load Song; you can find hundreds of these files on this site: modarchive.org;
