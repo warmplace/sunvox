@@ -3,10 +3,10 @@
 
 
 
-<title>:: warmplace.ru :: Open My World</title>
+<title>:: warmplace.ru :: SunVox User Manual </title>
 <meta content="text/html; charset=windows-1251" http-equiv="Content-Type">
 <link rel="stylesheet" type="text/css" href="manual_files/styles.css" \="">
-<meta name="keywords" content="warmplace, warm place, nightradio, zolotov, tracker, xm, mod, palm, palmos, armzx, psytexx, mviewer, palm art, observer, electronic music, eclock, jpeg viewer, jpg, jpeg">
+<meta name="keywords" content="sunvox, manual, docs, palm, palmos, tracker, mobile, linux, modular, synthesizer, nightradio">
 </head><body topmargin="0" leftmargin="0" link="#505050" marginheight="0" marginwidth="0" text="#303030" vlink="#505050" alink="#505050" background="manual_files/back_main.gif" bgcolor="#ffffff">
 
     <!-- GUI :) -->
@@ -49,7 +49,7 @@
     <table width="100%" border="0" cellpadding="0" cellspacing="0">
 	<!-- Content -->
 	<tbody><tr>
-	    <td valign="top" width="*">
+	    <td valign="TOP" width="*">
 		<table valign="top" width="100%" border="0" cellpadding="0" cellspacing="0">
 		    <tbody><tr><td colspan="3" height="8"> </td></tr>
 		    <tr>
@@ -76,17 +76,18 @@ This manual is not yet complete. But i working on it now. Please send any your c
 <hr>
 <br>
 <font class="title2">Introduction to SunVox</font><br><br>
-SunVox is a small, simple, fast and powerful program for music creation. It is based on modular synthesizers and <a href="http://en.wikipedia.org/wiki/Tracker">tracker</a>-like interface.<br>
+SunVox is a small, fast and powerful music sequencer (<a href="http://en.wikipedia.org/wiki/Tracker">tracker</a>) with modular synthesizers. It is a tool for those people who want to compose music anywhere. 
+SunVox available for desktop PC (Windows, Linux, Mac OS X), pocket computers (Windows Mobile, PalmOS, iPhone) and netbooks.<br>
 <br>
-Main SunVox features:<br>
+Key features:<br>
 <ul>
 <li>Modular interface.</li>
-<li>Highly optimized synth algorithmes.</li>
+<li>Highly optimized synth algorithms.</li>
 <li>Flexible architecture: SunVox can working on variuos devices. For example: 
   PDA with slow CPU - 16bit sound (fixed point arithmetic); or big PC with 
   powerfull CPU: 32bit sound (floating point arithmetic).</li>
-<li>SunVox engine (without GUI) is open source and distributed under the terms 
-  of BSD license.</li>
+<!-- <li>SunVox engine (without GUI) is open source and distributed under the terms 
+  of BSD license.</li> -->
 <li>Built-in synthesizers: 
 <ul>
 <li>FM synthesizer;</li>
@@ -104,14 +105,8 @@ Main SunVox features:<br>
 <li>Loop;</li>
 <li>Reverb (with DC Blocking Filter).</li>
 </ul>
-</li><li>Supported platforms: Windows, Linux, PalmOS, WindowsCE.</li>
+</li><li>Supported platforms: Windows, Linux, Mac OS X, PalmOS, WindowsCE (Windows Mobile), iPhone.</li>
 <li>Export to WAV.</li>
-</ul>
-Examples of SunVox application:<br>
-<ul>
-<li>composing music on pocket computers or netbooks;</li> 
-<li>embedding music into games;</li>
-<li>"chip tunes" creation: SunVox tunes can be very small; for example - 30 kBytes (or 2 kBytes after packing by ZIP)</li>
 </ul>
 <br>
 
@@ -124,7 +119,7 @@ Examples of SunVox application:<br>
 	<ul>
 	<li>System requirements:<br>
 	* Pentium processor or higher;<br>
-	* 256 mb RAM or higher;<br>
+	* 256 mb of RAM or higher;<br>
 	* Any Linux distribution;<br>
 	* SDL library (version 1.2 or later);<br>
 	* ALSA.</li>
@@ -135,9 +130,17 @@ Examples of SunVox application:<br>
 	<ul>
 	<li>System requirements:<br>
 	* Pentium processor or higher;<br>
-	* 256 mb RAM or higher.</li>
+	* 256 mb of RAM or higher.</li>
 	<li>Unpack archive with SunVox.</li>
 	<li>Run sunvox.exe</li>
+	</ul>
+<li>Mac OS X</li>
+	<ul>
+	<li>System requirements:<br>
+	* Mac OS X Leopard (10.5) or higher;<br>
+	* 1 gb of RAM or higher.</li>
+	<li>Unpack archive with SunVox.</li>
+	<li>Run sunvox.</li>
 	</ul>
 <li>WINDOWSCE (WINDOWS MOBILE)</li>
 	<ul>
@@ -154,8 +157,6 @@ Examples of SunVox application:<br>
 	* PalmOS 5.0 or higher.</li>
 	<li>Unpack archive with SunVox.</li><li>
 	</li><li>Install sunvox.prc to Palm.<br>
-WARNING. SunVox may crash some new devices like Treo 700p. In this case
-you must install sunvox_for_new_devices.prc instead of sunvox.prc.<br>
 FOR T|T, T2 and ZIRE71 USERS: Please, install FHR (Fargo Heap Resizer) before SunVox running. FHR page: <a href="http://fanoush.wz.cz/palm/fhr.html">http://fanoush.wz.cz/palm/fhr.html</a></li>
 	<li>Copy other files (examples, samples) to the flash-card.</li>
 	<li>Run sunvox.</li>
@@ -521,6 +522,9 @@ Lets see detailed description of each field in the event:<br>
 	<li>09 - set sample offset (offset in frames = PPPP * 256);</li>
 	<li>0A - slide velocity up/down (PPPP = UUDD; UU - up speed; DD - down speed);</li>
 	<li>0F - set playing speed (PPPP: 0001..001F - number of ticks per line; 0020..00FF - BPM);</li>
+	<li>19 - re-trigger note after PPPP ticks during the line;</li>
+	<li>1C - cut note after PPPP ticks in the current line;</li>
+	<li>1D - delays the start of note until tick PPPP in the current line;</li>
 	</ul>
 <li>PPPP - parameter of a selected effect/controller (0000 - min; 8000 - max).</li>
 </ul>
@@ -553,14 +557,14 @@ Cutoff frequency controller has number 2 in the filter.<br>
 Some synths has local controllers.<br>
 Local controller can be changed for separate sound on a separate channel.<br>
 Example: (changing local controller 2 in synth 1)<br>
-<font color="BLUE"></font><pre><font color="BLUE">NN VV SS CCEE PPPP
+<font color="BLUE"><pre>NN VV SS CCEE PPPP
 C3 80 01 0200 0000  //Set local controller 2 to value 0000. Separate sound begins playing here
 -- -- 01 0200 0001  //Set local controller 2 to value 0001
 -- -- 01 0200 0002  //Set local controller 2 to value 0002
 -- -- 01 0200 0003  //Set local controller 2 to value 0003
 -- -- 01 0200 0002  //...
 -- -- 01 0200 0001
-</font></pre><font color="BLUE"></font>
+</pre></font>
 <br><hr>
 
 <a name="pateff"></a>
@@ -609,26 +613,63 @@ ticks per line) of playback. Valid values for speed setting are 1 to 31
 (or 1 to 1F in hex). If a value is read that is above 31 (1F in hex),
 it means to set a modified speed based on beats
 per minute, where 4 lines are 1 beat. This means that if you try to set
-the speed to 42 (2A in hex), this will set 42 beats per minute.<br>
+the speed to 42 (2A in hex), this will set 42 beats per minute.<br><br>
+<b>19 - Re-trigger</b>. Effect 19 allows you to re-trigger a note after
+PPPP ticks during the line. For example, say note C3 is specified, with
+PPPP = 2 when the speed (TPL) is currently 6. This would mean that at
+the beginning of the line the specified note is started, and after two
+ticks it is restarted. This continues until the beginning of the next
+line.<br><br>
+<b>1C - Cut</b>. This effect turns off the note after PPPP ticks in the current line.<br><br>
+<b>1D - Delay</b>. This effect delays the start of a note until tick
+PPPP in the current line. For example, if note C2 is played, with
+effect 1D and argument PPPP = 3 when the speed is 6. The note C2 will
+be triggered at the 3rd tick after the start of the line. The purpose
+of this effect is to delay the start of a sample for a VERY short
+amount of time.<br>
 <br><hr>
 
 <a name="config"></a>
 <br>
 <font class="title2">Configuration</font><br><br>
 SunVox get its configuration from the sunvox_config.ini file.
-This file must be placed in the same folder with SunVox (for Linux/Windows) or in the root of filesystem (for WinCE devices).<br>
+This file must be placed in the same folder with SunVox
+(Linux/Windows/OSX), in the root of filesystem (Windows Mobile), or in
+the root of SD-card (PalmOS).<br>
 Typical sunvox_config.ini file looks like this:<br>
-<font color="BLUE"><pre>//----------------------------------------------------------------------------
-// Comments blah blah...
-width        640         //Screen width
-height       480         //Screen height
-//fullscreen   1           //Uncomment this, if you want fullscreen mode in Linux (SDL)
-buffer       4096        //Sound buffer size (in samples)
-audiodevice  hw:0,0	 //ALSA audio device name in Linux
-frequency    44100       //Sampling frequency (minimum - 44100)
-videodriver  gapi        //WinCE: gapi (default); raw (raw hires framebuffer); gdi (compatibility mode).
+<font color="BLUE"></font><pre><font color="BLUE">//----------------------------------------------------------------------------
+
+//Commented string. blah blah...
+
+//  Screen width and height:
+width 640
+height 480
+
+//  Uncomment this option for screen rotate (device dependent):
+//flip
+
+//  Uncomment this option if you want fullscreen mode in Linux (SDL):
+//fullscreen
+
+//  Uncomment this option if your device has touchscreen without pen (stylus), 
+//  or if you just want a large buttons:
+//touchcontrol
+
+//  Sound buffer size (in samples):
+buffer 4096
+
+//  ALSA audio device name in Linux; or audio device number in Windows:
+audiodevice hw:0,0
+
+//  Sampling frequency (minimum - 44100):
+frequency 44100
+
+//  Videodriver name on Windows Mobile: 
+//  ( gapi (default); raw (raw hires framebuffer); gdi (compatibility mode) )
+videodriver gapi
+
 //----------------------------------------------------------------------------
-</pre></font>
+</font></pre><font color="BLUE"></font>
 WARNING: Sound may differ slightly on different sampling frequencies
 <br>
 
@@ -640,7 +681,7 @@ WARNING: Sound may differ slightly on different sampling frequencies
 		</tbody></table>
 	    </td>
 	    <td height="100%" width="10" background="manual_files/back_menu.png"></td>
-	    <td height="100%" valign="top" width="175" background="manual_files/back_menu.png">
+	    <td height="100%" valign="TOP" width="175" background="manual_files/back_menu.png">
 		<!-- Menu -->
 		<table height="13" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td></td></tr></tbody></table><table width="100%" background="manual_files/folder_back.gif" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
 Warm Place<br>
@@ -684,7 +725,6 @@ Docs<br>
 <a href="http://www.warmplace.ru/docs/psytexx2/"><font color="blue">PsyTexx II</font></a><br>
 <a href="http://www.warmplace.ru/docs/psytexx1/"><font color="blue">PsyTexx 1.8</font></a><br>
 <a href="http://www.warmplace.ru/docs/sunvox/"><font color="blue">SunVox</font></a><br>
-<a href="http://www.warmplace.ru/docs/mybase/"><font color="blue">My knowledge base</font></a><br>
 <br>
 <table width="100%" background="manual_files/folder_back.gif" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
 Projects<br>
@@ -692,30 +732,16 @@ Projects<br>
 <a href="http://www.warmplace.ru/destiny/"><font color="blue">Echoes of destiny (Отзвуки Судьбы) (RU)</font></a><br>
 <br>
 <table width="100%" background="manual_files/folder_back.gif" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
-Forgotten pages<br>
-</td></tr></tbody></table>
-<a href="http://www.warmplace.ru/forgotten/konserv/"><font color="blue">2003: Konserv. life (RU)</font></a><br>
-<a href="http://www.warmplace.ru/forgotten/paper_story/"><font color="blue">2002: Paper story (RU)</font></a><br>
-<a href="http://www.warmplace.ru/forgotten/easy_music/"><font color="blue">2002: Easy music (RU)</font></a><br>
-<a href="http://www.warmplace.ru/forgotten/legends/"><font color="blue">2001: Legends... (RU)</font></a><br>
-<a href="http://www.warmplace.ru/forgotten/converters/"><font color="blue">2001: Converters</font></a><br>
-<br>
-<table width="100%" background="manual_files/folder_back.gif" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
 Friends<br>
 </td></tr></tbody></table>
 <center>
-<img src="manual_files/bbanner_empty.gif"><br><a href="http://palm.gif.ru/"><img src="manual_files/palmgif.gif" border="0"></a><br>
-<img src="manual_files/bbanner.gif"><br>
-<a href="http://sheker.chat.ru/"><img src="manual_files/c--.jpg" border="0"></a><br>
-<img src="manual_files/bbanner.gif"><br>
-<script language="javascript"><!--
-Gdoc=document;Grnd = Math.random() * Math.random();Gsrv = "graphoman.com";
-St ="<a href='http://"+Gsrv+"/net/click_in.html?id=29&rnd="+Grnd+"' target='_blank'>";
-St+="<img src='http://"+Gsrv+"/net/show.html?id=29&rnd="+Grnd+"' border=0 width=88 height=31 alt='Сеть Графоман'>";
-St+="</a>";Gdoc.write(St);//--></script><a href="http://graphoman.com/net/click_in.html?id=29&amp;rnd=0.026051488761264174" target="_blank"><img src="manual_files/show.gif" alt="Сеть Графоман" height="31" width="88" border="0"></a><noscript>
-<a href="http://graphoman.com/net/click_in.html?id=29" target="_blank">
-<img src="http://graphoman.com/net/show.html?id=29" alt="Сеть Графоман" border="0" width="88" height="31">
-</a></noscript><img src="manual_files/bbanner.gif"></center>
+<a href="http://www.warmplace.ru/http://www.softsea.com/"><font color="blue">Software Reviews</font></a><br>
+<a href="http://www.warmplace.ru/http://www.filesland.com/"><font color="blue">FilesLand</font></a><br>
+<a href="http://www.warmplace.ru/http://www.downloadatoz.com"><font color="blue">Downloadatoz</font></a><br>
+<img src="manual_files/bbanner_empty.gif"><br><a href="http://www.brothersoft.com/"><img src="manual_files/bsoft.gif" border="0"></a><br>
+<img src="manual_files/bbanner.gif"><a href="http://palm.gif.ru/"><img src="manual_files/palmgif.gif" border="0"></a><br>
+<img src="manual_files/bbanner.gif"><a href="http://sheker.chat.ru/"><img src="manual_files/c--.jpg" border="0"></a><br>
+<img src="manual_files/bbanner.gif"></center>
 
 		<table height="13" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td></td></tr></tbody></table>
 	    </td>
