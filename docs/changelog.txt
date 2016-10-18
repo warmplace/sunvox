@@ -1,3 +1,14 @@
+v1.4.5 (11 oct 2009):
+* new module: Vibrato;
+* added sinusoidal waveform to the "generator";
+* added new effects 11 and 12 - fineslide up/down;
+* added new effect 20 - set the probability (0...8000) of a note being triggered; this effect is for unpredictable rhythms;
+* added new effect 21 - same as 20 but with random velocity;
+* added new example track: endless_song (based on new effect 20);
+* new functions in the "sampler": resample; volume fade; waveform drawing (paint mode);
+* improved "transpose" function in the pattern editor;
+* pattern follow mode (only for single pattern playing);
+* sound engine optimization.
 v1.4.1 (02 aug 2009):
 * fixed several bugs in Mac OS X version;
 * removed text console from Windows version.

@@ -258,9 +258,11 @@ Controllers:<br>
 <li>Type - type of waveform:</li>
 	<ul>
 	<li>0 - triangle;</li>
-	<li>1 - rectangle;</li>
-	<li>2 - white noise;</li>
-	<li>3 - "dirty" wave;</li>
+	<li>1 - saw;</li>
+	<li>2 - rectangle;</li>
+	<li>3 - white noise;</li>
+	<li>4 - "dirty" wave;</li>
+	<li>5 - sinus.</li>
 	</ul>
 <li>Panning;</li>
 <li>Attack;</li>
@@ -269,6 +271,21 @@ Controllers:<br>
 <li>Mode: HQ/HQmono;</li><li>M.Release - modulator release;</li>
 <li>Sustain: 0 - OFF; 1 - ON;</li>
 <li>Phase modulation: 0 - OFF ... 256 - use input signal for phase modulation.</li>
+</ul>
+
+<font class="title2">Kicker</font><br><br>
+Available local controllers: Type.<br>
+Controllers:<br>
+<ul>
+<li>Volume;</li>
+<li>Type - type of waveform: 0 - triangle; 1 - square;</li>
+<li>Panning;</li>
+<li>Attack;</li>
+<li>Release;</li>
+<li>Vol. Add - additional volume;</li>
+<li>Env. Accel - volume&amp;frequency envelope acceleration;</li>
+<li>Polyphony - how many notes synthesizer can sound at one time;</li>
+<li>Anticlick: 0 - OFF; 1 - ON.</li>
 </ul>
 
 <font class="title2">Sampler</font><br><br>
@@ -318,21 +335,6 @@ Controllers:<br>
 	<li>5 - organ ver.4;</li>
 	<li>6 - sinus.</li>
 	</ul>
-</ul>
-
-<font class="title2">Kicker</font><br><br>
-Available local controllers: Type.<br>
-Controllers:<br>
-<ul>
-<li>Volume;</li>
-<li>Type - type of waveform: 0 - triangle; 1 - square;</li>
-<li>Panning;</li>
-<li>Attack;</li>
-<li>Release;</li>
-<li>Vol. Add - additional volume;</li>
-<li>Env. Accel - volume&amp;frequency envelope acceleration;</li>
-<li>Polyphony - how many notes synthesizer can sound at one time;</li>
-<li>Anticlick: 0 - OFF; 1 - ON.</li>
 </ul>
 
 <font class="title2">Delay</font><br><br>
@@ -398,25 +400,6 @@ value of the "Response" controller);</li>
 <li>Mix: minimal value - output=input; maximal value - output=filtered input.</li>
 </ul>
 
-<font class="title2">Vocal Filter</font><br><br>
-This filter was designed to simulate the vocal tract of a human.<br>
-Controllers:<br>
-<ul>
-<li>Volume;</li>
-<li>Bandwidth - bandwidth of formants;</li>
-<li>Amp. add - additional value for amplitude of formants;</li>
-<li>Formants - number of voice formants; maximum = 5 (best result);</li>
-<li>Vowel: A...E...I...O...U (minimal value - A; maximal - U);</li>
-<li>Character:</li>
-	<ul>
-	<li>0 - soprano;</li>
-	<li>1 - alto;</li>
-	<li>2 - tenor;</li>
-	<li>3 - bass;</li>
-	</ul>
-<li>Mono: 0 - Stereo; 1 - Mono.</li>
-</ul>
-
 <font class="title2">Flanger</font><br><br>
 Controllers:<br>
 <ul>
@@ -465,6 +448,35 @@ Controllers:<br>
 <li>Freeze: 0 - none; 1 - freeze mode;</li>
 <li>Mode.</li>
 </ul>
+
+<font class="title2">Vocal Filter</font><br><br>
+This filter was designed to simulate the vocal tract of a human.<br>
+Controllers:<br>
+<ul>
+<li>Volume;</li>
+<li>Bandwidth - bandwidth of formants;</li>
+<li>Amp. add - additional value for amplitude of formants;</li>
+<li>Formants - number of voice formants; maximum = 5 (best result);</li>
+<li>Vowel: A...E...I...O...U (minimal value - A; maximal - U);</li>
+<li>Character:</li>
+	<ul>
+	<li>0 - soprano;</li>
+	<li>1 - alto;</li>
+	<li>2 - tenor;</li>
+	<li>3 - bass;</li>
+	</ul>
+<li>Mono: 0 - Stereo; 1 - Mono.</li>
+</ul>
+
+<font class="title2">Vibrato</font><br><br>
+Controllers:<br>
+<ul>
+<li>Volume;</li>
+<li>Amplitude;</li>
+<li>Frequency;</li>
+<li>Mono: 0 - Stereo; 1 - Mono.</li>
+</ul>
+
 <br>
 
 <a name="song"></a>
@@ -557,14 +569,14 @@ Cutoff frequency controller has number 2 in the filter.<br>
 Some synths has local controllers.<br>
 Local controller can be changed for separate sound on a separate channel.<br>
 Example: (changing local controller 2 in synth 1)<br>
-<font color="BLUE"><pre>NN VV SS CCEE PPPP
+<font color="BLUE"></font><pre><font color="BLUE">NN VV SS CCEE PPPP
 C3 80 01 0200 0000  //Set local controller 2 to value 0000. Separate sound begins playing here
 -- -- 01 0200 0001  //Set local controller 2 to value 0001
 -- -- 01 0200 0002  //Set local controller 2 to value 0002
 -- -- 01 0200 0003  //Set local controller 2 to value 0003
 -- -- 01 0200 0002  //...
 -- -- 01 0200 0001
-</pre></font>
+</font></pre><font color="BLUE"></font>
 <br><hr>
 
 <a name="pateff"></a>
@@ -614,6 +626,12 @@ ticks per line) of playback. Valid values for speed setting are 1 to 31
 it means to set a modified speed based on beats
 per minute, where 4 lines are 1 beat. This means that if you try to set
 the speed to 42 (2A in hex), this will set 42 beats per minute.<br><br>
+<b>11 - Fineslide up</b>. This effect functions just like effect 1,
+except that the frequency of the note is only modified once (at the
+beginning of a line).<br><br>
+<b>12 - Fineslide down</b>. This effect functions just like effect 2,
+except that the frequency of the note is only modified once (at the
+beginning of a line).<br><br>
 <b>19 - Re-trigger</b>. Effect 19 allows you to re-trigger a note after
 PPPP ticks during the line. For example, say note C3 is specified, with
 PPPP = 2 when the speed (TPL) is currently 6. This would mean that at
@@ -626,7 +644,11 @@ PPPP in the current line. For example, if note C2 is played, with
 effect 1D and argument PPPP = 3 when the speed is 6. The note C2 will
 be triggered at the 3rd tick after the start of the line. The purpose
 of this effect is to delay the start of a sample for a VERY short
-amount of time.<br>
+amount of time.<br><br>
+<b>20 - Note probability</b>. Set the probability PPPP (from 0 to 8000)
+of a note being triggered. This effect can be used for original
+unpredictable rhythms.<br><br>
+<b>21 - Note probability with random velocity</b>. Same as effect 20 but with random velocity.<br><br>
 <br><hr>
 
 <a name="config"></a>
