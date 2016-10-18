@@ -1,0 +1,511 @@
+<html>
+
+<head>
+<title>SunVox User Manual</title>
+</head>
+
+<body>
+
+<font size="+0"><b>SunVox - Multiplatform Modular Music Creation Studio<br>User Manual</b></font><br>
+
+<br>
+<a href="#intro">Introduction to SunVox</a><br>
+<a href="#install">Installation and system requirements</a><br>
+<a href="#gui">Graphical user interface (GUI) description</a><br>
+<a href="#keys">Keyboard shortcuts</a><br>
+<a href="#synths">Synthesizers and effects</a><br>
+<a href="#song">SunVox song structure</a><br>
+<a href="#pat">Pattern editor</a><br>
+<a href="#config">Configuration file</a><br>
+<br>
+
+This manual is not yet complete. But i working on it now. Please send any your comments and issues to <a href="mailto:nightradio@gmail.com">nightradio@gmail.com</a>. Thank you for your understanding.<br><br>
+
+<a name="intro"></a>
+<hr>
+<br>
+<font class="title2">Introduction to SunVox</font><br><br>
+SunVox is a small, simple, fast and powerful program for music creation. It is based on modular synthesizers and <a href="http://en.wikipedia.org/wiki/Tracker">tracker</a>-like interface.<br>
+<br>
+Main SunVox features:<br>
+<ul>
+<li>Modular interface.</li>
+<li>Highly optimized synth algorithmes.</li>
+<li>Flexible architecture: SunVox can working on variuos devices. For example: 
+  PDA with slow CPU - 16bit sound (fixed point arithmetic); or big PC with 
+  powerfull CPU: 32bit sound (floating point arithmetic).</li>
+<li>SunVox engine (without GUI) is open source and distributed under the terms 
+  of BSD license.</li>
+<li>Built-in synthesizers: 
+<ul>
+<li>FM synthesizer;</li>
+<li>Generator (saw,triangle,square,noise waveforms);</li>
+<li>Sampler (supported formats: WAV, XI);</li>
+<li>SpectraVoice (FFT-based synth for analog-like pads);</li>
+<li>Kicker;</li>
+<li>Stereo Delay;</li>
+<li>Distortion;</li>
+<li>Echo;</li>
+<li>Filter (Low-pass, High-pass, Band-pass, Notch);</li>
+<li>Flanger;</li>
+<li>LFO;</li>
+<li>Loop;</li>
+<li>Reverb (with DC Blocking Filter).</li>
+<li>Vocal Filter</li>
+</ul>
+<li>Supported platforms: Windows, Linux, PalmOS, WindowsCE.</li>
+<li>Export to WAV.</li>
+</ul>
+Examples of SunVox application:<br>
+<ul>
+<li>composing music on pocket computers or netbooks;</li> 
+<li>embedding music into games;</li>
+<li>"chip tunes" creation: SunVox tunes can be very small; for example - 30 kBytes (or 2 kBytes after packing by ZIP)</li>
+</ul>
+<br>
+
+<a name="install"></a>
+<hr>
+<br>
+<font class="title2">Installation and system requirements</font><br>
+<ul>
+<li>LINUX</li>
+	<ul>
+	<li>System requirements:<br>
+	* Pentium processor or higher;<br>
+	* 256 mb RAM or higher;<br>
+	* Any Linux distribution;<br>
+	* SDL library (version 1.2 or later);<br>
+	* ALSA.</li>
+	<li>Unpack archive with SunVox.</li>
+	<li>Run sunvox.</li>
+	</ul>
+<li>WINDOWS</li>
+	<ul>
+	<li>System requirements:<br>
+	* Pentium processor or higher;<br>
+	* 256 mb RAM or higher.</li>
+	<li>Unpack archive with SunVox.</li>
+	<li>Run sunvox.exe</li>
+	</ul>
+<li>WINDOWSCE (WINDOWS MOBILE)</li>
+	<ul>
+	<li>System requirements:<br>
+	* ARM CPU (200 mHz or higher).</li>
+	<li>Copy sunvox.cab to your mobile device.</li>
+	<li>Install it.</li>
+	<li>Open Windows start menu -> Programs. Click on SunVox.</li>
+	</ul>
+<li>PALMOS</li>
+	<ul>
+	<li>System requirements:<br>
+	* ARM CPU (200 mHz or higher);<br>
+	* PalmOS 5.0 or higher.</li>
+	<li>Unpack archive with SunVox.<li>
+	<li>Install sunvox.prc to Palm.<br>
+WARNING. SunVox may crash some new devices like Treo 700p. In this case you must install sunvox_for_new_devices.prc instead of sunvox.prc.<br>
+FOR T|T, T2 and ZIRE71 USERS: Please, install FHR (Fargo Heap Resizer) before SunVox running. FHR page: <a href="http://fanoush.wz.cz/palm/fhr.html">http://fanoush.wz.cz/palm/fhr.html</a></li>
+	<li>Copy other files (examples, samples) to the Flash card.</li>
+	<li>Run sunvox.</li>
+	</ul>
+</ul>
+<br>
+
+<a name="gui"></a>
+<hr>
+<br>
+<font class="title2">Graphical user interface (GUI) description</font><br><br>
+<center>
+<img src="gui.png"><br><br>
+<img src="gui_play.png">
+</center>
+<br><hr>
+
+<a name="keys"></a>
+<br>
+<font class="title2">Keyboard shortcuts</font><br><br>
+<table>
+<tr><td>Keys:<td>Description:
+<tr><td>SPACE<td> - record ON/OFF
+<tr><td>q,w,e,r,t,y,u,i....<td> - playing notes
+<tr><td>CAPSLOCK<td> - note OFF
+<tr><td>F1...F8<td> - set octave number
+<tr><td>TAB<td> - go to the next channel
+<tr><td>SHIFT + TAB<td> - go to the previous channel
+<tr><td>CTRL + X<td> - cut
+<tr><td>CTRL + C<td> - copy
+<tr><td>CTRL + V<td> - paste
+<tr><td>CTRL + A<td> - select all
+<tr><td>CTRL + T<td> - select track
+<tr><td>SHIFT + DELETE<td> - cut
+<tr><td>SHIFT + INSERT<td> - paste
+<tr><td>SHIFT + '+'<td> - transpose selected area up
+<tr><td>SHIFT + '-'<td> - transpose selected area down
+<tr><td>SHIFT + UP/DOWN/LEFT/RIGHT<td> - selection
+<tr><td>SHIFT + MOUSE MOVING<td> - synth link/unlink
+<tr><td>CTRL + O<td> - load song
+<tr><td>CTRL + S<td> - save song
+<tr><td>CTRL + B<td> - save song to BACKUP.sunvox
+</table>
+<br>
+<br><hr>
+
+<a name="synths"></a>
+<br>
+<font class="title2">Synthesizers and effects</font><br><br>
+Some synthesizers has the "Mode" parameter with following possible values:<br>
+<table>
+<tr><td>00. HQ<td> - High Quality (stereo). Linear interpolation
+<tr><td>01. HQmono<td> - High Quality (mono). Linear interpolation
+<tr><td>02. LQ<td> - Low Quality (stereo) for devices with slow CPU
+<tr><td>03. LQmono<td> - Low Quality (mono) for devices with slow CPU
+<tr><td>04. Cubic<td> - High Quality (stereo). Cubic interpolation
+</table>
+<br>
+
+<font class="title2">FM Synthesizer</font><br><br>
+This synthesizer is based on frequency modulation. It working on internal sampling frequency: 44100 Hz.<br>
+Abbreviations: C - carrier; M - modulator.<br>
+Controllers:<br>
+<ul>
+<li>C.Volume - carrier volume;</li>
+<li>M.Volume - modulator volume;</li>
+<li>Panning;</li>
+<li>C.Freq mul - carrier frequency multiplier;</li>
+<li>M.Freq mul - modulator frequency multiplier;</li>
+<li>M.Feedback - modulator feedback;</li>
+<li>C.Attack - carrier attack;</li>
+<li>C.Decay - carrier decay;</li>
+<li>C.Sustain - carrier sustain;</li>
+<li>C.Release - carrier release;</li>
+<li>M.Attack - modulator attack;</li>
+<li>M.Decay - modulator decay;</li>
+<li>M.Sustain - modulator sustain;</li>
+<li>M.Release - modulator release;</li>
+<li>Polyphony - how many notes synthesizer can sound at one time;</li>
+<li>Mode:</li>
+	<ul>
+	<li>00 - High Quality. Stereo. Linear interpolation of envelopes;</li>
+	<li>01 - High Quality. Mono. Linear interpolation of envelopes;</li>
+	<li>02 - Low Quality. Stereo. No interpolation;</li>
+	<li>03 - Low Quality. Mono. No interpolation.</li>
+	</ul>
+</ul>
+
+<font class="title2">Generator</font><br><br>
+This synthesizer is for different waveforms generation.<br>
+Available local controllers: Type; Pan.<br>
+Controllers:<br>
+<ul>
+<li>Volume;</li>
+<li>Type - type of waveform:</li>
+	<ul>
+	<li>00 - triangle;</li>
+	<li>01 - rectangle;</li>
+	<li>02 - white noise;</li>
+	<li>03 - "dirty" wave;</li>
+	</ul>
+<li>Panning;</li>
+<li>Attack;</li>
+<li>Release;</li>
+<li>Polyphony - how many notes synthesizer can sound at one time;</li>
+<li>Mode: HQ/HQmono;</li>
+<li>Sustain: 00 - OFF; 01 - ON.</li>
+</ul>
+
+<font class="title2">Sampler</font><br><br>
+Supported file formats: WAV, XI.<br>
+Available local controllers: Pan.<br>
+Controllers:<br>
+<ul>
+<li>Volume;</li>
+<li>Panning;</li>
+<li>Sample interpolation: 00 - OFF; 01 - Linear;</li>
+<li>Volume interpolation: 00 - OFF; 01 - Linear;</li>
+<li>Polyphony - how many notes synthesizer can sound at one time.</li>
+</ul>
+
+<font class="title2">SpectraVoice</font><br><br>
+This synthesizer is based on FFT and can be used for sound generation with different form of spectrum.<br>
+Minimal internal sample size: 4096 words. Maximal: 65536 words<br>
+Available local controllers: Pan.<br>
+Controllers:<br>
+<ul>
+<li>Volume;</li>
+<li>Panning;</li>
+<li>Attack;</li>
+<li>Release;</li>
+<li>Polyphony - how many notes synthesizer can sound at one time;</li>
+<li>Mode: HQ/HQmono/LQ/LQmono/Cubic;</li>
+<li>Sustain: 00 - OFF; 01 - ON;</li>
+<li>Sample size:</li>
+	<ul>
+	<li>00 - 4096 words;</li>
+	<li>01 - 8192 words;</li>
+	<li>02 - 16384 words;</li>
+	<li>03 - 32768 words;</li>
+	<li>04 - 65536 words;</li>
+	</ul>
+<li>Harmonic - number of harmonic (00 - 15);</li>
+<li>h.freq - harmonic's frequency;</li>
+<li>h.volume - harmonic's amplitude;</li>
+<li>h.bandwidth - harmonic's bandwidth;</li>
+<li>h.bandtype - harmonic's bandtype:</li>
+	<ul>
+	<li>00 - half of sinus;</li>
+	<li>01 - square;</li>
+	<li>02 - organ ver.1;</li>
+	<li>03 - organ ver.2;</li>
+	<li>04 - organ ver.3;</li>
+	<li>05 - organ ver.4;</li>
+	<li>06 - sinus.</li>
+	</ul>
+</ul>
+
+<font class="title2">Kicker</font><br><br>
+Available local controllers: Type.<br>
+Controllers:<br>
+<ul>
+<li>Volume;</li>
+<li>Type - type of waveform: 00 - triangle; 01 - square;</li>
+<li>Panning;</li>
+<li>Attack;</li>
+<li>Release;</li>
+<li>Vol. Add - additional volume;</li>
+<li>Env. Accel - volume&frequency envelope acceleration;</li>
+<li>Polyphony - how many notes synthesizer can sound at one time;</li>
+<li>Anticlick: 00 - OFF; 01 - ON.</li>
+</ul>
+
+<font class="title2">Delay</font><br><br>
+Maximal delay is 1/64 second.<br>
+Controllers:<br>
+<ul>
+<li>Dry - amount of original signal in output;</li>
+<li>Wet - amount of delayed signal in output;</li>
+<li>Delay L - delay length on the left channel; maximal delay - 1/64 second;</li>
+<li>Delay R - delay length on the right channel; maximal delay - 1/64 second;</li>
+<li>Volume L - volume of the left channel;</li>
+<li>Volume R - volume of the right channel;</li>
+<li>Mono: 00 - stereo delay; 01 - mono delay;</li>
+<li>Inverse amplitude: 00 - OFF; 01 - ON.</li>
+</ul>
+
+<font class="title2">Distortion (and amplifier)</font><br><br>
+Controllers:<br>
+<ul>
+<li>Volume;</li>
+<li>Type - type of distortion: 00 - limitation; 01 - saturation;</li>
+<li>Power;</li>
+<li>Bitrate: 1..16;</li>
+<li>Frequency: maximum = 44100 Hz (8000 in hex in pattern editor).</li>
+</ul>
+
+<font class="title2">Echo</font><br><br>
+Maximal delay is one second.<br>
+Controllers:<br>
+<ul>
+<li>Dry - amount of original signal in output;</li>
+<li>Wet - amount of signal with echo in output;</li>
+<li>Feedback;</li>
+<li>Delay - delay length; maximal delay - one second;</li>
+<li>Stereo: 00 - mono; 01 - stereo.</li>
+</ul>
+
+<font class="title2">Filter</font><br><br>
+State Variable Filter (Chamberlin version). Double Sampled.<br>
+Controllers:<br>
+<ul>
+<li>Volume;</li>
+<li>Frequency: maximum = 14000 Hz (8000 in hex in pattern editor);</li>
+<li>Resonance;</li>
+<li>Type:</li>
+	<ul>
+	<li>00 - lowpass;</li>
+	<li>01 - highpass;</li>
+	<li>02 - bandpass;</li>
+	<li>03 - notch;</li>
+	</ul>
+<li>Response - speed of changing the frequency, resonance and volume;</li>
+<li>Mode:</li>
+	<ul>
+	<li>00 - double sampled stereo;</li>
+	<li>01 - double sampled mono;</li>
+	<li>02 - low quality stereo;</li>
+	<li>03 - low quality mono;</li>
+	</ul>
+<li>Impulse - frequency, that will be set immediately; after setting frequency will return to its previous value smoothly (according to value of the "Response" controller);</li>
+<li>Mix: minimal value - output=input; maximal value - output=filtered input.</li>
+</ul>
+
+<font class="title2">Vocal Filter</font><br><br>
+This filter was designed to simulate the vocal tract of a human.<br>
+Controllers:<br>
+<ul>
+<li>Volume;</li>
+<li>Bandwidth - bandwidth of formants;</li>
+<li>Amp. add - additional value for amplitude of formants;</li>
+<li>Formants - number of voice formants; maximum = 5 (best result);</li>
+<li>Vowel: A...E...I...O...U (minimal value - A; maximal - U);</li>
+<li>Character:</li>
+	<ul>
+	<li>00 - soprano;</li>
+	<li>01 - alto;</li>
+	<li>02 - tenor;</li>
+	<li>03 - bass;</li>
+	</ul>
+<li>Mono: 00 - Stereo; 01 - Mono.</li>
+</ul>
+
+<font class="title2">LFO</font><br><br>
+LFO - Low Frequency Oscillation.<br>
+Controllers:<br>
+<ul>
+<li>Volume;</li>
+<li>Type: 00 - amplitude modulation (tremolo); 01 - stereo panning modulation;</li>
+<li>Power;</li>
+<li>Frequency;</li>
+<li>Shape: 00 - sinus; 01 - square;</li>
+<li>Set phase.</li>
+</ul>
+
+<font class="title2">Loop</font><br><br>
+This effect is for repeating small pieces of input sound.<br>
+Controllers:<br>
+<ul>
+<li>Volume;</li>
+<li>Delay;</li>
+<li>Stereo: 00 - mono; 01 - stereo;</li>
+<li>Repeats - number of repeats in the loop.</li>
+</ul>
+
+<font class="title2">Reverb</font><br><br>
+Reverberator and DC Blocking Filter.<br>
+Controllers:<br>
+<ul>
+<li>Dry - amount of original signal in output;</li>
+<li>Wet - amount of reverberation in output;</li>
+<li>Feedback;</li>
+<li>Damp;</li>
+<li>Width;</li>
+<li>Freeze: 00 - none; 01 - freeze mode;</li>
+<li>Mode.</li>
+</ul>
+<br>
+
+<a name="song"></a>
+<hr>
+<br>
+<font class="title2">SunVox song structure</font><br><br>
+<center>
+<img src="song.png"><br><br>
+</center>
+Several words about the hex numbers.<br>
+In mathematics and computer science, hexadecimal (also base-16, hexa, or hex) is a numeral system with a radix, or base, of 16. It uses sixteen distinct symbols, most often the symbols 0–9 to represent values zero to nine, and A, B, C, D, E, F (or a through f) to represent values ten to fifteen.<br><br>
+Hexadecimal (hex) numbers:<br>
+00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A, 0B, 0C, 0D, 0E, 0F, 10, 11, 12, 13 ... FF<br>
+and their decimal equivalents:<br>
+00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ... 255<br><br>
+
+<a name="pat"></a>
+<hr>
+<br>
+<font class="title2">Pattern editor</font><br><br>
+Any pattern in the SunVox looks like this:<br>
+<table border=2>
+<tr><td>line<td>ch0 (channel 0)<td>ch1 (channel 1)<td>ch2 (channel 2)<td> ...
+<tr><td>000<td>event<td>event<td>event<td>
+<tr><td>001<td>event<td>event<td>event<td>
+<tr><td>xxx<td>...<td>...<td>...<td>
+</table>
+<br>
+event - some music event (something like a MIDI command).<br>
+Examples of events:<br>
+<table>
+<tr><td>* event of turning note C5 on: <td> <font color=BLUE>C5 80 01 0000 0000</font>
+<tr><td>* event of turning note A5 on: <td>  <font color=BLUE>A5 80 01 0000 0000</font>
+<tr><td>* event of turning note off: <td> <font color=BLUE>==</font>
+</table>
+<br>
+As you can see, event contain several text/numeric fields.<br>
+Event format: <font color=BLUE>NN VV SS CCEE PPPP</font><br>
+Lets see detailed description of each field in the event:<br>
+<ul>
+<li>NN - note</li>
+<li>VV - velocity (00..80)</li>
+<li>SS - synth number (00,01,02,03,04,05,06,07,08,09, ... FF)</li>
+<li>CC - number of controller (01,02,03,04, ... FF)</li>
+<li>EE - standart effect:</li>
+	<ul>
+	<li>01 - slide up (portamento up)</li>
+	<li>02 - slide down (portamento down)</li>
+	<li>03 - slide to note (sliding speed = PPPP)</li>
+	<li>0A - slide velocity up/down (PPPP = UUDD; UU - up speed; DD - down speed)</li>
+	<li>0F - set playing speed</li>
+	</ul>
+<li>PPPP - parameter of a selected effect/controller (0000 - min; 8000 - max)</li>
+</ul>
+Velocity can be changed dynamically.<br>
+Example:<br>
+<font color=BLUE><pre>
+NN VV SS CCEE PPPP
+C3 10 03 0000 0000
+-- 20 -- 0000 0000
+-- 30 -- 0000 0000
+-- 40 -- 0000 0000
+-- 50 -- 0000 0000
+-- 60 -- 0000 0000
+</pre></font>
+In this example velocity changed from 10 to 60.<br>
+<br>
+Example of changing cutoff frequency (global controller) of filter from min to max value:<br>
+<font color=BLUE><pre>
+NN VV SS CCEE PPPP
+-- -- 01 0200 0000
+-- -- 01 0200 1000
+-- -- 01 0200 2000
+-- -- 01 0200 3000
+-- -- 01 0200 4000
+-- -- 01 0200 5000
+-- -- 01 0200 6000
+-- -- 01 0200 7000
+-- -- 01 0200 8000
+</pre></font>
+Cutoff frequency controller has number 2 in the filter.<br>
+<br>
+Some synths has local controllers.<br>
+Local controller can be changed for separate sound on a separate channel.<br>
+Example: (changing local controller 2 in synth 1)<br>
+<font color=BLUE><pre>
+NN VV SS CCEE PPPP
+C3 80 01 0200 0000  //Set local controller 2 to value 0000. Separate sound begins playing here
+-- -- 01 0200 0001  //Set local controller 2 to value 0001
+-- -- 01 0200 0002  //Set local controller 2 to value 0002
+-- -- 01 0200 0003  //Set local controller 2 to value 0003
+-- -- 01 0200 0002  //...
+-- -- 01 0200 0001
+</pre></font>
+<br><hr>
+
+<a name="config"></a>
+<br>
+<font class="title2">Configuration file (sunvox_config.ini)</font><br><br>
+This file must be placed in the same folder with SunVox (for Linux/Windows) or in the root of filesystem (for WinCE devices).<br>
+Typical sunvox_config.ini file looks like this:<br>
+<font color=BLUE><pre>
+//----------------------------------------------------------------------------
+width        640         //Screen width
+height       480         //Screen height
+fullscreen               //Set it, if you want fullscreen mode in Linux (SDL)
+buffer       4096        //Sound buffer size (in samples)
+audiodevice  "hw:0,0"	 //ALSA audio device name in Linux
+frequency    44100       //Sampling frequency (minimum - 44100)
+noborder                 //Set it, if you want a window without border
+//----------------------------------------------------------------------------
+</pre></font>
+WARNING: Sound may differ slightly on different sampling frequencies
+<br>
+
+</body>
+
+</html>

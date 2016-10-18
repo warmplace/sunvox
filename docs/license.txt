@@ -1,6 +1,6 @@
 SunVox Modular Music Creation Studio is based on the SunVox Engine.
-Sources of the SunVox Engine can be found in the package with Pixilang 
-programming language.
+Sources of the SunVox Engine can be found here:
+http://www.warmplace.ru/soft/sunvox/index.php#download
 
 ==============================================================================
 SunVox Engine Release License:

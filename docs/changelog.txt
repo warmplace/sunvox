@@ -1,3 +1,22 @@
+v1.1 (26 oct 2008):
+* new module: Delay;
+* new module: LFO;
+* new module: FM synth;
+* new module: Reverb;
+* new module: Vocal Filter;
+* added "anticlick" controller in the "kicker" synth;
+* added "vibrato type" controller in the "flanger" synth;
+* added "mix" controller in the "filter" synth (mix original signal with filtered);
+* added new mode "cubic interpolation" for high quality sound in synths: SpectraVoice; (this mode not working on PDA);
+* new feature: changing font size in the pattern editor;
+* new feature: main menu -> edit -> interpolate velocity;
+* new examples: city_dreams, forests, pong, window;
+* new simple examples: delay, delay2, reverb, lfo, fm, voice;
+* fixed major bugs on PalmOS devices with non-square screen;
+* added sample-editor to the sampler module;
+* ALSA support in Linux;
+* redesigned some GUI elements;
+* code optimization.
 v1.0b (08 apr 2008):
 * fixed bug with crash on some new PalmOS devices.
 v1.0 (05 apr 2008):
