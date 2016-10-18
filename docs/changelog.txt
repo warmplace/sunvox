@@ -1,3 +1,17 @@
+v1.6.4 (03 aug 2011):
+* new module: Side Chain Compressor;
+* new module: DrumSynth with 120 unique synthetic drum sounds;
+* new module: Amplifier;
+* added multitrack WAV export;
+* double click on the empty area of Sound Net -> Create a new module;
+* double click on some pattern of Timeline -> Open a window with pattern properties;
+* maximum BPM increased to 800;
+* interactive waveform drawing added to Generator (only for type 4 (dirty));
+* added new simple examples: compressor, drumsynth1-4;
+* added new examples: chain reaction;
+* iOS: added stereo mode to Input module;
+* iOS: added Online Help (in Main Menu);
+* many bugs fixed.
 v1.6.3 (19 may 2011):
 * fixed several serious bugs in sound engine; 
 * added a new standard effect 07 - set sample offset by a percentage (from 0000 to 8000).
