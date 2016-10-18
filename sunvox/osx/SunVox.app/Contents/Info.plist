@@ -19,11 +19,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.7.3</string>
+	<string>1.7.3c</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.7.3</string>
+	<string>1.7.3c</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvmgcc42</string>
 	<key>DTPlatformBuild</key>
@@ -39,7 +39,7 @@
 	<key>DTXcodeBuild</key>
 	<string>4H127</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>© 2012, Alexander Zolotov, www.warmplace.ru</string>
+	<string>© 2013, Alexander Zolotov, www.warmplace.ru</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

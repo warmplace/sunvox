@@ -1,3 +1,12 @@
+v1.7.3c (14 may 2013):
+* additional LFO module waveforms: sin2 (correct sine), saw, saw2;
+* added ability to record into the selected Sampler slot;
+* fixed bug with JACK MIDI input;
+* fixed bug with the Sampler base note calculation;
+* base note for the Vorbis Player is C5;
+* new song (examples): april_song.
+v1.7.3b (27 apr 2013):
+* fixed several bugs (iOS 4-inch screen, Audiobus, UI).
 v1.7.3 (12 apr 2013):
 * iOS: added Virtual MIDI Port;
 * iOS: support of Audiobus;
