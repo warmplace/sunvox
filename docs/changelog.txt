@@ -1,3 +1,7 @@
+v1.8.1 (29 dec 2014):
+* bigger Compressor visualizer;
+* GPIO module is now available on all devices, but it is fully functional in Linux only;
+* bugs fixed.
 v1.8 (17 nov 2014):
 * audio engine has been switched to 32bit (Floating Point) mode on Android and iOS devices (except the slow devices without FPU);
 * other than 44100 sampling rate support for iOS and Android (only if the audio hardware supports it);
