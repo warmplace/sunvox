@@ -32,5 +32,7 @@ PALMOS
 ------------------------------------------------------------------------------
 Unpack archive with SunVox. 
 Install sunvox.prc and font.pdb files to Palm.
+WARNING. SunVox may crash some new devices like Treo 700p. In this case you
+         must install sunvox_for_new_devices.prc instead of sunvox.prc.
 Copy other files (examples, samples) to the Flash card.
 Run sunvox.

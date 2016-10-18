@@ -12,10 +12,13 @@ Support:
 ------------------------------------------------------------------------------
 What is it?
 ------------------------------------------------------------------------------
-SunVox is a small, fast and powerful program for music creation, based on 
-modular synths and tracker-like interface. (Detailed info about music trackers 
-is here: http://en.wikipedia.org/wiki/Tracker)
-Based on parts of PsyTexx, PsyTexxSynth and SunDog engine.
+SunVox is a small, simple, fast and powerful program for music creation, based
+on modular synths and tracker-like interface. 
+  ( Detailed info about music trackers is here: 
+    http://en.wikipedia.org/wiki/Tracker )
+SunVox is based on parts of the PsyTexx, the PsyTexxSynth engine and the 
+SunDog engine.
+
 Examples of use:
 * composing music on PDA;
 * music for games;
@@ -46,7 +49,7 @@ Main features
 ------------------------------------------------------------------------------
 What is different between the SunVox and another music editors?
 ------------------------------------------------------------------------------
+* SunVox has simple and useful interface.
 * SunVox is small and very flexible. It can be ported on any device.
 * SunVox engine (player and modular synthesizers) is open source software.
-* In SunVox each music pattern has its own graphic icon (instead of the name 
-  in another editors).
+* In SunVox each music pattern has its own graphic icon (instead of name).

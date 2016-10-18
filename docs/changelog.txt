@@ -1,0 +1,4 @@
+v1.0b (08 apr 2008):
+* fixed bug with crash on some new PalmOS devices.
+v1.0 (05 apr 2008):
+* the first release.
