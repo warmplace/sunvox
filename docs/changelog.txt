@@ -1,3 +1,6 @@
+v1.4.1 (02 aug 2009):
+* fixed several bugs in Mac OS X version;
+* removed text console from Windows version.
 v1.4 (24 jul 2009):
 * iPhone port;
 * OSX port;
