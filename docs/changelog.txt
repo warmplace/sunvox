@@ -1,3 +1,25 @@
+v1.9.1 (9 jan 2016):
+* new module - Glide; it is similar to the MultiSynth, but it also adds the commands of smooth transition between the notes; see the glide.sunvox example;
+* advanced Interpolator has been added to the Pattern Editor: with this tool you can make a smooth transition of the values of any pattern columns, with various parameters (like the curve type, noise, etc.);
+* new function in the Module View (Routing) - Replace; use it if you want to replace the selected module by some other module without loss of connections;
+* MIDI buttons (with notes) linked to some SunVox actions (shortcuts) are now ignored by the synths;
+* added restoring of the JACK MIDI input connections;
+* Sampler (sample editor): now the Copy and Paste functions work through the file;
+* Sampler (sample editor): new effects (Invert and Center) has been added;
+* LFO: new controller "Duty cycle" (only for the square waveform);
+* CUT operation has been added to the Module View (Routing) and the Timeline;
+* new keyboard shortcut: SHIFT + > - select the next module;
+* new keyboard shortcut: SHIFT + < - select the previous module;
+* new keyboard shortcut: CTRL + > - select the next synth;
+* new keyboard shortcut: CTRL + < - select the previous synth;
+* new keyboard shortcut: CTRL + RIGHT - next module horizontally;
+* new keyboard shortcut: CTRL + LEFT - previous module horizontally;
+* new keyboard shortcut: CTRL + DOWN - next module vertically;
+* new keyboard shortcut: CTRL + UP - previous module vertically;
+* new instrument from Cube48: DrumSynth48;
+* new simple song examples: glide;
+* new song examples: snowfall, SunVox Compo 2015.10 Winners (KnyazIvan - fatal precession, OceanicDegree - Dreaming, echo2 - unreal love 3);
+* bugs fixed.
 v1.9b (26 jul 2015):
 * special SunVox version (sunvox_no_simd) has been added for Linux x86 machines with old CPUs without SIMD instructions;
 * Project Properties: the new field "Based on SunVox (version)" has been added; change it if you think that some modules use the old buggy algorithm (Compressor for example);
