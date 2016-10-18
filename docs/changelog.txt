@@ -1,3 +1,8 @@
+v1.1b (16 nov 2008):
+* added new pattern length - 256;
+* fixed serious bug with pattern removing;
+* fixed bugs with screen resizing on some PalmOS devices;
+* fixed bugs with ALSA support (Linux).
 v1.1 (26 oct 2008):
 * new module: Delay;
 * new module: LFO;

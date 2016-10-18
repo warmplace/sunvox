@@ -1,0 +1,11 @@
+
+body { font-size: 80%; font-family: arial, sans-serif }
+
+table { font-size: 100%; font-family: arial, sans-serif }
+
+.date { color: red; font-weight: bold }
+.topic { font-weight: bold }
+
+.title { font-size: 130%; font-weight: bold }
+.title2 { font-weight: bold }
+.small { font-size: 90% }
