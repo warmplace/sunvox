@@ -1,11 +1,37 @@
+v1.6 (10 dec 2010):
+* GUI improvement and optimization;
+* Maemo port (tested on Nokia N900);
+* iOS: added screen orientation locking;
+* iOS 4 multitasking support;
+* iOS: added file sharing (SunVox <-> iTunes);
+* added spectrum analyzer;
+* new module: OGG Vorbis Player; note: this module is not available for the PalmOS devices;
+* new module: Amplitude Modulator (multiplier);
+* added new controller in the "Distortion": "Noise";
+* added LFO to the "Filter";
+* improved sound quality of the "FM" module;
+* improved sound quality of the "Kicker" module;
+* added high-quality cubic interpolation to the "Sampler" module; note: this mode doesn't work on handheld devices with integer engine;
+* added a set of built-in color themes;
+* you can specify your own colors using the c_0, c_1, c_2 and c_3 options in the sunvox_config file; example: c_0 #00FF80;
+* added UNDO/REDO functions (trough the main menu or CTRL + Z / CTRL + Y / SHIFT + CTRL + Z);
+* added "edit step" to the pattern editor;
+* new keyboard shortcut (pattern editor): CTRL + MINUS - decrease edit step;
+* new keyboard shortcut (pattern editor): CTRL + PLUS - increase edit step;
+* correct solo/mute handling in the "MultiSynth" module;
+* added "Module remapping" function (main menu -> edit -> remap);
+* fixed bug with relative note in the "MultiSynth";
+* sunvox_config: added "zoom" option; you can use it for larger pixels on Linux devices with SDL, or on WinCE devices with RAW video driver; example of usage: zoom 2;
+* added new songs and simple examples;
+* many bugs fixed.
 v1.5.5d (07 may 2010):
 * fixed bug with cursor on the timeline;
 * fixed bug with WAV/AIFF/XI preview;
 * fixed bug with scrollbar.
 v1.5.5 (04 may 2010):
-* added new controller in the "generator": "Duty cycle" (only for rectangular waveform);
-* WAV/AIFF/XI preview in the "load" dialogs of the "sampler";
-* animated visualization of the state of the "sampler";
+* added new controller in the "Generator": "Duty cycle" (only for rectangular waveform);
+* WAV/AIFF/XI preview in the "load" dialogs of the "Sampler";
+* animated visualization of the state of the "Sampler";
 * new keyboard shortcut (pattern editor): CTRL + D - duplicate;
 * new keyboard shortcut (pattern editor): CTRL + I - interpolate value;
 * new keyboard shortcut (pattern editor): CTRL + U - interpolate velocity;
@@ -37,12 +63,12 @@ v1.5.1 (03 apr 2010):
 * now SunVox can load its configuration either from sunvox_config.ini or sunvox_config.txt.
 v1.4.5 (11 oct 2009):
 * new module: Vibrato;
-* added sinusoidal waveform to the "generator";
+* added sinusoidal waveform to the "Generator";
 * added new effects 11 and 12 - fineslide up/down;
 * added new effect 20 - set the probability (0...8000) of a note being triggered; this effect is for unpredictable rhythms;
 * added new effect 21 - same as 20 but with random velocity;
 * added new example track: endless_song (based on new effect 20);
-* new functions in the "sampler": resample; volume fade; waveform drawing (paint mode);
+* new functions in the "Sampler": resample; volume fade; waveform drawing (paint mode);
 * improved "transpose" function in the pattern editor;
 * pattern follow mode (only for single pattern playing);
 * sound engine optimization.
@@ -73,12 +99,12 @@ v1.3b (30 mar 2009):
 * code optimization;
 * fixed several bugs.
 v1.3 (20 mar 2009):
-* fixed bug with ping-pong loop in the "sampler";
+* fixed bug with ping-pong loop in the "Sampler";
 * fixed bug with big values in scrollbars;
 * fixed bug with wrong song lenght calculation;
 * fixed bug with panning in the FM synthesizer;
 * new keyboard shortcuts: F9 - play; F11 - play pattern; F12 - stop;
-* added new parameter "P.Modulation" to the "generator" for phase modulation with input signal;
+* added new parameter "P.Modulation" to the "Generator" for phase modulation with input signal;
 * added possibility to load samples from RAW and JPEG files;
 * added support of 32-bit (floating point) samples;
 * added new effect 8 - arpeggio;
@@ -99,7 +125,7 @@ v1.2 (13 jan 2009):
 * added CPU usage monitor (not working on PalmOS);
 * added "mute" and "solo" buttons to the window with synth controllers;
 * added "zoom in" and "zoom out" buttons to the timeline window;
-* added "set vibrato phase" controller in the "flanger" synth;
+* added "set vibrato phase" controller in the "Flanger" synth;
 * improved reverb performance;
 * increased frequency ranges of synths;
 * updated manual;
@@ -116,10 +142,10 @@ v1.1 (26 oct 2008):
 * new module: FM synth;
 * new module: Reverb;
 * new module: Vocal Filter;
-* added "anticlick" controller in the "kicker" synth;
-* added "vibrato type" controller in the "flanger" synth;
+* added "anticlick" controller in the "Kicker" synth;
+* added "vibrato type" controller in the "Flanger" synth;
 * added "mix" controller in the "filter" synth (mix original signal with filtered);
-* added new mode "cubic interpolation" for high quality sound in synths: SpectraVoice; (this mode not working on PDA);
+* added new mode "cubic interpolation" for high quality sound in the "SpectraVoice"; (not working on PDA);
 * new feature: changing font size in the pattern editor;
 * new feature: main menu -> edit -> interpolate velocity;
 * new examples: city_dreams, forests, pong, window;
