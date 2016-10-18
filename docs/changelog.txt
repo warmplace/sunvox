@@ -1,3 +1,36 @@
+v1.7.3 (12 apr 2013):
+* iOS: added Virtual MIDI Port;
+* iOS: support of Audiobus;
+* iOS: support of 4-Inch display;
+* support of JACK Audio Connection Kit (for iOS and Linux);
+* improved Compressor algorithm;
+* default base note for WAV/AIFF samples is C5;
+* SunVox file is now includes additional information: timeline cursor position, current module, current pattern;
+* sound engine optimization;
+* new ASIO driver options;
+* Input Module (Mic/Line-in capture) is now also available for Linux (ALSA), Windows (MME,DirectSound,ASIO), Windows Mobile (with full duplex drivers only) and OSX;
+* extended list of the audio buffer sizes in the Preferences->Audio: 128, 256, 512, 768, 1024, 1280, 1536, 1792, 2048, 2560, 3072, 4096;
+* new options in the Preferences->Audio: Driver, Output Device, Input Device, Frequency;
+* new option in the Preferences->Interface: Window Parameters (width, height, fullscreen mode); fullscreen mode is only compatible with Windows and Linux;
+* added options for the MultiSynth: Use static note C5 (treat all received notes as C5); Ignore notes with zero velocity;
+* new Pattern Editor function - Slice by cursor;
+* added MIDI import; now you can load any MIDI files directly through the Load Song dialog;
+* added support of the following MIDI commands: Start, Continue, Stop;
+* number of MetaModule User Defined Controllers can be changed from 0 to 13;
+* added MIDI Omni Mode (all MIDI channels will be accepted);
+* new option in the Preferences->Interface: Show virtual keyboard; use it to show or hide virtual qwerty keyboard;
+* scrolling when highlighting in the Sample Editor;
+* per-pattern Mute/Solo (Timeline menu -> Toggle mute / Toggle solo);
+* Vorbis Player is now supports the sample offset commands (09 and 07);
+* added ability to create a new pattern by double clicking on an empty area of the Timeline;
+* new Timeline function - Slice Pattern(s) (knife position = current playing position);
+* new std. pattern effect 23 - set controller value to the random number with range from XX (00..FF) to YY (00..FF);
+* new std. pattern effect 1F - set BPM;
+* new songs: Manwe - Early Fall remake (original by Tangrine), kostya_m - Midnight, take_my_hand, follow_the_sun;
+* new simple examples: metamodule_test, metamodule_with_automation, random_ctl_values_with_range, trance, compressor2;
+* new instrument (pads): moving_pad, vocal_synth, filter_slide_up, analog, analog2, analog3, analog_distorted, space, violin, violin2, violin3, violin4;
+* new instrument (keyboard): analog10, fm2, bell2;
+* bugs fixed.
 v1.7.2b (22 sep 2012):
 * sampler freeze bug fixed;
 * changes in WinCE file functions;
@@ -58,7 +91,7 @@ v1.7 (09 apr 2012):
 * new features in the Main menu -> Edit: Shrink pattern and Expand pattern;
 * new standard pattern effects 40...5F - delay an event for selected fraction of the line (from 40 (0%) to 5F (100%));
 * new standard pattern effect 04 - vibrato with parameters XXYY, where the XX - frequency, YY - amplitude;
-* new standard pattern effect 22 - set the controller's value to the random number from 0 to XXYY (parameter);
+* new standard pattern effect 22 - set controller value to the random number from 0 to XXYY (parameter);
 * new controller in the Filter module: "Exponential freq" for exponential frequency;
 * new function "Stereo to mono" added to the Sampler (sample editor);
 * new sunvox_config file option: pencontrol - force UI (User Interface) optimization for Pen/Mouse control; 
@@ -69,7 +102,8 @@ v1.7 (09 apr 2012):
 * Windows: now DirectSound is default sound system; but if you need ASIO output, just select it in the sunvox_config.ini file (audiodriver asio);
 * iOS: "Create Directory" feature added to the Wi-Fi file browser; 
 * new examples: electrohouse, afternoon, pong, space_trip, 8bit_tales, sfields1, 1bit;
-* new instruments;
+* new instruments (pads): moving_pad, vocal_synth, filter_slide_up;
+* new instruments (keyboard): analog10, fm2;
 * sound engine optimization;
 * many bugs fixed.
 v1.6.4 (03 aug 2011):
