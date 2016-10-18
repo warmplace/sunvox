@@ -13,6 +13,7 @@ Lyzzard
 Manwe
 Scott Belden
 Sergey Ostanevich
-Sentinel
+Sentinel (linux.su)
 Thunder (the best MOD format description)
 Urban23rus
+William Pont

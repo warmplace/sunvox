@@ -1,3 +1,5 @@
+v1.6.1 (05 jan 2011):
+* Win Mobile: fixed bug with spectrum analyzer freezing.
 v1.6 (10 dec 2010):
 * GUI improvement and optimization;
 * Maemo port (tested on Nokia N900);
