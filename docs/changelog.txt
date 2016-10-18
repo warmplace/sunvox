@@ -1,3 +1,19 @@
+v1.5.1 (03 apr 2010):
+* sound engine optimization;
+* new module: DC Blocker (DC Blocking Filter);
+* new module: EQ (3Band Equalizer);
+* new module: MultiSynth (translates sound events to any number of synths);
+* new synth activity scopes;
+* added signal clipping indicator;
+* color selection for synths;
+* simple MIDI export;
+* AIFF (uncompressed) support;
+* added new example track: multisynth;
+* sunvox_config: removed "flip" option; added "rotate" option; example of usage: rotate 90 //turn the screen by 90 degrees;
+* sunvox_config: added "maxfps" option; use this option for setting maximal number of frames per second; less value - less CPU usage;
+* sunvox_config: added options for control the size of the synths: synth_max_xsize, synth_min_xsize, synth_xsize_divider, synth_ysize_multiplier;
+* sunvox_config: new options "no_scopes" and "no_levels" for slow devices;
+* now SunVox can load its configuration either from sunvox_config.ini or sunvox_config.txt.
 v1.4.5 (11 oct 2009):
 * new module: Vibrato;
 * added sinusoidal waveform to the "generator";
@@ -19,8 +35,8 @@ v1.4 (24 jul 2009):
 * design improvements and optimization;
 * updated icon editor (now in separate window);
 * updated sampler (added base note and frequency for each sample);
-* sunvox_config.ini: added "touchcontrol" option; use this option if your device has touchscreen without pen (stylus), or if you just want a large buttons;
-* sunvox_config.ini: now "audiodevice" option works in Windows (and Windows Mobile) too; example of usage: audiodevice 1 //set second audio device of your computer;
+* sunvox_config: added "touchcontrol" option; use this option if your device has touchscreen without pen (stylus), or if you just want a large buttons;
+* sunvox_config: now "audiodevice" option works in Windows (and Windows Mobile) too; example of usage: audiodevice 1 //set second audio device of your computer;
 * added new effect 19 - re-trigger note after PPPP ticks during the line;
 * added new effect 1C - cut note after PPPP ticks in the current line;
 * added new effect 1D - delays the start of note until tick PPPP in the current line;
@@ -29,8 +45,8 @@ v1.4 (24 jul 2009):
 * added "Touch Theremin" experimental tool for realtime playing;
 * tons of bugs fixed.
 v1.3b (30 mar 2009):
-* fixed bug with incorrect sunvox_config.ini file loading;
-* added new "videodriver" option to the sunvox_config.ini file; possible values for WinCE devices: gapi (default), raw (raw hires framebuffer), gdi (compatibility mode);
+* fixed bug with incorrect sunvox_config file loading;
+* added new "videodriver" option to the sunvox_config file; possible values for WinCE devices: gapi (default), raw (raw hires framebuffer), gdi (compatibility mode);
 * graphics in PalmOS version changed from grayscale 8bit to colour 16bit;
 * added possibility to change the color (foreground and background) of pattern's icon;
 * code optimization;
