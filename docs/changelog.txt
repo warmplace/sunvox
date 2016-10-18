@@ -1,3 +1,34 @@
+v1.8 (17 nov 2014):
+* audio engine has been switched to 32bit (Floating Point) mode on Android and iOS devices (except the slow devices without FPU);
+* other than 44100 sampling rate support for iOS and Android (only if the audio hardware supports it);
+* iOS: Audiobus 2 and IAA (partially) support;
+* new Module View (Routing) functions: Zoom (with multi-touch support), Snap to Grid;
+* MetaModule: EDIT button has been added; now you can edit MetaModules without annoying Loading/Saving;
+* MetaModule: additional options: Arpeggiator (change the pitch of internal MetaModule patterns), Apply velocity to song;
+* Sampler: the following options have been added: Record on play (use it if you want to record in sync with the PLAY button), Record in mono, Record with reduced sample rate, Record in 16bit;
+* SpectraVoice improvements: auto render, additional sample size, new band types (random, triangle1, triangle2, overtones1, overtones2, overtones3, overtones4);
+* Sound2Ctl: "Record Values" option has been added; now all values from this module can be recorded alongside with the other SunVox events (notes, Theremin, etc.);
+* offset commands (effect codes 09 and 07) support has been added to the following modules: Generator, Analog Generator;
+* MultiSynth: new controller "Random phase" has been added; for example, with this option you can play the Sampler's notes from the random position;
+* MultiSynth: new controller "Random velocity" has been added;
+* Analog Generator: new option "Filter freq. scaling per key (reverse)";
+* Analog Generator: new controller "Noise" - amount of the white noise;
+* new pattern command: Previous Track; use it to apply the effects to the previous track; but the following secondary effects are not allowed: 2x, 40..5F, 1D;
+* new button in the Pattern Editor: Spec.Cmd - press it to insert a special command (Set Pitch or Previous Track);
+* press SHIFT and change the value of some controller - the new value will be written to the pattern;
+* press SHIFT and play some note on Touch Theremin - the new microtone (Set Pitch XXYY command) will be written to the pattern;
+* new module - GPIO (only for Linux with GPIO Sysfs Interface enabled); with this module you can send or receive the signals to/from GPIO pins; check the test project - raspberry_pi_gpio;
+* additional MIDI slot has been added to the Preferences; now you can use two MIDI keyboards simultaneously;
+* Timeline section has been added to the Preferences;
+* new option: Preferences -> Timeline -> Show timeline (always show Timeline on the screen);
+* new keyboard shortcut: SHIFT + F9 - record start/stop;
+* new keyboard shortcut (pattern editor): SHIFT + [ - transpose octave down;
+* new keyboard shortcut (pattern editor): SHIFT + ] - transpose octave up;
+* new keyboard shortcut (pattern editor): CTRL + m - paste and mix;
+* new keyboard shortcut (pattern editor): SHIFT + k - insert the "Previous Track" special command;
+* new simple song examples: spectravoice2, metamodule_arpeggiator, metamodule_arpeggiator2, std_effect_multitrack, std_effect_multitrack2, std_effect_multitrack3, raspberry_pi_gpio;
+* new song examples: alchemy_masters, full_moon_night, Twistboy - Translucent, Spline - Endless August, Knyazivan - Left Double Quotation Mark;
+* bugs fixed.
 v1.7.5 (26 jun 2014):
 * iOS: 64bit CPU support;
 * iOS: SunVox file type association: now any SunVox-compatible documents (sunvox, midi, xm, mod) can be opened from other apps (Mail, Browser, etc.);
