@@ -1,3 +1,29 @@
+v1.6.3 (19 may 2011):
+* fixed several serious bugs in sound engine; 
+* added a new standard effect 07 - set sample offset by a percentage (from 0000 to 8000).
+v1.6.2 (13 may 2011):
+* quantization noise is reduced by 4 times (on smartphones and pocket computers);
+* added Lo-Fi (fixed point) SunVox versions for slow computers (only for Win32 and Linux x86);
+* improved sound quality of the following modules: Generator, SpectraVoice;
+* new Generator waveforms: half-sine (6); abs-sine (7); pulse-sine with duty cycle (8);
+* added copy and paste of modules;
+* added new control "Velocity" to MultiSynth module;
+* added ASIO support (for Windows only);
+* now Sampler can record signals from another modules; just connect some output module (Generator, for example) to the Sampler and press the "Rec", "Rec mono" or "Rec LoFi" button under the Sampler controllers; "Rec" - record stereo; "Rec mono" - record mono; "Rec LoFi" - record mono with reduced sampling frequency;
+* added base MIDI IN/OUT in versions for Linux (ALSA), OSX and iOS (CoreMidi), Windows (MM); 
+* supported MIDI IN commands: NoteON/OFF;
+* supported MIDI OUT commands: NoteON/OFF; Control Change; Program Change; Bank Select;
+* use controllers with number 80+X to send MIDI Control Change; where the X is MIDI Controller Number; for example: 8100 8000 - set Modulation (MSB and LSB) to the max value;
+* added Input module for audio receiving from microphone or line-in; at the moment only iOS supported; the Input for other systems will be available in the next releases;
+* iOS: added D-pad for more precise cursor positioning in the pattern editor;
+* iOS: added Audio Copy/Paste (Intua Audio Sharing); Sonoma compatible; Where to find: Main menu -> Export/import -> Copy/Paste;
+* iOS: added multitouch support to Touch Theremin;
+* iOS: added multitouch support to piano keyboard;
+* added Preferences (in the Main menu);
+* templates support (in the Preferences);
+* fixed bug with overload of EQ module;
+* added new songs and instruments (samples);
+* many bugs fixed.
 v1.6.1 (05 jan 2011):
 * Win Mobile: fixed bug with spectrum analyzer freezing.
 v1.6 (10 dec 2010):
