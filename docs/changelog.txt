@@ -1,3 +1,39 @@
+v1.7.2 (03 sep 2012):
+* for Android users: if your display flickers sometimes, put option_glnoretain.txt file (with any content) to the following directory: device SD card/Android/data/nightradio.sunvox/files/;
+* now XM and MOD files (formats of old trackers) can be loaded without the converter, through the Main Menu -> Load Song; you can find hundreds of these files on this site: modarchive.org;
+* extended list of effects for XM/MOD to SunVox conversion;
+* new std. pattern effect 30 - use it to stop playing the song;
+* new controller in the Reverb module - "All-pass filter"; use it to enable/disable output all-pass filter;
+* new controller in the Reverb module - "Room size";
+* added autorepeat mode for the following buttons: HLD (clear current note), OFF (insert Note OFF), INS (insert), BCK (backspace);
+* added eight layers for the modules; for example you can place some complicated drum chain on the first layer, and all other synths - on the second layer; layers can be visible together or separately;
+* new function "Scale" in the Module menu: use it if you want a smaller or bigger module size for the current project;
+* changing the size of the modules by mouse wheel (scroll wheel);
+* new module - WaveShaper;
+* new module - MetaModule; with this module you can include some external .sunvox song to your project and use this song as synth or effect; Not available for PalmOS;
+* new options in the Preferences->Recording: Pattern fit to grid, Note quantization, Controller quantization;
+* new option in the Preferences->MIDI: Ignore velocity;
+* new option in the Preferences->Audio Ouput: Audio buffer size;
+* empty parameter of the vibrato effect 04 is now treated as "use previous parameter value"; works only for songs created in SunVox 1.7.2 and higher;
+* new option "Smooth frequency change" in the Analog Generator; enabled by default; disable it if you want to use arpeggio effect 08;
+* velocity map in the MultiSynth module;
+* improved CPU Usage Monitor with scrolling and module selection;
+* maximum number of pattern tracks has been increased from 8 to 16;
+* maximum Echo delay length increased to 4 seconds (except for PalmOS, where still the maximum is 1 second);
+* new controller in the Echo module - "Delay units" with different available modes (ms, Hz, ticks, lines);
+* new controller in the Filter module - "LFO frequency units" with different available modes (ms, Hz, ticks, lines);
+* new controller in the Flanger module - "Vibrato speed units" with different available modes (ms, Hz, ticks, lines);
+* new controller in the LFO module - "Frequency units" with different available modes (ms, Hz, ticks, lines);
+* new controller in the Vibrato module - "Frequency units" with different available modes (ms, Hz, ticks, lines);
+* new controller in the Vibrato module - "Set phase";
+* new simple examples: MIDI_out, waveshaper, velocity_map, reverb2, reverb3;
+* new instrument in instruments/bass directory: analog_bass;
+* new instrument in instruments/pads directory: synth_violin;
+* new instruments in instruments/keyboard directory: piano14, piano15, space, space2;
+* new instruments in instruments/various directory: electric_guitar, noise_slide_up, electro_drum_loop;
+* keyboard instruments piano04.wav, piano05.wav has been replaced by piano04.sunsynth, piano05.sunsynth;
+* sound engine optimization;
+* many bugs fixed.
 v1.7 (09 apr 2012):
 * ported to Android;
 * ported to Meego;
@@ -15,8 +51,8 @@ v1.7 (09 apr 2012):
 * mono mode has been added to the LFO module;
 * new features in the Main menu -> Edit: Shrink pattern and Expand pattern;
 * new standard pattern effects 40...5F - delay an event for selected fraction of the line (from 40 (0%) to 5F (100%));
-* new standard pattern effect 04 - vibrato with parameters FFAA, where the FF - frequency, AA - amplitude;
-* new standard pattern effect 22 - set the controller's value to the random number from 0 to PPPP (parameter);
+* new standard pattern effect 04 - vibrato with parameters XXYY, where the XX - frequency, YY - amplitude;
+* new standard pattern effect 22 - set the controller's value to the random number from 0 to XXYY (parameter);
 * new controller in the Filter module: "Exponential freq" for exponential frequency;
 * new function "Stereo to mono" added to the Sampler (sample editor);
 * new sunvox_config file option: pencontrol - force UI (User Interface) optimization for Pen/Mouse control; 
@@ -158,9 +194,9 @@ v1.4 (24 jul 2009):
 * updated sampler (added base note and frequency for each sample);
 * sunvox_config: added "touchcontrol" option; use this option if your device has touchscreen without pen (stylus), or if you just want a large buttons;
 * sunvox_config: now "audiodevice" option works in Windows (and Windows Mobile) too; example of usage: audiodevice 1 //set second audio device of your computer;
-* added new effect 19 - re-trigger note after PPPP ticks during the line;
-* added new effect 1C - cut note after PPPP ticks in the current line;
-* added new effect 1D - delays the start of note until tick PPPP in the current line;
+* added new effect 19 - re-trigger note after XXYY ticks during the line;
+* added new effect 1C - cut note after XXYY ticks in the current line;
+* added new effect 1D - delays the start of note until tick XXYY in the current line;
 * added respective simple examples: std_effect_retrig.sunvox; std_effect_cut.sunvox; std_effect_delay.sunvox;
 * added "hide effects" function in the pattern editor's menu;
 * added "Touch Theremin" experimental tool for realtime playing;
