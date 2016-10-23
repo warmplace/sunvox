@@ -1,3 +1,11 @@
+v1.9.2 BETA2 (23 oct 2016):
+* Sampler: new option "Stop recording on project stop";
+* Analog Generator: new waveform "Drawn with spline interpolation";
+* MultiCtl: new controller "OUT offset";
+* new module Velocity2Ctl: converts the velocity parameter of the incoming notes to the controller values (in some another connected module);
+* new keyboard shortcut: CTRL + 4 - unmute all modules;
+* new version of SunVox library for developers;
+* bugs fixed.
 v1.9.2 BETA1 (10 oct 2016):
 * Windows (7 and higher): multitouch support;
 * Linux (x86_64 only): multitouch support;
