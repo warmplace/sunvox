@@ -1,8 +1,0 @@
-SunVox modular synthesizer
-Copyright (c) 2002 - 2016, Alexander Zolotov <nightradio@gmail.com>, WarmPlace.ru
-
-SunDog engine (part of SunVox)
-Copyright (c) 2002 - 2016, Alexander Zolotov <nightradio@gmail.com>, WarmPlace.ru
-
-Ogg Vorbis 'Tremor' integer playback codec
-Copyright (c) 2002, Xiph.org Foundation
