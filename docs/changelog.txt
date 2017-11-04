@@ -1,3 +1,7 @@
+v1.9.3 BETA2 (4 nov 2017):
+* now you can disable the recent files list by adding the "nofrecent" option to the sunvox_config.ini;
+* MetaModule: effect 07 (set sample offset by percentage) is now supported too; you can use it to jump to the specified location within the MetaModule-project;
+* bug fixes;
 v1.9.3 BETA1 (31 oct 2017):
 * 64-bit Windows support (x86_64);
 * Android (4.0 and higher): Preferences -> Interface: new option "Hide system bars" for true immersive fullscreen mode;
