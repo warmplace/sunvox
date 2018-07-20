@@ -22,10 +22,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Resources/archived-expanded-entitlements.xcent</key>
-		<data>
-		vO/gVYVVkU1zHBaxd4xJ53/ga5k=
-		</data>
 		<key>Resources/sunvox_logo.icns</key>
 		<data>
 		0Gg4H72ElX/7FwVufNb1GsMPFI0=
@@ -58,17 +54,6 @@
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>Resources/archived-expanded-entitlements.xcent</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			vO/gVYVVkU1zHBaxd4xJ53/ga5k=
-			</data>
-			<key>hash2</key>
-			<data>
-			l3BKiWC0+szu9UOXoI+10KRWJHw2JzWSFaoqJ98iZWw=
-			</data>
 		</dict>
 		<key>Resources/sunvox_logo.icns</key>
 		<dict>

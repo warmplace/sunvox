@@ -1,5 +1,6 @@
 SunVox
-Copyright (c) 2008 - 2017, Alexander Zolotov <nightradio@gmail.com>
+Modular Music Studio
+Copyright (c) 2008 - 2018, Alexander Zolotov <nightradio@gmail.com>
 WarmPlace.ru
 
 This is freeware, so you may use this software without charge.
