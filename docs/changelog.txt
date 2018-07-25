@@ -1,3 +1,5 @@
+v1.9.4 BETA2 (21 jul 2018):
+* fixed bugs with shortcuts.
 v1.9.4 BETA1 (20 jul 2018):
 * iOS: user files are now available through the Files app;
 * iOS: partial USB/Bluetooth keyboard support (no key release, no Home/End, no F1/F2/...);
