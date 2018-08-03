@@ -1,3 +1,5 @@
+v1.9.4c (3 aug 2018):
+* fixed bug in Feedback module (stereo mode).
 v1.9.4b (31 jul 2018):
 * bug fixes.
 v1.9.4 (29 jul 2018):
