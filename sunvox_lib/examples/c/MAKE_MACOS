@@ -1,0 +1,2 @@
+cp ../../macos/lib_x86_64/sunvox.dylib ./
+make CFLAGS="-m64" LDFLAGS="-m64 -lstdc++"

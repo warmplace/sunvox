@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA6715621A07810100074D8B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6715611A07810100074D8B /* AVFoundation.framework */; };
+		FA8575C3176A3F3C005C3BC3 /* test.sunvox in Resources */ = {isa = PBXBuildFile; fileRef = FA8575C2176A3F3C005C3BC3 /* test.sunvox */; };
+		FA9436E4172EB9330075AB4C /* sunvox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9436E3172EB9330075AB4C /* sunvox.a */; };
+		FACF526B172EA89F00430807 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACF526A172EA89F00430807 /* UIKit.framework */; };
+		FACF526D172EA89F00430807 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACF526C172EA89F00430807 /* Foundation.framework */; };
+		FACF526F172EA89F00430807 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACF526E172EA89F00430807 /* CoreGraphics.framework */; };
+		FACF5275172EA89F00430807 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FACF5273172EA89F00430807 /* InfoPlist.strings */; };
+		FACF5277172EA89F00430807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF5276172EA89F00430807 /* main.m */; };
+		FACF527B172EA89F00430807 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF527A172EA89F00430807 /* AppDelegate.m */; };
+		FACF527D172EA89F00430807 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FACF527C172EA89F00430807 /* Default.png */; };
+		FACF527F172EA89F00430807 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FACF527E172EA89F00430807 /* Default@2x.png */; };
+		FACF5281172EA89F00430807 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FACF5280172EA89F00430807 /* Default-568h@2x.png */; };
+		FACF5284172EA89F00430807 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF5283172EA89F00430807 /* ViewController.m */; };
+		FACF5287172EA89F00430807 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACF5285172EA89F00430807 /* ViewController_iPhone.xib */; };
+		FACF528A172EA89F00430807 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FACF5288172EA89F00430807 /* ViewController_iPad.xib */; };
+		FACF5295172EB4A700430807 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACF5294172EB4A700430807 /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA6715611A07810100074D8B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FA8575C2176A3F3C005C3BC3 /* test.sunvox */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.sunvox; path = ../../../resources/test.sunvox; sourceTree = "<group>"; };
+		FA9436E3172EB9330075AB4C /* sunvox.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = sunvox.a; path = ../sunvox.a; sourceTree = "<group>"; };
+		FA9436E5172EB93B0075AB4C /* sunvox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sunvox.h; path = ../../headers/sunvox.h; sourceTree = "<group>"; };
+		FACF5267172EA89F00430807 /* SunVox Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SunVox Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACF526A172EA89F00430807 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FACF526C172EA89F00430807 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FACF526E172EA89F00430807 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FACF5272172EA89F00430807 /* SunVox Player-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SunVox Player-Info.plist"; sourceTree = "<group>"; };
+		FACF5274172EA89F00430807 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FACF5276172EA89F00430807 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FACF5278172EA89F00430807 /* SunVox Player-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SunVox Player-Prefix.pch"; sourceTree = "<group>"; };
+		FACF5279172EA89F00430807 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FACF527A172EA89F00430807 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FACF527C172EA89F00430807 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FACF527E172EA89F00430807 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		FACF5280172EA89F00430807 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FACF5282172EA89F00430807 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FACF5283172EA89F00430807 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FACF5286172EA89F00430807 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		FACF5289172EA89F00430807 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		FACF5294172EB4A700430807 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FACF5264172EA89F00430807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6715621A07810100074D8B /* AVFoundation.framework in Frameworks */,
+				FACF5295172EB4A700430807 /* AudioToolbox.framework in Frameworks */,
+				FACF526B172EA89F00430807 /* UIKit.framework in Frameworks */,
+				FACF526D172EA89F00430807 /* Foundation.framework in Frameworks */,
+				FACF526F172EA89F00430807 /* CoreGraphics.framework in Frameworks */,
+				FA9436E4172EB9330075AB4C /* sunvox.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FACF525E172EA89F00430807 = {
+			isa = PBXGroup;
+			children = (
+				FACF5290172EA8CC00430807 /* SunVox Library */,
+				FACF5270172EA89F00430807 /* SunVox Player */,
+				FACF5269172EA89F00430807 /* Frameworks */,
+				FACF5268172EA89F00430807 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FACF5268172EA89F00430807 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FACF5267172EA89F00430807 /* SunVox Player.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FACF5269172EA89F00430807 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA6715611A07810100074D8B /* AVFoundation.framework */,
+				FACF5294172EB4A700430807 /* AudioToolbox.framework */,
+				FACF526A172EA89F00430807 /* UIKit.framework */,
+				FACF526C172EA89F00430807 /* Foundation.framework */,
+				FACF526E172EA89F00430807 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FACF5270172EA89F00430807 /* SunVox Player */ = {
+			isa = PBXGroup;
+			children = (
+				FA8575C2176A3F3C005C3BC3 /* test.sunvox */,
+				FACF5279172EA89F00430807 /* AppDelegate.h */,
+				FACF527A172EA89F00430807 /* AppDelegate.m */,
+				FACF5282172EA89F00430807 /* ViewController.h */,
+				FACF5283172EA89F00430807 /* ViewController.m */,
+				FACF5285172EA89F00430807 /* ViewController_iPhone.xib */,
+				FACF5288172EA89F00430807 /* ViewController_iPad.xib */,
+				FACF5271172EA89F00430807 /* Supporting Files */,
+			);
+			path = "SunVox Player";
+			sourceTree = "<group>";
+		};
+		FACF5271172EA89F00430807 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FACF5272172EA89F00430807 /* SunVox Player-Info.plist */,
+				FACF5273172EA89F00430807 /* InfoPlist.strings */,
+				FACF5276172EA89F00430807 /* main.m */,
+				FACF5278172EA89F00430807 /* SunVox Player-Prefix.pch */,
+				FACF527C172EA89F00430807 /* Default.png */,
+				FACF527E172EA89F00430807 /* Default@2x.png */,
+				FACF5280172EA89F00430807 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FACF5290172EA8CC00430807 /* SunVox Library */ = {
+			isa = PBXGroup;
+			children = (
+				FA9436E5172EB93B0075AB4C /* sunvox.h */,
+				FA9436E3172EB9330075AB4C /* sunvox.a */,
+			);
+			name = "SunVox Library";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FACF5266172EA89F00430807 /* SunVox Player */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACF528D172EA89F00430807 /* Build configuration list for PBXNativeTarget "SunVox Player" */;
+			buildPhases = (
+				FACF5263172EA89F00430807 /* Sources */,
+				FACF5264172EA89F00430807 /* Frameworks */,
+				FACF5265172EA89F00430807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SunVox Player";
+			productName = "SunVox Player";
+			productReference = FACF5267172EA89F00430807 /* SunVox Player.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FACF525F172EA89F00430807 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Alexander Zolotov";
+				TargetAttributes = {
+					FACF5266172EA89F00430807 = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = FACF5262172EA89F00430807 /* Build configuration list for PBXProject "SunVox Player" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = FACF525E172EA89F00430807;
+			productRefGroup = FACF5268172EA89F00430807 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FACF5266172EA89F00430807 /* SunVox Player */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FACF5265172EA89F00430807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACF5275172EA89F00430807 /* InfoPlist.strings in Resources */,
+				FACF527D172EA89F00430807 /* Default.png in Resources */,
+				FACF527F172EA89F00430807 /* Default@2x.png in Resources */,
+				FACF5281172EA89F00430807 /* Default-568h@2x.png in Resources */,
+				FACF5287172EA89F00430807 /* ViewController_iPhone.xib in Resources */,
+				FACF528A172EA89F00430807 /* ViewController_iPad.xib in Resources */,
+				FA8575C3176A3F3C005C3BC3 /* test.sunvox in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FACF5263172EA89F00430807 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACF5277172EA89F00430807 /* main.m in Sources */,
+				FACF527B172EA89F00430807 /* AppDelegate.m in Sources */,
+				FACF5284172EA89F00430807 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FACF5273172EA89F00430807 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACF5274172EA89F00430807 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FACF5285172EA89F00430807 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACF5286172EA89F00430807 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		FACF5288172EA89F00430807 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACF5289172EA89F00430807 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FACF528B172EA89F00430807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = ../../headers;
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Debug;
+		};
+		FACF528C172EA89F00430807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = ../../headers;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Release;
+		};
+		FACF528E172EA89F00430807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alexander Zolotov (A2FDM86ZBS)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SunVox Player/SunVox Player-Prefix.pch";
+				INFOPLIST_FILE = "SunVox Player/SunVox Player-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../..\"",
+					"\"$(SRCROOT)/..\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nightradio.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Alex Dev Profile";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FACF528F172EA89F00430807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alexander Zolotov (A2FDM86ZBS)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SunVox Player/SunVox Player-Prefix.pch";
+				INFOPLIST_FILE = "SunVox Player/SunVox Player-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../..\"",
+					"\"$(SRCROOT)/..\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "nightradio.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Alex Dev Profile";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FACF5262172EA89F00430807 /* Build configuration list for PBXProject "SunVox Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACF528B172EA89F00430807 /* Debug */,
+				FACF528C172EA89F00430807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACF528D172EA89F00430807 /* Build configuration list for PBXNativeTarget "SunVox Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACF528E172EA89F00430807 /* Debug */,
+				FACF528F172EA89F00430807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FACF525F172EA89F00430807 /* Project object */;
+}

@@ -17,11 +17,15 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZEwF7XczArZe5MAQ+VJ6E95vids=
+			meIEr+da7K52ouWuRIXt9dByzeU=
 			</data>
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Resources/README</key>
+		<data>
+		EPc/pg47trcexBRDa4Jo22rLXVA=
+		</data>
 		<key>Resources/sunvox_logo.icns</key>
 		<data>
 		0Gg4H72ElX/7FwVufNb1GsMPFI0=
@@ -46,14 +50,25 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZEwF7XczArZe5MAQ+VJ6E95vids=
+			meIEr+da7K52ouWuRIXt9dByzeU=
 			</data>
 			<key>hash2</key>
 			<data>
-			acnOoULpBxAUUGfHpaLDqH2qIoDCtrWsKBpnH1pEJRI=
+			VagjnuTOkOZiNdtqce3utGH1rzOj040kx7yXPwdoXYY=
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>Resources/README</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EPc/pg47trcexBRDa4Jo22rLXVA=
+			</data>
+			<key>hash2</key>
+			<data>
+			FZWh3AY+TItKgsEOyRrFJDMmPvGGxgp1TnxbVdCe6y4=
+			</data>
 		</dict>
 		<key>Resources/sunvox_logo.icns</key>
 		<dict>
@@ -70,11 +85,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zsgWi/0tYi1Q2hCOL5vTSTTamqg=
+			4k3FoJqx3G7uPjkuigGF9PpRcWI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZdP/Bwi6aQyvgXubxBgKKj82H5OrDGVX0kWz+uKItq4=
+			kCOLW3cDbYJ5ziXM+OZBQv6wYEDX4NQnpLlu+pTIwa8=
 			</data>
 		</dict>
 	</dict>

@@ -1,0 +1,72 @@
+set_pixel_size( WINDOW_XSIZE / 480 )
+resize( get_screen(), WINDOW_XSIZE, WINDOW_YSIZE )
+
+sv = sv_new()
+
+version_major = ( SV_VERSION >> 24 ) & 255;
+version_minor1 = ( SV_VERSION >> 16 ) & 255;
+version_minor2 = ( SV_VERSION >> 8 ) & 255;
+version_minor3 = SV_VERSION & 255;
+logf( "SunVox version: %d.%d.%d.%d\n", version_major, version_minor1, version_minor2, version_minor3 )
+
+g_module_scope0 = new( 256, 1, INT16 )
+g_module_scope1 = new( 256, 1, INT16 )
+
+//load SunVox-compatible file (sunvox, xm, mod, midi):
+while 1
+{
+    if sv_load( sv, "../../resources/test.sunvox" ) == 0 { break }
+    if sv_load( sv, "../sound_files/test.sunvox" ) == 0 { break }
+    break
+}
+
+m = sv_find_module( sv, "Kicker" )
+logf( "Module %d:\n", m )
+logf( "  name: %s\n", sv_get_module_name( sv, m ) )
+logf( "  number of controllers: %d\n", sv_get_number_of_module_ctls( sv, m ) )
+logf( "  ctl0 name: %s\n", sv_get_module_ctl_name( sv, m, 0 ) )
+logf( "  ctl0 value: %d\n", sv_get_module_ctl_value( sv, m, 0 ) )
+clear( GREEN ) frame()
+sv_send_event( sv, 0, 64, 128, m+1, 0, 0 )
+sleep( 500 )
+clear( BLUE ) frame()
+sv_send_event( sv, 0, 64, 128, m+1, 0, 0 )
+sleep( 500 )
+
+sv_play( sv, 0 )
+
+while( 1 )
+{
+    transp( 100 )
+    clear( BLACK )
+    transp( 256 )
+
+    y = -64
+
+    size1 = sv_get_module_scope( sv, 0, 0, g_module_scope0, 256 )
+    size2 = sv_get_module_scope( sv, 1, 0, g_module_scope1, 256 )
+
+    ts = "" sprintf( ts, "SunVox Player\nCurrent line: %d\n", sv_get_current_line( sv ) )
+    print( ts, 0, y )
+
+    y1 = y + 64
+    y2 = y + 64 * 2
+    x = 0 while x < 256
+    {
+	c = get_blend( RED, YELLOW, x )
+	y = ( g_module_scope0[ x ] >> 8 ) + y1
+        dot( x - 128, y, c )
+        dot( x - 128, y+1, c )
+        y = ( g_module_scope1[ x ] >> 8 ) + y2
+        dot( x - 128, y+1, c )
+        x + 1
+    }
+
+    print( "Module 0 Scope", 0, y1 )
+    print( "Module 1 Scope", 0, y2 )
+
+    while( get_event() ) { if EVT[ EVT_TYPE ] == EVT_QUIT { break2 } }
+    frame()
+}
+
+sv_remove( sv )

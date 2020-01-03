@@ -1,0 +1,117 @@
+set_pixel_size( WINDOW_XSIZE / 240 )
+resize( get_screen(), WINDOW_XSIZE, WINDOW_YSIZE )
+scr = get_screen()
+xsize = get_xsize( scr )
+ysize = get_ysize( scr )
+
+sv = sv_new() //create a new SunVox sound stream
+
+sv_lock( sv )
+mod_gen = sv_new_module( sv, "Analog generator" )
+mod_reverb = sv_new_module( sv, "Reverb" )
+sv_connect_module( sv, mod_gen, mod_reverb ) //Analog generator -> Reverb
+sv_connect_module( sv, mod_reverb, 0 ) //Reverb -> Output (always module 0)
+sv_unlock( sv )
+
+kbd_map = new( 256, 1, INT8 )
+kbd_tracks = new( 256, 1, INT8 ) //kbd_tracks[ KEY_CODE ] = track number OR -1
+clean( kbd_map, -1 )
+clean( kbd_tracks, -1 )
+base_note = 12 * 4
+kbd_map[ 'z' ] = base_note
+kbd_map[ 's' ] = base_note + 1
+kbd_map[ 'x' ] = base_note + 2
+kbd_map[ 'd' ] = base_note + 3
+kbd_map[ 'c' ] = base_note + 4
+kbd_map[ 'v' ] = base_note + 5
+kbd_map[ 'g' ] = base_note + 6
+kbd_map[ 'b' ] = base_note + 7
+kbd_map[ 'h' ] = base_note + 8
+kbd_map[ 'n' ] = base_note + 9
+kbd_map[ 'j' ] = base_note + 10
+kbd_map[ 'm' ] = base_note + 11
+kbd_map[ ',' ] = base_note + 12
+kbd_map[ 'l' ] = base_note + 13
+kbd_map[ '.' ] = base_note + 14
+kbd_map[ ';' ] = base_note + 15
+kbd_map[ '/' ] = base_note + 16
+base_note + 12
+kbd_map[ 'q' ] = base_note
+kbd_map[ '2' ] = base_note + 1
+kbd_map[ 'w' ] = base_note + 2
+kbd_map[ '3' ] = base_note + 3
+kbd_map[ 'e' ] = base_note + 4
+kbd_map[ 'r' ] = base_note + 5
+kbd_map[ '5' ] = base_note + 6
+kbd_map[ 't' ] = base_note + 7
+kbd_map[ '6' ] = base_note + 8
+kbd_map[ 'y' ] = base_note + 9
+kbd_map[ '7' ] = base_note + 10
+kbd_map[ 'u' ] = base_note + 11
+kbd_map[ 'i' ] = base_note + 12
+kbd_map[ '9' ] = base_note + 13
+kbd_map[ 'o' ] = base_note + 14
+kbd_map[ '0' ] = base_note + 15
+kbd_map[ 'p' ] = base_note + 16
+kbd_map[ '[' ] = base_note + 17
+kbd_map[ '=' ] = base_note + 18
+kbd_map[ ']' ] = base_note + 19
+
+track_bits = 0
+fn get_free_track()
+{
+    $i = 0 while $i < 31
+    {
+	if ( track_bits & ( 1 << $i ) ) == 0 { break }
+	$i + 1
+    }
+    ret( $i )
+}
+
+clear()
+print( "Press any keys" )
+
+while 1
+{
+    while( get_event() )
+    {
+	$evt_type = EVT[ EVT_TYPE ]
+	if $evt_type == EVT_QUIT { breakall }
+	if $evt_type == EVT_BUTTONDOWN || $evt_type == EVT_BUTTONUP
+	{
+	    $down = ( $evt_type == EVT_BUTTONDOWN )
+	    $key = EVT[ EVT_KEY ]
+	    $note = kbd_map[ $key ]
+	    if $note > 0
+	    {
+		if $down
+		{
+		    $track_num = kbd_tracks[ $key ]
+		    if $track_num < 0
+		    {
+			$track_num = get_free_track()
+			track_bits | ( 1 << $track_num )
+			kbd_tracks[ $key ] = $track_num
+
+			sv_send_event( sv, $track_num, $note + 1, 0, mod_gen + 1 )
+		    }
+		}
+		else
+		{
+		    $track_num = kbd_tracks[ $key ]
+		    if $track_num >= 0
+		    {
+			sv_send_event( sv, $track_num, NOTECMD_NOTE_OFF )
+
+			track_bits & ~( 1 << $track_num )
+			kbd_tracks[ $key ] = -1
+		    }
+		}
+	    }
+	}
+    }
+
+    frame()
+}
+
+sv_remove( sv ) //remove the SunVox stream

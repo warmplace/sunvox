@@ -1,0 +1,16 @@
+Starting with macOS Sierra (10.12), any application distributed outside the App
+Store runs from a randomized path. So the program can't correctly determine its
+home directory (where the app and all its files are located).
+
+Workarounds: (choose one)
+
+ * move the SunVox to some other folder (using the Finder only!), 
+   then move it back;
+
+ * open Terminal and enter the following command: 
+   xattr -r -d com.apple.quarantine "/PATH_TO_THE_APP/SunVox.app"; 
+   example: xattr -r -d com.apple.quarantine "~/Desktop/sunvox/sunvox/macos/SunVox.app";
+
+ * right click on the SunVox -> 
+   -> show package content -> Contents -> MacOS -> 
+   -> double click on sunvox;

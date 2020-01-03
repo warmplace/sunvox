@@ -1,0 +1,106 @@
+v1.9.5 ():
+* deprecated functions sv_get_sample_type() and sv_get_module_scope() have been removed;
+* updated sv_volume(): negative volume values will be ignored; return value = previous volume;
+* updated sv_pattern_mute(): negative values will be ignored; return value = previous state (1 - muted; 0 - unmuted);
+* new function: sv_get_time_map();
+* new function: sv_get_autostop();
+* new function: sv_get_sample_rate();
+* new function: sv_find_module() - find a module by name;
+* new function: sv_find_pattern() - find a pattern by name;
+* new function: sv_get_pattern_name();
+* new function: sv_get_module_finetune();
+* new function: sv_module_curve() - read/write the curve values of the specified module;
+* new function: sv_set_event_t() - set the time of events to be sent by sv_send_event();
+* new flags for sv_get_module_flags(): SV_MODULE_FLAG_MUTE / SOLO / BYPASS;
+* sunvox.h: new macro SV_GET_MODULE_FINETUNE( in_finetune, out_finetune, out_relative_note ) - use it to unpack the finetune and relative_note from sv_get_module_finetune();
+* sunvox.h: new macro SV_PITCH_TO_FREQUENCY( in_pitch ) - use it to get the frequency (in Hz) from the pitch (XXYY value for the NOTECMD_SET_PITCH cmd);
+* sunvox.h: new macro SV_FREQUENCY_TO_PITCH( in_freq ) - use it to get the pitch value (XXYY for the NOTECMD_SET_PITCH cmd) from the frequency (in Hz);
+* headers/sunvox.pixi has been removed, because the SunVox engine will be part of Pixilang 3.8; read more: examples/pixilang/readme.txt;
+* updated examples (examples/c and examples/pixilang);
+* bugs fixed.
+v1.9.4c Windows/Linux update (16 aug 2018):
+* SSSE3 is not required anymore.
+v1.9.4c macOS/iOS update (12 aug 2018):
+* fixed bug in XM/MOD loading code.
+v1.9.4c (3 aug 2018):
+* ported to JavaScript + WebAssembly;
+* updated API documentation in headers/sunvox.h;
+* Input module (microphone or line-in) is now supported (except the JS-version);
+* sunvox.h: new macro SV_GET_MODULE_XY( in_xy, out_x, out_y ) - use it to unpack the X and Y coordinates from sv_get_module_xy();
+* new function: sv_audio_callback2() - send some data to the Input module and receive the filtered data from the Output module;
+* new function: sv_update_input() - handle input ON/OFF requests to enable/disable input ports of the sound card (for example, after the Input module creation);
+* new functions: sv_load_module_from_memory(), sv_sampler_load_from_memory();
+* new function: sv_get_log() - get the latest messages from the log;
+* the first parameter of the sv_init() has been renamed to "const char* config" - use this string if you need some additional audio configuration; example: "buffer=1024|audiodriver=alsa|audiodevice=hw:0,0"; see more info in sunvox.h;
+* new example for Linux and macOS: test6.cpp (using SunVox as a filter for some user-generated signal);
+* deprecated functions: sv_get_sample_type(), sv_get_module_scope() (use sv_get_module_scope2() instead);
+* bugs fixed.
+v1.9.3 (21 nov 2017):
+* 64-bit Windows support (x86_64);
+* Lo-Fi versions (for old and slow computers) of library for x86 Linux and Windows;
+* Android sample project has been converted to the Android Studio format;
+* SDL dependency has been removed from the library (except the ARMEL (MAEMO) version);
+* bugs fixed.
+v1.9.2 (4 nov 2016):
+* changes from the final SunVox release;
+* bugs fixed.
+v1.9.2 BETA (23 oct 2016):
+* changes from SunVox 1.9.2;
+* support of additional Linux versions: arm64, Maemo, Raspberry Pi;
+* bugs fixed.
+v1.9.1 (9 jan 2016):
+* changes from SunVox 1.9.1 (new module Glide, etc.);
+* bugs fixed.
+v1.9 (19 jul 2015):
+* engine optimization;
+* bugs fixed.
+v1.8.1 (29 dec 2014):
+* bugs fixed.
+v1.8 (17 nov 2014):
+* 32bit sound on Android;
+* new function: sv_get_current_line2() - get current line number in fixed point format 27.5;
+* bugs fixed.
+v1.7.5b (25 jun 2014):
+* bugs fixed.
+v1.7.5 (1 jun 2014):
+* iOS: 64bit version;
+* iOS: engine is now optimized for true 32-bit sound on Apple A6 and higher CPUs;
+* new example for Linux and OSX: test5.cpp (SunVox audio export to the file);
+* bugs fixed.
+v1.7.4b (4 feb 2014):
+* MetaModule: number of user defined controllers has been increased to 27;
+* Delay: new controller "Delay units" has been added; possible values: sec/16384, ms, Hz, ticks, lines, lines/2, lines/3;
+* Delay: max delay length has been increased to 4 seconds;
+* bugs fixed.
+v1.7.4 (23 jan 2014):
+* engine optimization;
+* new module - Sound2Ctl; this module can convert the audio signal to the numeric value of any selected controller;
+* new module - MultiCtl; with this module you can control multiple controllers at once;
+* WaveShaper: new controller "DC filter" (DC Blocking Filter) has been added; enabled by default;
+* Amplifier: new controller "Absolute" has been added; enable it to apply "absolute value" filter to the signal;
+* DrumSynth is now supports Velocity Change commands;
+* bugs fixed.
+v1.7.3d (23 jul 2013):
+* new functions: sv_get_number_of_module_ctls(), sv_get_module_ctl_name(), sv_get_module_ctl_value().
+* bugs fixed.
+v1.7.3c (14 jun 2013):
+* new functions: sv_new_module(), sv_remove_module(), sv_connect_module(), sv_disconnect_module(), sv_load_module(), sv_sampler_load();
+* new examples for Linux and OSX: test3.cpp, test4.cpp;
+* bugs fixed.
+v1.7.3b (29 apr 2013):
+* added iOS sample project + iOS library;
+* added Android sample project + Android library for Java developers;
+* Android version is now compatible with JNI and with Native Activity;
+* new function: sv_get_module_scope2( int slot, int mod_num, int channel, signed short* read_buf, unsigned int samples_to_read ); use it instead of sv_get_module_scope();
+* bugs fixed.
+v1.7.3 (13 apr 2013):
+* new function: sv_load_from_memory( int slot, void* data, unsigned int data_size );
+* engine optimization;
+* bugs fixed.
+v1.7.3 BETA1 (24 dec 2012):
+* added Android version;
+* new functions: sv_lock_slot(), sv_unlock_slot(), sv_pattern_mute();
+* bugs fixed.
+v1.7.2b (22 sep 2012):
+* new functions for working with pattern data directly;
+* bugs fixed.
