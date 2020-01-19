@@ -1,3 +1,8 @@
+v1.9.5 BETA2 (18 jan 2020):
+* extended set of supported MIDI sync commands (slave mode): Start/Stop/Continue, MIDI Clock, Song Position Pointer;
+* Project properties: "Sync" settings allow you to specify the types of synchronization commands that the project accepts;
+* Preferences -> MIDI: "Sync source" - MIDI device for receiving synchronization commands;
+* bug fixes;
 v1.9.5 BETA1 (3 jan 2020):
 * Android 6+: USB MIDI support;
 * Android: arm64 and x86_64 support; Android 2.3 support has been dropped; now the minimum is 4.1;

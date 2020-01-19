@@ -1,6 +1,6 @@
 //
 // SunVox Library (modular synthesizer)
-// Copyright (c) 2008 - 2019, Alexander Zolotov <nightradio@gmail.com>, WarmPlace.ru
+// Copyright (c) 2008 - 2020, Alexander Zolotov <nightradio@gmail.com>, WarmPlace.ru
 //
 
 //
