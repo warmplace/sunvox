@@ -1,9 +1,0 @@
-You can freely use the SunVox library in your own products (even commercial ones).
-
-REQUIREMENT 1:
-The following text must be included in the documentation and/or other materials provided with your products:
-Powered by SunVox modular synthesizer
-Copyright (c) 2008 - 2020, Alexander Zolotov <nightradio@gmail.com>, WarmPlace.ru
-
-REQUIREMENT 2:
-All other TXT files (from this folder) must be included in the documentation too.

@@ -1,2 +1,0 @@
-cp ../../linux/lib_x86_64/sunvox.so ./
-make CFLAGS="-m64" LDFLAGS="-m64 -ldl -lm"
