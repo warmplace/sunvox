@@ -1,3 +1,7 @@
+v1.9.5c (6 feb 2020):
+* bug fixes.
+v1.9.5b (24 jan 2020):
+* iOS (AU): missing files added.
 v1.9.5 (23 jan 2020):
 * Android 6+: USB MIDI support;
 * Android: arm64 and x86_64 support; Android 2.3 support has been dropped; now the minimum is 4.1;
