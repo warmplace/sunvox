@@ -1,3 +1,35 @@
+v1.9.6 BETA (5 nov 2020):
+* iOS: SunVox Audio Unit (AUv3) can now be used as an effect (filter) inside other DAWs;
+* sound engine optimization;
+* new module - Pitch Detector for detecting the pitch of the incoming signal; the frequency and note will be displayed; notes will be sent to the module output; see example "pitch correction (automatic tuning)";
+* new module - ADSR envelope generator; see examples adsr, adsr2, adsr3;
+* new module - Ctl2Note for converting the controller value into a note (input - automation; output - notes); see example ctl2note;
+* Analog Generator: new waveform "harmonics" allows you to draw the harmonic distribution; but remember, if you turn on all 32 harmonics, then the module's performance will slow down 32 times compared to a pure sine generator; reduced polyphony and LQmono mode will slightly reduce the CPU load;
+* SpectraVoice: new harmonic types: overtones1+, overtones2+, overtones3+, overtones4+, metal;
+* LFO: new controller "Frequency scale" (in percents) - use it to slow or accelerate the oscillations;
+* LFO: new controller "Smooth transitions" - disable it to get hard transitions inside the waveform;
+* Generator, Kicker, SpectraVoice: increased resolution (accuracy) of Attack and Release controllers; (only if the base version is 1.9.6 or higher in the Project Properties);
+* Sound2Ctl: new option "Send only changed values";
+* MultiSynth: new option "Round the note (X-axis on curve3) to the nearest integer" (remove microtones);
+* MultiSynth: new option "Round the pitch (Y-axis on curve3) to the closest";
+* MultiSynth: new option "Record notes to the scale (curve3)"; see example "dynamic scale";
+* MultiSynth: new option "Output note = Output note - Input note + C5" (difference between output and input pitch);
+* MultiSynth: new option "Output port number = note % number of connected outputs"; (% is the modulo (remainder) operation); see example "drumkit 3 (multisynth)";
+* MultiSynth: new option "Output port number = polyphonic channel % number of connected outputs";
+* MultiSynth: new curve 3 describing the dependence of the output pitch on the input note;
+* MetaModule: new options "Receive notes from the keyboard" and "Don't receive notes from the keyboard";
+* MetaModule -> User defined controllers: edit buttons (add,delete,move up/down) have been added;
+* Pitch shifter: incoming notes change the value of controller 02.Pitch; the C5 note corresponds to zero;
+* Pitch shifter: new controller "Bypass if pitch=0" - play the original signal when the module does not change the pitch;
+* MetaModule, MultiSynth, Sound2Ctl, Sampler, Analog Generator: options can be accessed in the same way as controllers (see the exact numbers in the options list);
+* new MIDI IN mode for modules - "never" (never receive MIDI data);
+* improved popup menus: additional navigation keys (up,down,left,right,space,enter,escape); horizontal scroll if the menu does not fit on the screen; highlight of the current effect;
+* new pattern effects (column EE): 05 and 06 - raise / lower the pitch of the last note activated on the track (one semitone = 100 (256dec));
+* new keyboard shortcuts for the timeline: slice, mute, solo, unmute, set restart position, snap to grid (unassigned by default);
+* new folder "curves" (with curves for MultiSynth, MultiCtl and WaveShaper);
+* new modules in the instruments/ and effects/ folders;
+* new examples (SunVox Compo 2020.02 winners): Trackerbound - Alpha Ursae Minoris, Trackerbound - Silentium, manganoid - Lazy Thunder, SawZer - Phantom;
+* bug fixes.
 v1.9.5d (20 feb 2020):
 * bug fixes.
 v1.9.5c (6 feb 2020):

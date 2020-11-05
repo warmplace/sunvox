@@ -1,0 +1,217 @@
+/*
+  SUNVOX CURVE FILE GENERATOR
+  How to use:
+    1) change the SETUP section:
+       filename = "file name for your curve";
+       format = 
+         0 - MultiSynth curve1;
+         1 - MultiSynth curve2;
+         2 - MultiSynth curve3;
+         4 - WaveShaper;
+         5 - MultiCtl.
+       curve_function - here you can place you own function for the specified curve;
+    2) run this program using the Pixilang - https://warmplace.ru/soft/pixilang
+  License: public domain.
+*/
+
+// ########################################
+// ## SETUP ###############################
+// ########################################
+
+//Filename:
+filename = "sunvox_curve"
+
+//Format:
+format = 2
+if format == 0
+{
+    //MultiSynth curve1: X = note; Y = velocity (0..255)
+    type = INT8
+    items = 128
+    format_name = "MultiSynth Curve 1"
+    mod_name = "MultiSynth"
+}
+if format == 1
+{
+    //MultiSynth curve2: X = velocity; Y = velocity (0..255)
+    type = INT8
+    items = 257
+    format_name = "MultiSynth Curve 2"
+    mod_name = "MultiSynth"
+}
+if format == 2
+{
+    //MultiSynth curve3: X = note; Y = pitch (0..65535);
+    //pitch range: 0 ... 16384 (note0) ... 49152 (note128) ... 1; semitone = 256;
+    note0 = 16384
+    semitone = 256
+    not_normalized = 1
+    type = INT16
+    items = 128
+    format_name = "MultiSynth Curve 3"
+    mod_name = "MultiSynth"
+}
+if format == 3
+{
+    //WaveShaper: X = input; Y = output (0..65535)
+    type = INT16
+    items = 256
+    format_name = "WaveShaper"
+    mod_name = "WaveShaper"
+}
+if format == 4
+{
+    //MultiCtl: X = input; Y = output (0..32768)
+    type = INT16
+    items = 257
+    max = 32768
+    format_name = "MultiCtl"
+    mod_name = "MultiCtl"
+}
+
+//Function:
+//$x = 0...1.0  or  0,1,2,3 for MultiSynth Pitch Curve3
+//$y = 0...1.0  or  0...65535 for MultiSynth Pitch Curve3
+fn curve_function( $x ) 
+{
+    //Linear:
+    //$y = $x
+
+    //Linear with a limited number of levels:
+    //$levels = 8 ; $y = ( $x / (1/$levels) div 1 ) * (1/($levels-1))
+
+    //Sine variations:
+    //$y = sin( $x * M_PI * 2 ) / 2 + 0.5
+    //$y = sin( $x * M_PI )
+    //$y = -sin( $x * M_PI + M_PI/2 ) / 2 + 0.5
+
+    //Exponential curves:
+
+    //$y = pow( $x, 3 )
+    //$y = pow( $x, 6 ) //Exponential+
+    //$y = pow( $x, 0.5 ) //...
+
+    //Something between the linear and the exponential curve:
+    //$y = $x * $x + pow( $x, 3 ) * ( 1 - $x )
+
+    //Random:
+    //$y = rand() / 32768
+
+    //Pitch Curves:
+
+    //Normal scale:
+    //$y = note0 + semitone * $x
+
+    //Reverse scale:
+    //$y = note0 + semitone * ( 128 - $x )
+
+    //Diatonic scale (major):
+    //$y = note0 + semitone * remap_note( $x, "CCDDEFFGGAAB" )
+
+    //Harmonic major scale:
+    //$y = note0 + semitone * remap_note( $x, "CCDDEFFGgggB" )
+
+    //Melodic major scale:
+    //$y = note0 + semitone * remap_note( $x, "CCDDEFFGggaa" )
+
+    //Double harmonic major scale:
+    //$y = note0 + semitone * remap_note( $x, "CcccEFFGgggB" )
+
+    //Minor scale:
+    //$y = note0 + semitone * remap_note( $x, "CCDddFFGggaa" )
+
+    //Whole tone scale (six-note)
+    //$y = note0 + semitone * ( $x div 2 * 2 )
+
+    //Minor pentatonic:
+    //$y = note0 + semitone * remap_note( $x, "CCddFFFGGaaa" )
+
+    //Major pentatonic:
+    //$y = note0 + semitone * remap_note( $x, "CCDDEEEGGAAA" )
+
+    ret( $y )
+}
+
+// ########################################
+// ## SETUP COMPLETE ######################
+// ########################################
+
+set_pixel_size( WINDOW_XSIZE / 480 )
+resize( get_screen(), WINDOW_XSIZE, WINDOW_YSIZE )
+scr = get_screen()
+xsize = get_xsize( scr )
+ysize = get_ysize( scr )
+
+clear( BLACK )
+curve = new( items, 1, type )
+clean( curve )
+if max == 0 
+{
+    if type == INT8 { max = 255 }
+    if type == INT16 { max = 65535 }
+}
+i = 0 while i < items
+{
+    if not_normalized
+    {
+	v = curve_function( i )
+	if v < 0 { v = 0 }
+	if v > max { v = max }
+    }
+    else
+    {
+	v = curve_function( i / ( items - 1 ) )
+	if v < 0 { v = 0 }
+	if v > 1 { v = 1 }
+	if type == INT8 { v * max }
+	if type == INT16 { v * max }
+    }
+    logf( "%d: %d\n", i, v )
+    curve[ i ] = v
+    x = i / items * xsize - xsize / 2
+    y = ( -v / max + 0.5 ) * ysize
+    if i > 0
+    {
+	fbox( prev_x + xsize/items/2, y, x - prev_x + 1, ysize * 2, #404040 )
+	fbox( prev_x + xsize/items/2, y, x - prev_x + 1, 1, #808080 )
+    }
+    prev_x = x
+    i + 1
+}
+save( curve, filename, FORMAT_RAW )
+
+ts=""
+sprintf( ts, "File %s just generated.\nNow you can load it in SunVox\n(%s -> LOAD)", filename, mod_name )
+print( ts )
+
+while 1
+{
+    frame( 100 )
+    while get_event() { if EVT[ EVT_TYPE ] == EVT_QUIT { halt } }
+}
+
+fn remap_note( $n, $notes )
+{
+    $len = strlen( $notes )
+    $nn = $n % $len
+    $oct = $n div $len
+    $c = $notes[ $nn ]
+    while 1
+    {
+	if $c == 'C' { $c = 0 break }
+	if $c == 'c' { $c = 1 break }
+	if $c == 'D' { $c = 2 break }
+	if $c == 'd' { $c = 3 break }
+	if $c == 'E' { $c = 4 break }
+	if $c == 'F' { $c = 5 break }
+	if $c == 'f' { $c = 6 break }
+	if $c == 'G' { $c = 7 break }
+	if $c == 'g' { $c = 8 break }
+	if $c == 'A' { $c = 9 break }
+	if $c == 'a' { $c = 10 break }
+	if $c == 'B' { $c = 11 break }
+	break
+    }
+    ret( $oct * $len + $c )
+}
+//normal scale: CcDdEFfGgAaB
