@@ -75,7 +75,7 @@ if format == 4
 fn curve_function( $x ) 
 {
     //Linear:
-    //$y = $x
+    $y = $x
 
     //Linear with a limited number of levels:
     //$levels = 8 ; $y = ( $x / (1/$levels) div 1 ) * (1/($levels-1))
@@ -84,6 +84,7 @@ fn curve_function( $x )
     //$y = sin( $x * M_PI * 2 ) / 2 + 0.5
     //$y = sin( $x * M_PI )
     //$y = -sin( $x * M_PI + M_PI/2 ) / 2 + 0.5
+
 
     //Exponential curves:
 
@@ -96,6 +97,7 @@ fn curve_function( $x )
 
     //Random:
     //$y = rand() / 32768
+
 
     //Pitch Curves:
 
@@ -128,6 +130,28 @@ fn curve_function( $x )
 
     //Major pentatonic:
     //$y = note0 + semitone * remap_note( $x, "CCDDEEEGGAAA" )
+
+    //Custom tuning (you can set the offset in cents):
+    /*
+    $y = note0 + semitone * tuning_cents_offset( $x,
+        //example: Standard Just (1529)
+        15.64, //C
+        -13.69, //c
+        -1.95, //D
+        31.28, //d
+        1.96, //E
+        13.69, //F
+	-15.64, //f
+        17.6, //G
+        -11.73, //g
+        0, //A
+        11.73, //a
+        3.91 //B
+    )
+    */
+
+    //Tuning from the file with a list of frequencies (in Hz, frequency per line):
+    //if freq_list <= 0 { freq_list = load_list( "freq_series.txt" ) } ; $y = freq_to_pitch( freq_list[ $x ] )
 
     ret( $y )
 }
@@ -215,3 +239,53 @@ fn remap_note( $n, $notes )
     ret( $oct * $len + $c )
 }
 //normal scale: CcDdEFfGgAaB
+
+fn tuning_cents_offset( $n, $zero,$one,$two,$three,$four,$five,$six,$seven,$eight,$nign,$ten,$eleven )
+{
+    $oct_len = 12
+    $nn = $n % $oct_len
+    $oct = $n div $oct_len
+    while 1
+    {
+        if $nn == 0 { $add = $2 break }
+        if $nn == 1 { $add = $3 break }
+        if $nn == 2 { $add = $4 break }
+        if $nn == 3 { $add = $5 break }
+        if $nn == 4 { $add = $6 break }
+        if $nn == 5 { $add = $7 break }
+        if $nn == 6 { $add = $8 break }
+        if $nn == 7 { $add = $9 break }
+        if $nn == 8 { $add = $10 break }
+        if $nn == 9 { $add = $11 break }
+        if $nn == 10 { $add = $12 break }
+        if $nn == 11 { $add = $13 break }
+        break
+    }
+    ret( $oct * $oct_len + $nn + $add/100 )
+}
+
+fn load_list( $fname )
+{
+    $f = fopen( $fname, "rb" )
+    if $f == 0 { ret( -1 ) }
+    $ts = new( 256, 1, INT8 )
+    $list = new( 1024, 1, FLOAT )
+    $list_size = 0
+    while 1
+    {
+	$len = fgets( $ts, 256, $f )
+	if $len <= 0 { break }
+	$list[ $list_size ] = str2num( $ts )
+	$list_size + 1
+    }
+    if $list_size == 0 { remove( $list ) $list = -1 }
+    resize( $list, $list_size, 1, FLOAT )
+    remove( $ts )
+    fclose( $f )
+    ret( $list )
+}
+
+fn freq_to_pitch( $freq ) //from frequency (in Hz) to pitch (MultiSynth Curve3):
+{
+    ret( log2( $freq / 16.333984375 ) * 3072 + 16384 )
+}

@@ -1,4 +1,4 @@
-v1.9.6 BETA (5 nov 2020):
+v1.9.6 BETA2 (11 nov 2020):
 * iOS: SunVox Audio Unit (AUv3) can now be used as an effect (filter) inside other DAWs;
 * sound engine optimization;
 * new module - Pitch Detector for detecting the pitch of the incoming signal; the frequency and note will be displayed; notes will be sent to the module output; see example "pitch correction (automatic tuning)";
