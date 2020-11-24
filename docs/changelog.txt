@@ -1,4 +1,4 @@
-v1.9.6 BETA2 (11 nov 2020):
+v1.9.6 (24 nov 2020):
 * iOS: SunVox Audio Unit (AUv3) can now be used as an effect (filter) inside other DAWs;
 * sound engine optimization;
 * new module - Pitch Detector for detecting the pitch of the incoming signal; the frequency and note will be displayed; notes will be sent to the module output; see example "pitch correction (automatic tuning)";
@@ -24,7 +24,7 @@ v1.9.6 BETA2 (11 nov 2020):
 * MetaModule, MultiSynth, Sound2Ctl, Sampler, Analog Generator: options can be accessed in the same way as controllers (see the exact numbers in the options list);
 * new MIDI IN mode for modules - "never" (never receive MIDI data);
 * improved popup menus: additional navigation keys (up,down,left,right,space,enter,escape); horizontal scroll if the menu does not fit on the screen; highlight of the current effect;
-* new pattern effects (column EE): 05 and 06 - raise / lower the pitch of the last note activated on the track (one semitone = 100 (256dec));
+* new pattern effects (column EE): 05 and 06 - pitch bend up/down (one semitone = 100 (256dec));
 * new keyboard shortcuts for the timeline: slice, mute, solo, unmute, set restart position, snap to grid (unassigned by default);
 * new folder "curves" (with curves for MultiSynth, MultiCtl and WaveShaper);
 * new modules in the instruments/ and effects/ folders;
