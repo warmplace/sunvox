@@ -1,3 +1,5 @@
+v1.9.6b (25 nov 2020):
+* bug fixes.
 v1.9.6 (24 nov 2020):
 * iOS: SunVox Audio Unit (AUv3) can now be used as an effect (filter) inside other DAWs;
 * sound engine optimization;
