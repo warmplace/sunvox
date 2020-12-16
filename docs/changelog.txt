@@ -1,3 +1,5 @@
+v1.9.6c (15 dec 2020):
+* bug fixes.
 v1.9.6b (25 nov 2020):
 * bug fixes.
 v1.9.6 (24 nov 2020):
