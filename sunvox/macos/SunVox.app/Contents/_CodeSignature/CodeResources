@@ -13,11 +13,20 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Resources/English.lproj/MainMenu.nib</key>
+		<key>Resources/English.lproj/MainMenu.nib/keyedobjects-101300.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Mvi7sJDHd1oQzkQE6YMJlGyubcE=
+			zTfpXJLmOi/+n3Xw0OuG+bvNSrU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/English.lproj/MainMenu.nib/keyedobjects.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4MR9AQ0ZqDYsBgLw32EK524rH9A=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -46,15 +55,28 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Resources/English.lproj/MainMenu.nib</key>
+		<key>Resources/English.lproj/MainMenu.nib/keyedobjects-101300.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Mvi7sJDHd1oQzkQE6YMJlGyubcE=
+			zTfpXJLmOi/+n3Xw0OuG+bvNSrU=
 			</data>
 			<key>hash2</key>
 			<data>
-			sDceN7rj3izMfa3V+gC2IT6IklESKmHILAsOkpJzxyg=
+			uFrtZqBmfW4PAGzECqhtOjaTfQDdvc84sJ2Op8k747k=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/English.lproj/MainMenu.nib/keyedobjects.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4MR9AQ0ZqDYsBgLw32EK524rH9A=
+			</data>
+			<key>hash2</key>
+			<data>
+			ttuiKdT5MvA+mN/s9UgNJJUEiT6p3ZACGbe37GjsbQA=
 			</data>
 			<key>optional</key>
 			<true/>

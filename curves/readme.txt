@@ -11,6 +11,7 @@ How to use the generator:
       4 - WaveShaper;
       5 - MultiCtl.
     curve_function() - here you can place you own function for the specified curve;
+                       (or just uncomment one of the available code examples inside the function)
  3) download Pixilang - https://warmplace.ru/soft/pixilang
  4) launch Pixilang, choose sunvox_curve_generator.pixi for execution;
  5) the new curve file will be created in the same folder.

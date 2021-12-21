@@ -70,8 +70,8 @@ if format == 4
 }
 
 //Function:
-//$x = 0...1.0  or  0,1,2,3 for MultiSynth Pitch Curve3
-//$y = 0...1.0  or  0...65535 for MultiSynth Pitch Curve3
+//$x = 0...1.0  or  0,1,2,3...127 (note) for MultiSynth Pitch Curve3
+//$y = 0...1.0  or  0...65535 (pitch) for MultiSynth Pitch Curve3
 fn curve_function( $x ) 
 {
     //Linear:
@@ -85,6 +85,9 @@ fn curve_function( $x )
     //$y = sin( $x * M_PI )
     //$y = -sin( $x * M_PI + M_PI/2 ) / 2 + 0.5
 
+    //Random:
+    //$y = rand() / 32768
+
 
     //Exponential curves:
 
@@ -95,8 +98,6 @@ fn curve_function( $x )
     //Something between the linear and the exponential curve:
     //$y = $x * $x + pow( $x, 3 ) * ( 1 - $x )
 
-    //Random:
-    //$y = rand() / 32768
 
 
     //Pitch Curves:
@@ -152,6 +153,14 @@ fn curve_function( $x )
 
     //Tuning from the file with a list of frequencies (in Hz, frequency per line):
     //if freq_list <= 0 { freq_list = load_list( "freq_series.txt" ) } ; $y = freq_to_pitch( freq_list[ $x ] )
+
+    //Equal temperament (ET):
+    /*
+    $tones_per_octave = 96;
+    $note_shift = 0 //the note coinciding with C0 (note 0) in the default 12-TET scale
+    $pitch_shift = semitone * 12 * 4;
+    $y = note0 + $pitch_shift + semitone * 12 / $tones_per_octave * ( $x - $note_shift )
+    */
 
     ret( $y )
 }

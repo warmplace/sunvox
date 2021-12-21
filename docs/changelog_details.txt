@@ -1,0 +1,37 @@
+v2.0
+
+=======
+CONTROL
+=======
+
+There are two modes in the main SunVox windows (pattern, modules, timeline): selection and navigation.
+Left mouse button = selection or navigation (depending on the mode).
+Middle mouse button = navigation.
+The default on desktops is selection.
+Navigation is the default on mobile devices.
+If Main menu -> Preferences -> Interface -> Control type = "Fingers", then SunVox will work like on a mobile device.
+
+What if you need navigation but there is no middle mouse button?
+macOS:
+  * CMD + left button;
+  * or install some application to emulate the middle button, for example Middle.
+All systems:
+  * switch between editing modes using the button with a selection rectangle;
+  * if there is no such button, uncomment one of the show_sel_btn options in sunvox_config.ini;
+
+General rules for all devices:
+  * pressing with the stylus or finger is equivalent to pressing the left mouse button;
+  * double click in an empty area - create a new object (if possible);
+  * double-clicking on an object opens its properties (if possible);
+  * scroll wheel - zoom in or scroll up/down;
+  * right mouse button = menu;
+  * SHIFT + left button = connect modules or disable snapping to the timeline grid;
+  * CTRL + left button = multiple selection mode (previous selection is not cleared);
+
+===========
+SUPERTRACKS
+===========
+
+Since v2.0, the timeline can work in an alternative supertrack mode (do not confuse with the tracks that are inside the pattern :)
+Patterns on one supertrack control the same tracks: one pattern can complement the tracks of another.
+A new pattern option "don't turn off notes at the end of the pattern" has been added: one short pattern can turn notes on, and another (on the same supertrack) turn it off.
