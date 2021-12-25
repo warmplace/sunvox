@@ -1,8 +1,13 @@
+v2.0 BETA2 (24 dec 2021):
+* module and timeline editor: "Select All" has been changed to "Select/Unselect All";
+* FFT: "Volume" ctl;
+* Delay: new "Delay units" values: sec/44100, sec/48000;
+* bug fixes;
 v2.0 BETA1 (21 dec 2021):
 * iOS 11+: SunVox Audio Unit (AUv3) can now send MIDI notes and MIDI CC to other AU modules;
 * iOS 13.4+: full USB/Bluetooth keyboard support (like on desktops);
 * multiple module selection (see changelog_details.txt) + ability to save several selected modules to a sunvox file;
-* supertracks (see changelog_details.txt and simple_examples/supertracks.sunvox);
+* timeline: supertracks (see changelog_details.txt and simple_examples/supertracks.sunvox);
 * improved import of old tracker formats (XM and MOD);
 * new module - FMX: 5-operator Frequency Modulation synth;
 * new module - FFT frequency transformator;
