@@ -1,3 +1,10 @@
+v2.0 BETA3 (10 jan 2022):
+* Delay: the Feedback resolution has been increased to 32768;
+* Delay: new "Delay unit" value: sample; try to avoid using this as the sound will depend on the sampling rate in the SunVox settings;
+* Analog Generator: new controller "Osc2 phase" - starting phase of the additional oscillator;
+* Analog Generator: new option "Increased frequency computation accuracy";
+* FMX: new Modulation type - "phase+"; the same as phase modulation, but the envelope will be applied to self-modulation and feedback;
+* bug fixes;
 v2.0 BETA2 (24 dec 2021):
 * module and timeline editor: "Select All" has been changed to "Select/Unselect All";
 * FFT: "Volume" ctl;

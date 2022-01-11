@@ -16,6 +16,7 @@ macOS:
   * CMD + left button;
   * or install some application to emulate the middle button, for example Middle.
 All systems:
+  * there is middle button emulation on some touchpads: using three-finger click or by simultaneously pressing the left and right buttons (see the system touchpad settings);
   * switch between editing modes using the button with a selection rectangle;
   * if there is no such button, uncomment one of the show_sel_btn options in sunvox_config.ini;
 
@@ -35,3 +36,24 @@ SUPERTRACKS
 Since v2.0, the timeline can work in an alternative supertrack mode (do not confuse with the tracks that are inside the pattern :)
 Patterns on one supertrack control the same tracks: one pattern can complement the tracks of another.
 A new pattern option "don't turn off notes at the end of the pattern" has been added: one short pattern can turn notes on, and another (on the same supertrack) turn it off.
+
+===============
+MAKE METAMODULE
+===============
+
+The selected modules can be packed into one MetaModule (see the menu of the module editor).
+But the modules must conform to the following topology: TT -> SEL( IN -> ... ) -> R
+TT - signal sources (optional) outside the selection;
+SEL() - selected modules to be packed;
+IN - receiving module (optional) inside the selection; at most one;
+... - any modules inside the selection;
+R - receiver (optional) that receives signals from modules within the selection; at most one.
+
+=======================
+DIALOG WINDOW SHORTCUTS
+=======================
+
+Y or ENTER = first button on the left;
+N = last button on the right;
+ESC = cancel;
+1...9 = buttons from left to right;
