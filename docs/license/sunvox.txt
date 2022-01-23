@@ -1,6 +1,6 @@
 SunVox
 Modular Music Studio
-Copyright (c) 2008 - 2021, Alexander Zolotov <nightradio@gmail.com>
+Copyright (c) 2008 - 2022, Alexander Zolotov <nightradio@gmail.com>
 WarmPlace.ru
 
 This is freeware, so you may use this software without charge.

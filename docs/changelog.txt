@@ -1,16 +1,4 @@
-v2.0 BETA3 (10 jan 2022):
-* Delay: the Feedback resolution has been increased to 32768;
-* Delay: new "Delay unit" value: sample; try to avoid using this as the sound will depend on the sampling rate in the SunVox settings;
-* Analog Generator: new controller "Osc2 phase" - starting phase of the additional oscillator;
-* Analog Generator: new option "Increased frequency computation accuracy";
-* FMX: new Modulation type - "phase+"; the same as phase modulation, but the envelope will be applied to self-modulation and feedback;
-* bug fixes;
-v2.0 BETA2 (24 dec 2021):
-* module and timeline editor: "Select All" has been changed to "Select/Unselect All";
-* FFT: "Volume" ctl;
-* Delay: new "Delay units" values: sec/44100, sec/48000;
-* bug fixes;
-v2.0 BETA1 (21 dec 2021):
+v2.0 (23 jan 2022):
 * iOS 11+: SunVox Audio Unit (AUv3) can now send MIDI notes and MIDI CC to other AU modules;
 * iOS 13.4+: full USB/Bluetooth keyboard support (like on desktops);
 * multiple module selection (see changelog_details.txt) + ability to save several selected modules to a sunvox file;
@@ -20,6 +8,7 @@ v2.0 BETA1 (21 dec 2021):
 * new module - FFT frequency transformator;
 * sound engine optimization;
 * the name of the current file is now visible in the title bar of the app window;
+* module and timeline editor: "Select All" has been changed to "Select/Unselect All";
 * timeline menu: new option "Vertical mode"; +shortcut
 * timeline menu: new functions "Load" and "Save" to load/save selected patterns from/to a sunvox file;
 * timeline menu: new function "Detach" to convert the clones to the normal patterns; +shortcut
@@ -35,15 +24,19 @@ v2.0 BETA1 (21 dec 2021):
 * Amplifier: new controller "Bipolar DC Offset";
 * Analog Generator: the "Freq2" controller has been ranamed to "Osc2" (pitch deviation of the additional oscillator);
 * Analog Generator: new controller "Osc2 volume" - additional oscillator volume;
-* Analog Generator: new controller "Osc2 mode" - mixing mode of the main and additional oscillators (add;sub;mul;min;max;bitwise AND;bitwise XOR);
-* Delay: new controller "Feedback" (for sound and events);
+* Analog Generator: new controller "Osc2 mode" - mixing mode of the additional oscillator with the main one (add;sub;mul;min;max;bitwise AND;bitwise XOR);
+* Analog Generator: new controller "Osc2 phase" - starting phase of the additional oscillator;
+* Analog Generator: new option "Increased frequency computation accuracy";
 * Delay: new controller "Delay multiplier";
+* Delay: new "Delay unit" values: sec/44100, sec/48000, sample;
 * Delay: max delay length has been increased to 60 sec;
+* Delay: new controller "Feedback" (for sound and events);
 * Echo: new controller "Right channel offset" (how much to shift the right channel relative to the left in time);
 * Echo: new controller "Filter";
 * Echo: new controller "Filter frequency";
 * Filter Pro: new modes "stereo + smoothing" and "mono + smoothing" for additional parameter smoothing;
 * Filter Pro: new types "LP 6dB" and "HP 6dB";
+* LFO: new controller "Sine quality";
 * MetaModule->Play patterns: new values "on (repeat, endless)" and "on (no repeat, endless)";
 * MetaModule: number of user defined controllers has been increased to 96;
 * MetaModule: controller color can now be changed by adding "@X" to the beginning of the name, where X is the group number from 0 to F; group colors (c_cgp0, c_cgp1, etc.) can be changed in sunvox_config.ini;
@@ -58,7 +51,7 @@ v2.0 BETA1 (21 dec 2021):
   * 1A - fine velocity slide up/down (XX - up speed; YY - down speed); once at the beginning of a line;
   * 33 - slot sync (for sv_sync_resume() in SunVox library);
   * 34 - set (XX) or reset (YY) project options: 1 - no portamento on the first tick; 2 - no velocity slide on the first tick; (for compatibility with old tracker formats);
-  * 3B - copy track XX from from the pattern YY; for example, if XXYY = 0023, then the first track will be copied from the pattern named "23";
+  * 3C - copy track XX from from the pattern YY; for example, if XXYY = 0023, then the first track will be copied from the pattern named "23";
   * 3D - write a random value to track YY; min value, max value and column must be in track 0, starting from line XX; see example "pat effect 3D random value";
          (columns: 0 - NN; 1 - VV; 2 - MM; 3 - CC; 4 - EE; 5 - XX; 6 - YY; 7 - XXYY);
 * corrected Mute/Solo algorithm for modules;
@@ -70,8 +63,8 @@ v2.0 BETA1 (21 dec 2021):
 * new modules in the instruments/ and effects/ folders;
 * new examples (SunVox Compo 2021.02 winners): Logickin - Mech Haven, So_ingMachine - Some of our tracks cant be covered, kiberaver - electric dreams;
 * new examples: NightRadio - Afterglow, NightRadio - Winter Is Coming;
-* bug fixes;
-* and more in the final release...
+* updated version of SunVox library for developers: https://warmplace.ru/soft/sunvox/sunvox_lib.php
+* bug fixes.
 v1.9.6c (15 dec 2020):
 * bug fixes.
 v1.9.6b (25 nov 2020):

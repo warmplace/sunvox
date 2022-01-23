@@ -33,9 +33,10 @@ General rules for all devices:
 SUPERTRACKS
 ===========
 
-Since v2.0, the timeline can work in an alternative supertrack mode (do not confuse with the tracks that are inside the pattern :)
-Patterns on one supertrack control the same tracks: one pattern can complement the tracks of another.
-A new pattern option "don't turn off notes at the end of the pattern" has been added: one short pattern can turn notes on, and another (on the same supertrack) turn it off.
+Since SunVox 2.0 there are two timeline modes: classic (default) and supertrack mode.
+In classic mode, all patterns are independent - each has its own tracks inside.
+In supertrack mode, the patterns can complement each other (interact) if they are on the same supertrack. Each supertrack is a set of 32 tracks that can be used by multiple patterns at the same time.
+In supertrack mode, you can enable the "don't turn off notes at the end of the pattern" option: one short pattern can turn notes on, and another (on the same supertrack) turn it off.
 
 ===============
 MAKE METAMODULE
