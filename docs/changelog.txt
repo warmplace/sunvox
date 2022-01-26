@@ -1,3 +1,5 @@
+v2.0b (26 jan 2022):
+* bug fixes.
 v2.0 (23 jan 2022):
 * iOS 11+: SunVox Audio Unit (AUv3) can now send MIDI notes and MIDI CC to other AU modules;
 * iOS 13.4+: full USB/Bluetooth keyboard support (like on desktops);
