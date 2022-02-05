@@ -1,3 +1,5 @@
+v2.0c (31 jan 2022):
+* bug fixes (LFO, Delay, UI).
 v2.0b (26 jan 2022):
 * bug fixes.
 v2.0 (23 jan 2022):
