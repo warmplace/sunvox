@@ -7,8 +7,8 @@
          0 - MultiSynth curve1;
          1 - MultiSynth curve2;
          2 - MultiSynth curve3;
-         4 - WaveShaper;
-         5 - MultiCtl.
+         3 - WaveShaper;
+         4 - MultiCtl.
        curve_function - here you can place you own function for the specified curve;
     2) run this program using the Pixilang - https://warmplace.ru/soft/pixilang
   License: public domain.
@@ -45,7 +45,7 @@ if format == 2
     //pitch range: 0 ... 16384 (note0) ... 49152 (note128) ... 1; semitone = 256;
     note0 = 16384
     semitone = 256
-    not_normalized = 1
+    x_not_normalized = 1
     type = INT16
     items = 128
     format_name = "MultiSynth Curve 3"
@@ -185,7 +185,7 @@ if max == 0
 }
 i = 0 while i < items
 {
-    if not_normalized
+    if x_not_normalized
     {
 	v = curve_function( i )
 	if v < 0 { v = 0 }
