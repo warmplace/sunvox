@@ -1,3 +1,5 @@
+v2.0e (5 mar 2022):
+* bug fixes (Generator, UI).
 v2.0d (14 feb 2022):
 * bug fixes (UI).
 v2.0c (31 jan 2022):
