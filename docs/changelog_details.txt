@@ -1,4 +1,74 @@
-v2.0
+//
+// SUNVOX
+// 2.1
+//
+
+=====================
+PATTERN DRAWING TOOLS
+=====================
+
+Since v2.1, the pattern can be edited using the drawing tools.
+To open the corresponding window, go to the pattern editor menu and select the "Draw" item.
+
+The following tools are available:
+  * draw with a brush in the specified columns";
+  * draw Note OFF commands;
+  * draw levels in the VV column; (after selecting this tool, the working column VV is set, but it can be changed to any other);
+  * draw levels in the XXYY column; (after selecting this tool, the working column XXYY is set, but it can be changed to any other);
+  * erase values in the specified columns;
+  * erase values in all columns;
+  * play and copy to brush (specified columns only).
+
+All the tools described above work only when the pattern editing mode is active.
+
+LEVELS are a graphical representation of the values in the selected column of the track.
+Before v2.1 there was a menu item "XXYY levels drawing" in the pattern editor.
+Since v2.1 this function has been moved to the pattern drawing tool window.
+
+BRUSH is a piece of a pattern that can be used to draw on another pattern.
+The currently active brush is stored in the on-screen musical keyboard.
+In the simplest case, the brush is the last chord played on the keyboard. The notes of the first line of this brush will be highlighted in green on the keyboard.
+To play/change/save/load the brush, increase the height of the keyboard and click the "+" button that appears on the left.
+
+========
+TOOLBARS
+========
+
+Toolbar 1 is the main horizontal divider with STOP and PLAY buttons.
+Toolbar 2 is the second horizontal divider above the timeline.
+Floating toolbar is the window that can be opened from the Main menu -> Toolbar.
+
+Starting from v2.1 these panels can be customized (add/remove buttons).
+To do this, go to the Main menu -> Preferences -> Toolbars.
+Each toolbar is described by a string with the names of buttons and commands, separated by commas.
+Commands < and > set the direction of adding buttons: from left to right or from right to left.
+Available names:
+  * < - switch the direction of adding buttons: from left to right (default);
+  * > - switch the direction of adding buttons: from right to left;
+  * play;
+  * play2 - play from the beginning;
+  * play3 - play pattern;
+  * stop;
+  * rec;
+  * vol - volume;
+  * svol - volume (short version);
+  * lev - signal level indicator;
+  * undo;
+  * redo;
+  * cut;
+  * copy;
+  * paste;
+  * dup - duplicate;
+  * bpm - BPM;
+  * bpmtpl - BPM and TPL;
+  * clock - current time;
+  * cpu - CPU usage monitor;
+  * cpu2 - CPU usage monitor (pressing will open a list of modules).
+
+//
+// SUNVOX
+// 2.0
+//
 
 =======
 CONTROL

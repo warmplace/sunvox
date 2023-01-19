@@ -1,0 +1,182 @@
+v2.1 (2023):
+
+//
+// NEW
+//
+
+sunvox/effects/distortion:
+  BreadBread Slammer.sunsynth
+
+sunvox/effects/misc:
+  Keres 4Way-QuadraFilter.sunsynth
+
+sunvox/effects/note:
+  PhilipBergwerf live rndm pitch.sunsynth
+  PhilipBergwerf realtime rndm velocity.sunsynth
+  PhilipBergwerf velocity detuner.sunsynth
+
+sunvox/effects/phaser:
+  sk0 StereoPhaser001.sunsynth
+
+sunvox/effects/reverb:
+  Logickin Stelliferous Reverb.sunsynth
+
+sunvox/effects/stereo:
+  Keres Enhanze.sunsynth
+  Keres LegSpread.sunsynth
+  Keres Protool.sunsynth
+  Keres SuperEnhanzer.sunsynth
+  NR Mono2Stereo (simple).sunsynth
+
+sunvox/examples:
+  NightRadio - Cycles of Light.sunvox
+
+sunvox/examples/simple_examples:
+  loop3.sunvox
+  triplet.sunvox
+
+sunvox/examples/sunvox_compo:
+  PhilipBergwerf - We want Peace.sunvox
+  RobloxFan75000 - Hypermatic.sunvox
+  fuzion_mixer & Logickin - Synthonic Voyage.sunvox
+
+sunvox/instruments/bass:
+  BreadBread DBReese.sunsynth
+  BreadBread NeuroBass.sunsynth
+
+sunvox/instruments/bell:
+  Keres MetaBell.sunsynth
+
+sunvox/instruments/drums/hihat:
+  NR Spectral Hihat 01.sunsynth
+  NR Spectral Hihat 02.sunsynth
+
+sunvox/instruments/drums/loops:
+  Keres Qord.sunsynth
+
+sunvox/instruments/fx:
+  PhilipBergwerf adjustable noise.sunsynth
+
+sunvox/instruments/guitar:
+  Alobx OverDrive-guitar.sunsynth
+
+sunvox/instruments/keyboard:
+  Alobx AmSynth.sunsynth
+  BreadBread GigaDetunedWaveV1R1.sunsynth
+  Logickin CaRaCaRa.sunsynth
+  NR SYNTH 02.sunsynth
+
+sunvox/instruments/pads:
+  Keres SlowString.sunsynth
+
+sunvox/instruments/wind:
+  ACheney Brass.sunsynth
+  ACheney Sax.sunsynth
+
+//
+// CHANGED
+//
+
+sunvox/effects/chorus:
+  ACheney Chorus Lite.sunsynth
+  ACheney Chorus.sunsynth
+
+sunvox/effects/compressor:
+  ACheney Compressor Pro.sunsynth
+  ACheney Limiter.sunsynth
+  ACheney Multiband Compressor.sunsynth
+  ACheney Multiband Limiter.sunsynth
+
+sunvox/effects/distortion:
+  ACheney Multiband Distortion.sunsynth
+  ACheney Scream Filter.sunsynth
+
+sunvox/effects/misc:
+  ACheney Bus Pro.sunsynth
+  ACheney Bus.sunsynth
+  ACheney Cabinet.sunsynth
+  ACheney Effects Sequencer.sunsynth
+  ACheney Envelope Filter.sunsynth
+  ACheney Exciter.sunsynth
+  ACheney Multiband Saturator.sunsynth
+  ACheney Saturator.sunsynth
+  ACheney Talkbox.sunsynth
+  ACheney Vinyl.sunsynth
+  ACheney Wah-wah.sunsynth
+
+sunvox/effects/note:
+  Philipbergwerf Rndm MIDI Delay.sunsynth
+
+sunvox/effects/reverb:
+  ACheney Reverb Pro.sunsynth
+
+sunvox/effects/stereo:
+  ACheney Multiband Imager.sunsynth
+
+sunvox/instruments/bass:
+  ACheney SV-303.sunsynth
+
+sunvox/instruments/drums:
+  ACheney Tom.sunsynth
+
+sunvox/instruments/drums/bass:
+  ACheney 909 Kick.sunsynth
+  ACheney Acoustic Kick.sunsynth
+  ACheney Analog Kick.sunsynth
+  ACheney EDM Kick.sunsynth
+  ACheney Hardstyle Kick.sunsynth
+
+sunvox/instruments/drums/claps:
+  ACheney Clap.sunsynth
+
+sunvox/instruments/drums/cymbal:
+  ACheney Cymbal.sunsynth
+
+sunvox/instruments/drums/hihat:
+  ACheney Hihat.sunsynth
+
+sunvox/instruments/drums/loops:
+  ACheney Bounce.sunsynth
+  ACheney Brick.sunsynth
+  ACheney Chase.sunsynth
+  ACheney Driver.sunsynth
+  ACheney Funkpute.sunsynth
+  ACheney Gohard.sunsynth
+  ACheney Grinder.sunsynth
+  ACheney Pseudoamen.sunsynth
+  ACheney Pseudothink.sunsynth
+  ACheney Pure.sunsynth
+  ACheney Setup.sunsynth
+  ACheney Stoplight.sunsynth
+
+sunvox/instruments/drums/shaker:
+  ACheney Shaker.sunsynth
+
+sunvox/instruments/drums/snare:
+  ACheney 909 Snare.sunsynth
+  ACheney Acoustic Snare.sunsynth
+  ACheney Analog Snare.sunsynth
+  ACheney EDM Snare.sunsynth
+
+sunvox/instruments/fx:
+  ACheney Analog FX.sunsynth
+
+sunvox/instruments/guitar:
+  ACheney Electric Guitar.sunsynth
+
+sunvox/instruments/keyboard:
+  ACheney Analog Synth II.sunsynth
+  ACheney Analog Synth.sunsynth
+  ACheney Organ.sunsynth
+  ACheney Supersaw II.sunsynth
+  ACheney Supersaw Lite.sunsynth
+  ACheney Supersaw.sunsynth
+
+sunvox/instruments/keyboard/piano:
+  ACheney Sunforte.sunsynth
+
+sunvox/instruments/pads:
+  ACheney Chantsynth.sunsynth
+
+sunvox/instruments/strings:
+  ACheney String Designer.sunsynth
