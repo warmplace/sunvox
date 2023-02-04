@@ -1,3 +1,9 @@
+v2.1 BETA2 (27 jan 2023):
+* hi-res fonts and fractional scaling can now be disabled in Preferences -> Interface -> Fonts;
+* new pattern effect (column EE): 35 - bind MIDI OUT message XX (0 - Program Change; 1 - Channel Pressure; 2 - Pitch Bend Change) to controller YY (0 - OFF; 0x80 - MIDI controller 0; 0x81 - MIDI controller 1...); for the specified module only;
+* new special pattern command: "XX" - stop the module, clear its internal buffers and put it into standby mode;
+* musical keyboard settings: Row shift is now in semitones (instead of octaves);
+* bug fixes.
 v2.1 BETA1 (19 jan 2023):
 * high resolution icons;
 * high resolution fonts with fractional scaling (only in OpenGL version, including iOS, Android, macOS, Windows and Linux);
@@ -12,10 +18,10 @@ v2.1 BETA1 (19 jan 2023):
 * musical keyboard: the new panel with additional functions and settings; to open it - increase the height of the keyboard and press the appeared "+" button;
 * musical keyboard settings: type (classic, uniform, free (any frequency)), number of rows, key width, color inversion, autorepeat;
 * new way to edit a pattern - drawing with a brush; go the pattern editor menu and select "Draw" - this will open the pattern drawing tools;
-* for a more detailed description of working with a brush, see changelog_details.txt or https://warmplace.ru/soft/sunvox/manual.php#pdraw
+* for a more detailed description of working with a brush, see changelog_details.txt
 * new features in the pattern editor menu: Copy to brush; Reverse; Draw (open pattern drawing tools);
 * Preferences -> Timeline: new option "Hexadecimal track numbers";
-* Preferences -> Toolbars: the buttons on the horizontal dividers can be customized here; see changelog_details.txt or https://warmplace.ru/soft/sunvox/manual.php#toolbars
+* Preferences -> Toolbars: the buttons on the horizontal dividers can be customized here; see changelog_details.txt
 * pattern editor menu -> Remap: module number -1 = all modules;
 * more detailed pattern names after the live recording;
 * new keyboard shortcuts (unassigned by default) that open the corresponding tool windows in the pattern editor:
