@@ -1,4 +1,4 @@
-v2.1 (2023):
+v2.1 (1 feb 2023):
 
 //
 // NEW
@@ -6,6 +6,7 @@ v2.1 (2023):
 
 sunvox/effects/distortion:
   BreadBread Slammer.sunsynth
+  fuzion_mixer b1tkrasha.sunsynth
 
 sunvox/effects/misc:
   Keres 4Way-QuadraFilter.sunsynth
@@ -64,10 +65,14 @@ sunvox/instruments/keyboard:
   Alobx AmSynth.sunsynth
   BreadBread GigaDetunedWaveV1R1.sunsynth
   Logickin CaRaCaRa.sunsynth
+  NR Quartz.sunsynth
   NR SYNTH 02.sunsynth
 
 sunvox/instruments/pads:
   Keres SlowString.sunsynth
+
+sunvox/instruments/various:
+  ESA MorphinTone.sunsynth
 
 sunvox/instruments/wind:
   ACheney Brass.sunsynth

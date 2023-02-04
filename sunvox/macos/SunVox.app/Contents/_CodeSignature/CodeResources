@@ -13,20 +13,11 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Resources/English.lproj/MainMenu.nib/keyedobjects-101300.nib</key>
+		<key>Resources/English.lproj/MainMenu.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
 			7mZqKqCmrz7PBRUjMZFtIe2RPiU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>Resources/English.lproj/MainMenu.nib/keyedobjects.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			WIGgrruryYjoowp8jx82QlGWftw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -44,10 +35,6 @@
 	<dict>
 		<key>Resources/English.lproj/InfoPlist.strings</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			MiLKDDnrUKr4EmuvhS5VQwxHGK8=
-			</data>
 			<key>hash2</key>
 			<data>
 			Oc8u4Ht7Mz58F50L9NeYpbcq9qTlhPUeZCcDu/pPyCg=
@@ -55,12 +42,8 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Resources/English.lproj/MainMenu.nib/keyedobjects-101300.nib</key>
+		<key>Resources/English.lproj/MainMenu.nib</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			7mZqKqCmrz7PBRUjMZFtIe2RPiU=
-			</data>
 			<key>hash2</key>
 			<data>
 			y8SJYNCmfTlTBNekKIG/RAknWQsD3H6pI3mxKmADDco=
@@ -68,25 +51,8 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Resources/English.lproj/MainMenu.nib/keyedobjects.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			WIGgrruryYjoowp8jx82QlGWftw=
-			</data>
-			<key>hash2</key>
-			<data>
-			kuPspcf+W5g+sOTOEDsyCSLECmxEkkP8fMdpFeMavbI=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 		<key>Resources/README</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			EPc/pg47trcexBRDa4Jo22rLXVA=
-			</data>
 			<key>hash2</key>
 			<data>
 			FZWh3AY+TItKgsEOyRrFJDMmPvGGxgp1TnxbVdCe6y4=
@@ -94,10 +60,6 @@
 		</dict>
 		<key>Resources/sunvox_logo.icns</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			0Gg4H72ElX/7FwVufNb1GsMPFI0=
-			</data>
 			<key>hash2</key>
 			<data>
 			hEveCUVKJsDAtLvtNbjN/1AnvIQoCGyA2E4lIL/9EeI=
@@ -105,10 +67,6 @@
 		</dict>
 		<key>embedded.provisionprofile</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			4k3FoJqx3G7uPjkuigGF9PpRcWI=
-			</data>
 			<key>hash2</key>
 			<data>
 			kCOLW3cDbYJ5ziXM+OZBQv6wYEDX4NQnpLlu+pTIwa8=
