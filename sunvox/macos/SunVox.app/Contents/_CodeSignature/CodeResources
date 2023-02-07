@@ -13,11 +13,20 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Resources/English.lproj/MainMenu.nib</key>
+		<key>Resources/English.lproj/MainMenu.nib/keyedobjects-101300.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
 			7mZqKqCmrz7PBRUjMZFtIe2RPiU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/English.lproj/MainMenu.nib/keyedobjects.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WIGgrruryYjoowp8jx82QlGWftw=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -42,11 +51,20 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>Resources/English.lproj/MainMenu.nib</key>
+		<key>Resources/English.lproj/MainMenu.nib/keyedobjects-101300.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			y8SJYNCmfTlTBNekKIG/RAknWQsD3H6pI3mxKmADDco=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/English.lproj/MainMenu.nib/keyedobjects.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kuPspcf+W5g+sOTOEDsyCSLECmxEkkP8fMdpFeMavbI=
 			</data>
 			<key>optional</key>
 			<true/>

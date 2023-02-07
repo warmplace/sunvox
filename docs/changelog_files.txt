@@ -1,3 +1,18 @@
+v2.1b (7 feb 2023):
+
+//
+// NEW
+//
+
+sunvox/effects/reverb:
+  Taneb and Echo2 Tape Reverb.sunsynth
+
+sunvox/examples/simple_examples:
+  loop4.sunvox
+
+
+
+
 v2.1 (1 feb 2023):
 
 //

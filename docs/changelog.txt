@@ -1,3 +1,7 @@
+v2.1b (7 feb 2023):
+* Loop: new controller "On NoteON" (restart with transition to zero iteration (record);restart current iteration); see simple_examples/loop4.sunvox;
+* pattern effect 34: new value 4 - use Round-robin keyboard track allocation algorithm, instead of default tight packing; may be required for live play on the MultiSynth module with the "trigger" option; but this option may cause the brush to work incorrectly;
+* bug fixes.
 v2.1 (1 feb 2023):
 * iOS: now the interface is displayed in high resolution; if you want to switch back to the normal low resolution mode (on some devices this will increase the FPS) - go to the Preferences -> Interface -> Low resolution;
 * iOS: Preferences -> Audio -> Additional options: new option "minimize the amount of system-supplied signal processing" (measurement mode);
