@@ -1,3 +1,33 @@
+v2.1c (15 mar 2023):
+
+//
+// NEW
+//
+
+sunvox/effects/misc:
+  NR AutoLFO.sunsynth
+
+sunvox/instruments/keyboard:
+  BreadBread Acoustic Marimba.sunsynth
+  BreadBread Rhodes Keyboard.sunsynth
+  BreadBread Synth Marimba.sunsynth
+
+sunvox/instruments/pads:
+  NR Afterglow.sunsynth
+
+sunvox/instruments/various:
+  BreadBread Simple Foghorn.sunsynth
+
+//
+// CHANGED
+//
+
+sunvox/instruments/keyboard:
+  NR Quartz.sunsynth
+
+
+
+
 v2.1b (7 feb 2023):
 
 //

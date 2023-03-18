@@ -1,3 +1,5 @@
+v2.1c (15 mar 2023):
+* bug fixes (including several bugs in the USB MIDI code on Android).
 v2.1b (7 feb 2023):
 * Loop: new controller "On NoteON" (restart with transition to zero iteration (record);restart current iteration); see simple_examples/loop4.sunvox;
 * pattern effect 34: new value 4 - use Round-robin keyboard track allocation algorithm, instead of default tight packing; may be required for live play on the MultiSynth module with the "trigger" option; but this option may cause the brush to work incorrectly;
