@@ -1,4 +1,4 @@
-v2.1.2 (4 oct 2024):
+v2.1.2 (15 oct 2024):
 
 //
 // NEW
@@ -16,6 +16,9 @@ sunvox/curves/MultiSynth/curve2:
 sunvox/curves/WaveShaper:
   ws rectifier
   ws reverse
+
+sunvox/effects/compressor:
+  NR Limiter (lookahead).sunsynth
 
 sunvox/effects/misc:
   NR AutoFilter.sunsynth
@@ -51,6 +54,7 @@ sunvox/instruments/bass:
   So_ingMachine SO Shapely Bass.sunsynth
 
 sunvox/instruments/keyboard:
+  PhilipBergwerf HarmonixFmx.sunsynth
   So_ingMachine SO This Is Your 'Fault.sunsynth
 
 sunvox/instruments/various:
