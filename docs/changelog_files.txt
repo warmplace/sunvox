@@ -1,4 +1,4 @@
-v2.1.2 (3 sep 2024):
+v2.1.2 (4 oct 2024):
 
 //
 // NEW
@@ -20,6 +20,7 @@ sunvox/curves/WaveShaper:
 sunvox/effects/misc:
   NR AutoFilter.sunsynth
   NR Glitch.sunsynth
+  Taneb Timestretch.sunsynth
 
 sunvox/effects/phaser:
   NR Dispersion.sunsynth
@@ -33,6 +34,8 @@ sunvox/effects/reverb:
 
 sunvox/examples/simple_examples:
   freq dispersion.sunvox
+  metamodule options 78,79 (autobypass).sunvox
+  metamodule options 78,79.sunvox
   multictl.sunvox
   ring modulation sidechain.sunvox
   sampler rec automation.sunvox

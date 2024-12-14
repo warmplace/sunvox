@@ -1,3 +1,16 @@
+v2.1.2 BETA2 (4 oct 2024):
+* mouse scroll wheel support on Android;
+* the file dialog now remembers the cursor position in each folder;
+* Glide: new controller "Frequency divide";
+* MetaModule: new options: (see simple_examples/metamodule options 78,79.sunvox)
+  - 79 - ignore effect 31 (jump to line XXYY) after the last Note OFF; works only if "Play patterns" >= 3;
+  - 78 - jump to the "RL" pattern after the last Note OFF; works only if "Play patterns" >= 3;
+* sample editor: the following parameters have been added to the "Create a new sample" and "Resample" dialogs: interpolation type; length in lines and seconds; "Just crop/extend (no resampling)" option;
+* new options in sunvox_config.ini:
+  - jack_nodefin - don't set default JACK input connections;
+  - jack_nodefout - don't set default JACK output connections;
+  - jack_drmin - don't restore JACK MIDI IN connections;
+* bug fixes.
 v2.1.2 BETA1 (3 sep 2024):
 * new module Smooth - it attempts to follow the waveform of the incoming signal, smoothing out sharp changes in accordance with the Rise and Fall parameters;
 * new modulation types in FMX and Analog Generator (Osc2 modes):
