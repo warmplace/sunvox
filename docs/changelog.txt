@@ -1,3 +1,5 @@
+v2.1.2b (14 dec 2024):
+* bug fixes.
 v2.1.2 (15 oct 2024):
 * new module Smooth - it attempts to follow the waveform of the incoming signal, smoothing out sharp changes in accordance with the Rise and Fall parameters;
 * new modulation types in FMX and Analog Generator (Osc2 modes):
@@ -53,6 +55,7 @@ v2.1.2 (15 oct 2024):
   - jack_nodefin - don't set default JACK input connections;
   - jack_nodefout - don't set default JACK output connections;
   - jack_drmin - don't restore JACK MIDI IN connections;
+* the file dialog now remembers the cursor position in each folder;
 * mouse scroll wheel support on Android;
 * Windows: new sound driver DirectSound2 allows buffer size to be reduced to 512 - this may be useful if you can't use ASIO for some reason;
 * 64-bit versions (non-OpenGL) can now run on CPUs without SSSE3 support;
