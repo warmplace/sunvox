@@ -22,7 +22,7 @@
 filename = "sunvox_curve"
 
 //Format:
-format = 2
+format = 0
 if format == 0
 {
     //MultiSynth curve1: X = note; Y = velocity (0..255)
@@ -76,6 +76,9 @@ fn curve_function( $x )
 {
     //Linear:
     $y = $x
+
+    //Reverse:
+    //$y = 1 - $x
 
     //Linear with a limited number of levels:
     //$levels = 8 ; $y = ( $x / (1/$levels) div 1 ) * (1/($levels-1))

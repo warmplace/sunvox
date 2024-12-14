@@ -1,6 +1,3 @@
-https://acheney.xyz/sunvox/modules
-https://git.acheney.xyz/acheney/sunvox-modules
-
 Modules from Aden Cheney (ACheney) are distributed under the MIT License:
 
 Copyright (c) 2023 Aden Cheney

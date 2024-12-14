@@ -1,4 +1,89 @@
-v2.1.1c (2023):
+v2.1.2 (3 sep 2024):
+
+//
+// NEW
+//
+
+sunvox/curves/MultiCtl:
+  mc reverse
+
+sunvox/curves/MultiSynth/curve1:
+  ms1 reverse
+
+sunvox/curves/MultiSynth/curve2:
+  ms2 reverse
+
+sunvox/curves/WaveShaper:
+  ws rectifier
+  ws reverse
+
+sunvox/effects/misc:
+  NR AutoFilter.sunsynth
+  NR Glitch.sunsynth
+
+sunvox/effects/phaser:
+  NR Dispersion.sunsynth
+  sk0 PhaserMonoManual001.sunsynth
+
+sunvox/effects/reverb:
+  ACheney Glacier Delay.sunsynth
+  ACheney Hawking Delay.sunsynth
+  NR Tape Delay.sunsynth
+  Shockwave Quad Sample Delay.sunsynth
+
+sunvox/examples/simple_examples:
+  freq dispersion.sunvox
+  multictl.sunvox
+  ring modulation sidechain.sunvox
+  sampler rec automation.sunvox
+
+sunvox/examples/sunvox_compo:
+  Logickin - Spaghetti Express Train.sunvox
+  PhilipBergwerf - Amsterdam 1907.sunvox
+
+sunvox/instruments/bass:
+  Logickin Vox 303 Mk3.1.sunsynth
+  NR LoFi Bass.sunsynth
+  So_ingMachine SO CallipEDGEian.sunsynth
+  So_ingMachine SO Shapely Bass.sunsynth
+
+sunvox/instruments/keyboard:
+  So_ingMachine SO This Is Your 'Fault.sunsynth
+
+sunvox/instruments/various:
+  So_ingMachine SO Thank You Very Cool.sunsynth
+
+sunvox/instruments/wind:
+  So_ingMachine OLI253.sunsynth
+  So_ingMachine SO Bright Clarinet Or Something.sunsynth
+  So_ingMachine SO Flute Type Thing.sunsynth
+  So_ingMachine SO Not Exactly An Oboe.sunsynth
+  So_ingMachine SO Obligatory Sax.sunsynth
+  So_ingMachine SO Smooth Brass Sorta.sunsynth
+  So_ingMachine SO Sortaccordion.sunsynth
+
+//
+// CHANGED
+//
+
+sunvox/curves:
+  sunvox_curve_generator.pixi
+
+sunvox/effects/phaser:
+  NR Phaser (mono).sunsynth
+  sk0 StereoPhaser001.sunsynth
+
+sunvox/effects/reverb:
+  NR XReverb.sunsynth
+  So_ingMachine Band Delay.sunsynth
+
+sunvox/instruments/bass:
+  KTRN FM Fatbass.sunsynth
+
+
+
+
+v2.1.1c (29 nov 2023):
 
 //
 // NEW

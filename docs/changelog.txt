@@ -1,3 +1,53 @@
+v2.1.2 BETA1 (3 sep 2024):
+* new module Smooth - it attempts to follow the waveform of the incoming signal, smoothing out sharp changes in accordance with the Rise and Fall parameters;
+* new modulation types in FMX and Analog Generator (Osc2 modes):
+  * min abs: if( abs(in2) < abs(in1) ) out = in2; else out = in1;
+  * max abs: if( abs(in2) > abs(in1) ) out = in2; else out = in1;
+* Modulator: additional modulation types (as in FMX and Analog Generator) have been added;
+* LFO: improved quality of waveforms "saw", "triangle" and "random interpolated" (26 bits instead of 15);
+* Filter Pro: max value of the Roll-off controller has been raised to 96dB;
+* Filter Pro: since version 2.1.2 the Roll-off controller also affects the All-pass filter type; see simple_examples/freq dispersion.sunvox;
+* Reverb: improved type of all-pass filter has been added to controller 8 - it has almost no effect on the gain of the original signal frequencies;
+* Delay: new controller "Negative feedback" for changing the sing of feedback;
+* Delay: new controller "All-pass filter" for switching the module to All-pass mode, where the filter order is the delay length in samples;
+* Glide: new controllers "Octave" and "Frequency multiply";
+* MultiCtl: new button "Set" for precise curve modification;
+* MultiCtl: new button "+" (next to the controller number) - press it if you want to change multiple controllers within a single module; see simple_examples/multictl.sunvox;
+* Pitch Detector: new algorithm - "spectral peak"; it determines the frequency of the loudest harmonic with high accuracy; suitable for signals with pronounced fundamental harmonic;
+* Pitch Detector: additional info under the controllers: incoming signal frequency; frequency range; output note frequency;
+* Pitch Detector: the maximum detected frequencies for algorithms 1 and 2 are 2000 Hz and 1000 Hz; but these values will double if the following conditions are met: base version >= 2.1.2; LP filter == 0; Alg1-2 Sample rate >= 44100;
+* Sampler: new controller "Record" (stop/pause/start recording); see simple_examples/sampler rec automation.sunvox;
+* sample editor: new function "Set the start position" (position at which the sample will start playing);
+* sample editor: new functions "Convert to 8/16/32bit" (editor menu -> Misc);
+* sample editor: view settings (in the menu) allow you to set the units (samples, seconds, ticks, etc.) in which the cursor position and selection size will be displayed;
+* sample editor: PLAY (from the cursor position) button has been added;
+* sample editor: improved sample wave display (with correct peak drawing; versions for arm64 and x86_64+SSSE3 (OpenGL) provides the best quality);
+* pattern effect 34: new option 8 has been added - enable it if you need to output 7-bit MIDI controller values, even if the controller is 14-bit (0-31);
+* new keyboard shortcuts (unassigned by default):
+  * previous layout;
+  * next layout;
+  * layout: normal;
+  * layout: timeline;
+  * layout: pattern editor;
+  * layout: module view + controllers;
+  * layout: controllers;
+  * layout: module view;
+* new keyboard shortcuts (unassigned by default) for the module editor:
+  * toggle LINK mode (connecting modules);
+* new keyboard shortcuts (unassigned by default) for the timeline:
+  * next pattern horizontally;
+  * previous pattern horizontally;
+  * next pattern vertically;
+  * previous pattern vertically;
+* new keyboard shortcuts (unassigned by default) for the brush:
+  * play current note (in the pattern editor), copy it to the brush and go to the next line;
+  * play current line (in the pattern editor), copy it to the brush and go to the next line;
+* new options in sunvox_config.ini: no_clog - disable logging to console; no_flog - disable logging to file; also see the corresponding command line options -ncl and -nfl;
+* Windows: new sound driver DirectSound2 allows buffer size to be reduced to 512 - this may be useful if you can't use ASIO for some reason;
+* 64-bit versions (non-OpenGL) can now run on CPUs without SSSE3 support;
+* new modules and examples (see changelog_files.txt);
+* updated version of SunVox library for developers: https://warmplace.ru/soft/sunvox/sunvox_lib.php
+* minor improvements, bug fixes, increased stability.
 v2.1.1c (29 nov 2023):
 * Sampler: new controller "Tick length" (affects the duration of the envelopes);
 * new example: NightRadio - Frozen;
