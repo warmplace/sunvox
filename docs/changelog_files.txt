@@ -1,3 +1,185 @@
+v2.1.1c (2023):
+
+//
+// NEW
+//
+
+sunvox/examples:
+  NightRadio - Frozen.sunvox
+
+
+
+
+v2.1.1 (22 oct 2023):
+
+//
+// NEW
+//
+
+sunvox/effects/chorus:
+  echo2 Aether Chorus.sunsynth
+  echo2 Chorus8.sunsynth
+  echo2 Effective Chorus.sunsynth
+  echo2 Power Chorus.sunsynth
+  echo2 SimpleChorus.sunsynth
+  echo2 Xaoc Chorus 2.sunsynth
+
+sunvox/effects/compressor:
+  KTRN Exponential Multiband Compressor.sunsynth
+
+sunvox/effects/distortion:
+  echo2 AltDist.sunsynth
+  echo2 Broken Chorus Distotrion.sunsynth
+  echo2 Overdrive2.sunsynth
+  echo2 Resoshaper.sunsynth
+  echo2 SunDrive.sunsynth
+
+sunvox/effects/misc:
+  echo2 Analog Filter.sunsynth
+  echo2 Autofilter.sunsynth
+  offthesky randommanglerFX.sunsynth
+
+sunvox/effects/note:
+  offthesky notePULSEgenerator.sunsynth
+
+sunvox/effects/phaser:
+  echo2 Phaser.sunsynth
+  echo2 PhaserFlanger Metallic setting.sunsynth
+  echo2 PhaserFlanger.sunsynth
+
+sunvox/effects/reverb:
+  ACheney Analog Delay.sunsynth
+  echo2 GaussTape.sunsynth
+  echo2 OtherEcho.sunsynth
+  echo2 Tape4.sunsynth
+  echo2 Terry's Dream Tape.sunsynth
+  echo2 Velvet Reverb 3.sunsynth
+  offthesky cremeVerb.sunsynth
+
+sunvox/effects/stereo:
+  offthesky funkyPanner.sunsynth
+
+sunvox/examples/sunvox_compo:
+  PhilipBergwerf - Symphonius.sunvox
+  SawZer - Showdown.sunvox
+  So_ingMachine - Minding My Business.sunvox
+  sk0 - Last Day of Winter.sunvox
+
+sunvox/instruments/bass:
+  TB 5th.sunsynth
+  TB Fierce.sunsynth
+  TB Mosquito.sunsynth
+  TB Noisy 808ish.sunsynth
+  TB Octavian.sunsynth
+  TB Screamer.sunsynth
+  echo2 Bass Growl.sunsynth
+
+sunvox/instruments/drums/bass:
+  TB Deep Kick.sunsynth
+  TB Psy Kick.sunsynth
+  TB Tri Kick.sunsynth
+  echo2 Kick.sunsynth
+
+sunvox/instruments/drums/claps:
+  echo2 Slap.sunsynth
+
+sunvox/instruments/drums/hihat:
+  echo2 Hat.sunsynth
+
+sunvox/instruments/drums/snare:
+  TB 909ish Snare.sunsynth
+  TB Jab Snare.sunsynth
+  TB Ping Snare.sunsynth
+  TB Pong Snare.sunsynth
+  TB Reso Snare.sunsynth
+  TB Sonar Snare.sunsynth
+  TB Tiny Snare.sunsynth
+  TB clap 1.sunsynth
+  TB what is a snare drum.sunsynth
+
+sunvox/instruments/fx:
+  TB Laser FX 2.sunsynth
+  TB Laser FX.sunsynth
+  TB Whistle.sunsynth
+  offthesky vinylcracklehiss.sunsynth
+
+sunvox/instruments/keyboard/FM:
+  echo2 Bass.sunsynth
+  echo2 Bell like.sunsynth
+  echo2 Cheerful.sunsynth
+  echo2 Epiano.sunsynth
+  echo2 FMX Lofi Fm Piano.sunsynth
+  echo2 FMX Lofi Soft Bell.sunsynth
+  echo2 Harp like.sunsynth
+  echo2 Low Cinematographic.sunsynth
+  echo2 Magic Pad.sunsynth
+  echo2 Nasty Metal 2.sunsynth
+  echo2 Nasty Metal.sunsynth
+  echo2 Pleasant Piano.sunsynth
+  echo2 Tubular.sunsynth
+  echo2 Zhaba.sunsynth
+
+sunvox/instruments/keyboard:
+  TB Broken String.sunsynth
+  TB Droplet.sunsynth
+  TB Plink.sunsynth
+  TB Silentium.sunsynth
+  analog15.sunsynth
+  echo2 MarsVox.sunsynth
+  echo2 Powersynth 15.sunsynth
+  echo2 Powersynth 16.sunsynth
+  echo2 Rave Synth 1.sunsynth
+  echo2 The Minimoom v2.sunsynth
+  echo2 The Minimoom.sunsynth
+  echo2 Voice.sunsynth
+
+sunvox/instruments/pads:
+  echo2 Ether.sunsynth
+  echo2 Magic Bee.sunsynth
+  echo2 Pad.sunsynth
+
+//
+// CHANGED
+//
+
+sunvox/effects/compressor:
+  ACheney Compressor Pro.sunsynth
+
+sunvox/effects/distortion:
+  ACheney Overdrive.sunsynth
+  ACheney Scream Filter.sunsynth
+
+sunvox/effects/misc:
+  ACheney Bus Pro.sunsynth
+  ACheney Bus.sunsynth
+  ACheney Exciter.sunsynth
+  ACheney Multiband Saturator.sunsynth
+  ACheney Saturator.sunsynth
+
+sunvox/instruments/drums/bass:
+  ACheney Analog Kick.sunsynth
+  ACheney EDM Kick.sunsynth
+
+sunvox/instruments/drums/cymbal:
+  ACheney Cymbal.sunsynth
+
+sunvox/instruments/drums/hihat:
+  ACheney Hihat.sunsynth
+
+sunvox/instruments/drums/snare:
+  ACheney Acoustic Snare.sunsynth
+  ACheney Analog Snare.sunsynth
+  ACheney EDM Snare.sunsynth
+
+sunvox/instruments/keyboard:
+  ACheney Analog Synth II.sunsynth
+  ACheney Analog Synth.sunsynth
+  ACheney Triple Oscillator (mono).sunsynth
+  ACheney Triple Oscillator (poly).sunsynth
+
+
+
+
 v2.1c (15 mar 2023):
 
 //

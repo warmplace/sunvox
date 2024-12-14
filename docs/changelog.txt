@@ -1,3 +1,23 @@
+v2.1.1c (29 nov 2023):
+* Sampler: new controller "Tick length" (affects the duration of the envelopes);
+* new example: NightRadio - Frozen;
+* bug fixes.
+v2.1.1b (1 nov 2023):
+* fixed bug with saving OGG sample.
+v2.1.1 (22 oct 2023):
+* iOS 11 support has been dropped; now the minimum is 12;
+* now you can also load samples in the following formats (on ALL platforms): 64-bit WAV/AIFF, OGG (Vorbis), MP3, FLAC;
+* export to FLAC and OGG (Vorbis);
+* Modulator: the accuracy of the phase modulation mode has been increased (but only if the version of SunVox 2.1.1 (and higher) is specified in the project properties);
+* Modulator: new controller "Max phase modulation delay";
+* Vorbis player: new controller "Ignore Note OFF" (play every note endlessly);
+* MetaModule: new option "Auto BPM/TPL" (synchronize BPM and TPL of the module with BPM and TPL of the parent project);
+* Pattern Editor: new function "Sync with timeline" - sync the cursor with the timeline (+shortcut, unassigned by default);
+* Timeline: new function "Sync with pat.editor" - sync the cursor with the pattern editor (+shortcut, unassigned by default);
+* sample editor: new function "Mono to stereo" (editor menu -> Misc);
+* auto-repeat in the virtual (on-screen) text keyboard;
+* new modules and examples (see changelog_files.txt);
+* bug fixes.
 v2.1c (15 mar 2023):
 * bug fixes (including several bugs in the USB MIDI code on Android).
 v2.1b (7 feb 2023):
