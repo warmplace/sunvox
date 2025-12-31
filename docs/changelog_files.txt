@@ -1,3 +1,70 @@
+v2.1.3 ():
+
+//
+// NEW
+//
+
+sunvox/effects/compressor:
+  sk0 3BandComp1.sunsynth
+
+sunvox/effects/reverb:
+  Taneb Short Spring.sunsynth
+  Taneb Spring.sunsynth
+
+sunvox/effects/stereo:
+  NR Stereo Swap.sunsynth
+
+sunvox/examples:
+  NightRadio - Autumn Waltz.sunvox
+
+sunvox/examples/generative:
+  NightRadio - machine 0006 (rain).sunvox
+
+sunvox/examples/simple_examples:
+  karplus-strong bass.sunvox
+  pat effect 35 MIDI program change.sunvox
+  pitch correction (manual tuning).sunvox
+  random pitch 1.sunvox
+  random pitch 2.sunvox
+  stereo signal separation.sunvox
+
+sunvox/examples/sunvox_compo:
+  vekoN - Didido.sunvox
+
+sunvox/instruments/fx:
+  ASP FX TRAIN AND BOLOTO III Opt.V.sunsynth
+
+sunvox/instruments/guitar:
+  GreenLED E.Guitar.sunsynth
+
+sunvox/instruments/keyboard/piano:
+  GreenLED Piano.sunsynth
+
+sunvox/instruments/pads:
+  NR Cosmic Pad.sunsynth
+
+sunvox/instruments/strings:
+  GreenLED Strings.sunsynth
+
+//
+// CHANGED
+//
+
+sunvox/curves:
+  sunvox_curve_generator.pixi
+
+sunvox/effects/phaser:
+  sk0 StereoPhaser001.sunsynth
+
+sunvox/effects/reverb:
+  Taneb and Echo2 Tape Reverb.sunsynth
+
+sunvox/instruments/pads:
+  NR Afterglow.sunsynth
+
+
+
+
 v2.1.2 (15 oct 2024):
 
 //

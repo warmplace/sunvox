@@ -1,5 +1,225 @@
 //
 // SUNVOX
+// 2.1.3
+//
+
+======================================
+ГОРЯЧИЕ КЛАВИШИ НА ПАНЕЛИ ИНСТРУМЕНТОВ
+======================================
+
+Теперь на каждую панель инструментов можно добавлять не только кнопки из стандартного набора, но и любые сочетания клавиш.
+Подробнее про настройку панелей инструментов: https://warmplace.ru/soft/sunvox/manual_ru.php#toolbars
+Общий формат для каждой кнопки такой: mod+key/name
+mod - один или несколько модификаторов: shift+, ctrl+, alt+, shift+ctrl+ и т.д.
+key - символ клавиши;
+name - отображаемое название кнопки;
+Примеры:
+  * ctrl+o/OPEN
+  * shift+tab/PrevColumn
+  * space/EditONOFF
+Кроме того, вместо mod+key можно сразу указывать идентификатор (ID) горячей клавиши. Например:
+  * main_undo/UNDO
+  * main_new/NEW
+Список таких ID приведен ниже. Его также можно найти на сайте: https://warmplace.ru/soft/sunvox/manual_ru.php#kbd
+
+Общие:
+
+main_undo - Отмена действия;
+main_redo - Возврат действия;
+main_new - Новый;
+main_left - Влево;
+main_right - Вправо;
+main_up - Вверх;
+main_down - Вниз;
+main_pgup - На страницу вверх;
+main_pgdown - На страницу вниз;
+main_home - В начало;
+main_end - В конец;
+main_tab - На след. колонку/трек (tab);
+main_select_begin - Начать выделение;
+main_select_end - Закончить выделение;
+main_select_all - Выделить все / снять выдел.;
+main_cut - Вырезать;
+main_copy - Скопировать;
+main_paste - Вставить;
+main_duplicate - Размножить;
+main_detach - Отцепить;
+main_ins - Вставить со сдвигом (insert);
+main_backspace - Удалить со сдвигом (backspace);
+main_del - Удалить;
+main_lt_prev - Пред. планировка;
+main_lt_next - След. планировка;
+main_lt_norm - Планировка: обычная;
+main_lt_tline - Планировка: таймлиния;
+main_lt_pat - Планировка: редактор паттерна;
+main_lt_mods - Планировка: модули + контроллеры;
+main_lt_mods_c - Планировка: контроллеры;
+main_lt_mods_n - Планировка: модули;
+
+Приложение:
+
+main_exit - Выход;
+
+Проект:
+
+main_newprj - Новый проект;
+main_load - Загрузить;
+main_save - Сохранить;
+main_save_backup - Сохранить BACKUP.sunvox;
+
+Муз.клавиатура:
+
+main_C0 - Нота C-0;
+main_c0 - Нота C#0;
+main_D0 - Нота D-0;
+main_d0 - Нота D#0;
+main_E0 - Нота E-0;
+main_F0 - Нота F-0;
+main_f0 - Нота F#0;
+main_G0 - Нота G-0;
+main_g0 - Нота G#0;
+main_A0 - Нота A-0;
+main_a0 - Нота A#0;
+main_B0 - Нота B-0;
+main_C1 - Нота C-1;
+main_c1 - Нота C#1;
+main_D1 - Нота D-1;
+main_d1 - Нота D#1;
+main_E1 - Нота E-1;
+main_F1 - Нота F-1;
+main_f1 - Нота F#1;
+main_G1 - Нота G-1;
+main_g1 - Нота G#1;
+main_A1 - Нота A-1;
+main_a1 - Нота A#1;
+main_B1 - Нота B-1;
+main_C2 - Нота C-2;
+main_c2 - Нота C#2;
+main_D2 - Нота D-2;
+main_d2 - Нота D#2;
+main_E2 - Нота E-2;
+main_F2 - Нота F-2;
+main_f2 - Нота F#2;
+main_G2 - Нота G-2;
+main_g2 - Нота G#2;
+main_A2 - Нота A-2;
+main_a2 - Нота A#2;
+main_B2 - Нота B-2;
+main_C3 - Нота C-3;
+main_c3 - Нота C#3;
+main_D3 - Нота D-3;
+main_d3 - Нота D#3;
+main_E3 - Нота E-3;
+main_F3 - Нота F-3;
+main_f3 - Нота F#3;
+main_G3 - Нота G-3;
+main_g3 - Нота G#3;
+main_A3 - Нота A-3;
+main_a3 - Нота A#3;
+main_B3 - Нота B-3;
+main_oct0 - Октава 0;
+main_oct1 - Октава 1;
+main_oct2 - Октава 2;
+main_oct3 - Октава 3;
+main_oct4 - Октава 4;
+main_oct5 - Октава 5;
+main_oct6 - Октава 6;
+main_oct7 - Октава 7;
+main_oct8 - Октава 8;
+main_oct_inc - Октава +;
+main_oct_dec - Октава -;
+
+Кисть:
+
+main_playnote - Проиграть текущую ноту и скопировать в кисть;
+main_playnote2 - Проиграть текущую ноту и перейти на след.строку;
+main_playline - Проиграть строку и скопировать в кисть;
+main_playline2 - Проиграть строку и перейти на следующую;
+main_playbrush - Проиграть первую строку кисти;
+main_copy2brush - Скопировать в кисть;
+main_pastebrush - Вставить из кисти;
+
+Редактор паттерна:
+
+main_edit - Редактир. паттерна вкл/выкл;
+main_edit_step_inc - Увеличить шаг редактирования (паттерн);
+main_edit_step_dec - Уменьшить шаг редактирования (паттерн);
+main_note_off - Спец.команда: выключить ноту;
+main_set_pitch - Спец.команда: высота тона XXYY;
+main_prev_track - Спец.команда: предыдущий трек;
+main_clean_mod - Спец.команда: остановить модуль;
+main_paste_and_mix - Вставить с наложением;
+main_select_track - Выделить трек;
+main_interp - Интерполировать;
+main_interp_val - Интерполяция XXYY;
+main_interp_vel - Интерполяция VV;
+main_transp - Транспонировать;
+main_transp_up - Транспонировать +1;
+main_transp_down - Транспонировать -1;
+main_transp_up2 - Транспонировать +12;
+main_transp_down2 - Транспонировать -12;
+main_place_evenly - Распредел. равномерно;
+main_cyclic_shift - Циклический сдвиг;
+main_cyclic_shift1 - Циклический сдвиг вверх;
+main_cyclic_shift2 - Циклический сдвиг вниз;
+main_reverse - Перевернуть;
+main_remap - Переназначить;
+main_seteff - Установить эффект;
+main_draw - Рисовать;
+main_pat_clear - Очистить паттерн;
+main_pat_shrink - Сжать паттерн /2;
+main_pat_expand - Растянуть паттерн *2;
+main_pat_slice - Разрезать по курсору;
+main_pat_props - Свойства паттерна;
+main_addcols - Показать/скрыть колонки CCEEXXYY;
+main_patscale - Масштаб;
+main_pat_csync - Синхрон. курсор с таймлинией;
+
+Модули:
+
+main_random - Случайные значения контроллеров модуля;
+main_write_ctls - Записать значения контр. в паттерн;
+main_next_mod - Следующий модуль;
+main_prev_mod - Предыдущий модуль;
+main_next_syn - Следующий синтезатор;
+main_prev_syn - Предыдущий синтезатор;
+main_next_modx - След. модуль по горизонтали (правее);
+main_prev_modx - Пред. модуль по горизонтали (левее);
+main_next_mody - След. модуль по вертикали (ниже);
+main_prev_mody - Пред. модуль по вертикали (выше);
+main_mute_mod - Вкл/выкл mute (модуль);
+main_solo_mod - Вкл/выкл solo (модуль);
+main_bypass_mod - Вкл/выкл bypass (модуль);
+main_unmute_mods - Сброс mute/solo модулей;
+main_find_mod - Найти модуль;
+main_make_metamod - Упаковать в MetaModule;
+main_link_mod - Вкл/выкл режима LINK;
+
+Таймлиния:
+
+main_play - Играть/Остановить;
+main_play2 - Играть с начала;
+main_play3 - Играть паттерн;
+main_stop - Стоп;
+main_rec - Запись;
+main_play4 - Играть от курсора в паттерне;
+main_gostart - Перейти в начало таймлинии;
+main_tslice - Разрезать;
+main_mute_pat - Вкл/выкл mute (паттерн);
+main_solo_pat - Вкл/выкл solo (паттерн);
+main_unmute_pats - Сброс mute/solo паттернов;
+main_set_rpos - Установить начало повтора;
+main_tstracks - Вкл/выкл супертреки;
+main_torient - Изменить ориентацию;
+main_tsnap - Привязка к сетке вкл/выкл;
+main_tcsync - Синхрон. курсор с ред.паттерна;
+main_next_patx - След. паттерн по горизонтали (правее);
+main_prev_patx - Пред. паттерн по горизонтали (левее);
+main_next_paty - След. паттерн по вертикали (ниже);
+main_prev_paty - Пред. паттерн по вертикали (выше);
+
+//
+// SUNVOX
 // 2.1
 //
 

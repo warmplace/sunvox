@@ -1,5 +1,225 @@
 //
 // SUNVOX
+// 2.1.3
+//
+
+=================
+TOOLBAR SHORTCUTS
+=================
+
+Now, in addition to the standard set of buttons, you can add any keyboard shortcuts to each toolbar.
+Learn more about customizing toolbars: https://warmplace.ru/soft/sunvox/manual.php#toolbars
+The general format for each button is: mod+key/name
+mod - one or more modifiers: shift+, ctrl+, alt+, shift+ctrl+, etc.
+key - the key symbol;
+name - the displayed name of the button;
+Examples:
+  * ctrl+o/OPEN
+  * shift+tab/PrevColumn
+  * space/EditONOFF
+Alternatively, instead of mod+key, you can directly specify the hotkey ID. For example:
+  * main_undo/UNDO
+  * main_new/NEW
+A list of such IDs is provided below. It can also be found on the website: https://warmplace.ru/soft/sunvox/manual.php#kbd
+
+General:
+
+main_undo - Undo;
+main_redo - Redo;
+main_new - New;
+main_left - Left;
+main_right - Right;
+main_up - Up;
+main_down - Down;
+main_pgup - Page up;
+main_pgdown - Page down;
+main_home - Go to start (home);
+main_end - Go to end;
+main_tab - Next column/track (tab);
+main_select_begin - Selection begin;
+main_select_end - Selection end;
+main_select_all - Select/unselect all;
+main_cut - Cut;
+main_copy - Copy;
+main_paste - Paste;
+main_duplicate - Duplicate;
+main_detach - Detach;
+main_ins - Insert;
+main_backspace - Backspace;
+main_del - Delete;
+main_lt_prev - Previous layout;
+main_lt_next - Next layout;
+main_lt_norm - Layout: normal;
+main_lt_tline - Layout: timeline;
+main_lt_pat - Layout: pattern editor;
+main_lt_mods - Layout: module view + controllers;
+main_lt_mods_c - Layout: controllers;
+main_lt_mods_n - Layout: module view;
+
+Application:
+
+main_exit - Exit;
+
+Project:
+
+main_newprj - New project;
+main_load - Load;
+main_save - Save;
+main_save_backup - Save BACKUP.sunvox;
+
+Musical keyboard:
+
+main_C0 - Note C-0;
+main_c0 - Note C#0;
+main_D0 - Note D-0;
+main_d0 - Note D#0;
+main_E0 - Note E-0;
+main_F0 - Note F-0;
+main_f0 - Note F#0;
+main_G0 - Note G-0;
+main_g0 - Note G#0;
+main_A0 - Note A-0;
+main_a0 - Note A#0;
+main_B0 - Note B-0;
+main_C1 - Note C-1;
+main_c1 - Note C#1;
+main_D1 - Note D-1;
+main_d1 - Note D#1;
+main_E1 - Note E-1;
+main_F1 - Note F-1;
+main_f1 - Note F#1;
+main_G1 - Note G-1;
+main_g1 - Note G#1;
+main_A1 - Note A-1;
+main_a1 - Note A#1;
+main_B1 - Note B-1;
+main_C2 - Note C-2;
+main_c2 - Note C#2;
+main_D2 - Note D-2;
+main_d2 - Note D#2;
+main_E2 - Note E-2;
+main_F2 - Note F-2;
+main_f2 - Note F#2;
+main_G2 - Note G-2;
+main_g2 - Note G#2;
+main_A2 - Note A-2;
+main_a2 - Note A#2;
+main_B2 - Note B-2;
+main_C3 - Note C-3;
+main_c3 - Note C#3;
+main_D3 - Note D-3;
+main_d3 - Note D#3;
+main_E3 - Note E-3;
+main_F3 - Note F-3;
+main_f3 - Note F#3;
+main_G3 - Note G-3;
+main_g3 - Note G#3;
+main_A3 - Note A-3;
+main_a3 - Note A#3;
+main_B3 - Note B-3;
+main_oct0 - Octave 0;
+main_oct1 - Octave 1;
+main_oct2 - Octave 2;
+main_oct3 - Octave 3;
+main_oct4 - Octave 4;
+main_oct5 - Octave 5;
+main_oct6 - Octave 6;
+main_oct7 - Octave 7;
+main_oct8 - Octave 8;
+main_oct_inc - Octave +;
+main_oct_dec - Octave -;
+
+Brush:
+
+main_playnote - Play current note and copy to brush;
+main_playnote2 - Play current note and go to the next line;
+main_playline - Play current line and copy to brush;
+main_playline2 - Play current line and go to the next line;
+main_playbrush - Play the 1st line of the brush;
+main_copy2brush - Copy to brush;
+main_pastebrush - Paste from brush;
+
+Pattern editor:
+
+main_edit - Pattern edit ON/OFF;
+main_edit_step_inc - Increase pat. edit step;
+main_edit_step_dec - Decrease pat. edit step;
+main_note_off - Special cmd: Note OFF;
+main_set_pitch - Special cmd: Set pitch;
+main_prev_track - Special cmd: Previous track;
+main_clean_mod - Special cmd: Stop the module;
+main_paste_and_mix - Paste and mix;
+main_select_track - Select track;
+main_interp - Interpolate;
+main_interp_val - Interpolate XXYY;
+main_interp_vel - Interpolate VV;
+main_transp - Transpose;
+main_transp_up - Transpose +1;
+main_transp_down - Transpose -1;
+main_transp_up2 - Transpose +12;
+main_transp_down2 - Transpose -12;
+main_place_evenly - Place evenly;
+main_cyclic_shift - Cyclic shift;
+main_cyclic_shift1 - Cyclic shift up;
+main_cyclic_shift2 - Cyclic shift down;
+main_reverse - Reverse;
+main_remap - Remap;
+main_seteff - Set effect;
+main_draw - Draw;
+main_pat_clear - Clear pattern;
+main_pat_shrink - Shrink pattern /2;
+main_pat_expand - Expand pattern *2;
+main_pat_slice - Slice by cursor;
+main_pat_props - Pattern properties;
+main_addcols - Show/hide CCEEXXYY columns;
+main_patscale - Scale;
+main_pat_csync - Sync the cursor with the timeline;
+
+Modules (routing):
+
+main_random - Randomize module controllers;
+main_write_ctls - Write ctl values to pattern;
+main_next_mod - Next module;
+main_prev_mod - Previous module;
+main_next_syn - Next synth;
+main_prev_syn - Previous synth;
+main_next_modx - Next module horizontally (to the right);
+main_prev_modx - Prev. module horizontally (to the left);
+main_next_mody - Next module vertically (below);
+main_prev_mody - Prev. module vertically (above);
+main_mute_mod - Toggle mute (module);
+main_solo_mod - Toggle solo (module);
+main_bypass_mod - Toggle bypass (module);
+main_unmute_mods - Unmute all modules;
+main_find_mod - Find a module;
+main_make_metamod - Make MetaModule;
+main_link_mod - Toggle LINK mode;
+
+Timeline:
+
+main_play - Play/Stop;
+main_play2 - Play from beginning;
+main_play3 - Play pattern;
+main_stop - Stop;
+main_rec - Record;
+main_play4 - Play from pattern cursor;
+main_gostart - Go to beginning (timeline);
+main_tslice - Slice;
+main_mute_pat - Toggle mute (pattern);
+main_solo_pat - Toggle solo (pattern);
+main_unmute_pats - Unmute all patterns;
+main_set_rpos - Set restart position;
+main_tstracks - Toggle supertracks;
+main_torient - Change orientation;
+main_tsnap - Snap to grid ON/OFF;
+main_tcsync - Sync the cursor with the pat.editor;
+main_next_patx - Next pattern horizontally (to the right);
+main_prev_patx - Prev. pattern horizontally (to the left);
+main_next_paty - Next pattern vertically (below);
+main_prev_paty - Prev. pattern vertically (above);
+
+//
+// SUNVOX
 // 2.1
 //
 

@@ -6,7 +6,7 @@
        format = 
          0 - MultiSynth curve1;
          1 - MultiSynth curve2;
-         2 - MultiSynth curve3;
+         2 - MultiSynth curve3 (pitch);
          3 - WaveShaper;
          4 - MultiCtl.
        curve_function - here you can place you own function for the specified curve;
@@ -22,7 +22,7 @@
 filename = "sunvox_curve"
 
 //Format:
-format = 0
+format = 2
 if format == 0
 {
     //MultiSynth curve1: X = note; Y = velocity (0..255)
@@ -42,7 +42,7 @@ if format == 1
 if format == 2
 {
     //MultiSynth curve3: X = note; Y = pitch (0..65535);
-    //pitch range: 0 ... 16384 (note0) ... 49152 (note128) ... 1; semitone = 256;
+    //pitch range: 0 ... 16384 (note0) ... 49152 (note=128) ... 65535 (note=191.996); semitone = 256;
     note0 = 16384
     semitone = 256
     x_not_normalized = 1

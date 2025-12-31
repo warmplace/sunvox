@@ -1,3 +1,45 @@
+v2.1.4d (29 dec 2025):
+v2.1.4c:
+* bug fixes.
+v2.1.4b (16 dec 2025):
+* Android 16+: fixed a bug with incorrect handling of the BACK button/gesture.
+v2.1.4 (2 dec 2025):
+* improved algorithm for searching for free polyphony channels in synths and samplers: if an empty channel can't be found, a search is performed for a channel with a released note (the NoteOFF command is processed, but the tail of the voice is still playing);
+* Sampler: new Attack and Release controllers;
+  both parameters only work when the volume envelope is enabled (in the sample editor);
+  values: 0 - instant; 32768 - infinite;
+  approximate length in ticks = log(1/100) / log(value/32768);
+* LFO: additional frequency units: semitone, semitone/100;
+* LFO: new controllers: Transpose, Finetune;
+* now an empty selection in the pattern editor is equivalent to one selected event under the current cursor position;
+* new options in sunvox_config.ini:
+  - nosel_mode - how to interpret an empty selection in a pattern:
+      0 - ignore;
+      1 (default) - select the event under the cursor;
+      2 - select the entire pattern;
+  - nextpat_mode - what to do after switching to the next/previous pattern (using the corresponding shortcuts) when a looped playback of the selected pattern is active:
+      0 (default) - start playback of the new selected pattern after the current loop is completed;
+      1 - continue playback of the previous looped pattern.
+* bug fixes.
+v2.1.3 (19 oct 2025):
+* Analog Generator: new option "Always play Osc2" (play additional oscillator even if Osc2=0);
+* Modulator: Max PM (Phase Modulation) delay: added values 8, 16, 32 sec;
+* Modulator: new controller "PM interpolation";
+* MetaModule: new buttons in the user defined controller editor: "]+" (add after); "+[" (add before);
+* Sampler: the new "Reverse" controller lets you play a sample backwards; limitation: if a loop is enabled, the playback position immediately jumps inside the loop in reverse mode;
+* export to audio: new option "Seamless Loop" (the tail from the end of the project will be mixed into the beginning of the file);
+* controller properties: added a "Write all to pattern" button;
+* controller properties: now there are separate input fields for decimal and hexadecimal values;
+* new buttons in the pattern icon editor: INV (invert colors), New (generate a new icon), Copy, Paste;
+* text selection in input fields (currently only for devices with a physical keyboard); available shortcuts: SHIFT+ARROWS; SHIFT+INS/DEL; CTRL+A/X/C/V;
+* prefixes in text input fields for conversion from one number system to another: 0xVALUE - from hexadecimal to decimal; 0tVALUE - from decimal to hexadecimal;
+* new keyboard shortcut (unassigned by default) for the module editor: Write the values of all controllers of the selected module to the current pattern;
+* now, in addition to the standard set of buttons, you can add any keyboard shortcuts to each toolbar; details are in changelog_details.txt and on the website: https://warmplace.ru/soft/sunvox/manual.php#toolbars
+* Android: new option: Preferences -> Main -> Broad access to files; allows you to write to and read almost any folder (except system folders) on internal and external memory cards; for example, this is convenient for working with a collection of samples in a shared folder that can be accessed by multiple music apps;
+  unfortunately, the version on Google Play doesn't have this option, as Google has not approved the use of the MANAGE_EXTERNAL_STORAGE permission; if you need this feature, install the APK file directly: https://warmplace.ru/temp/SunVox.apk
+* bug fixes.
+v2.1.2c (22 dec 2024):
+* iOS: bug fixes.
 v2.1.2b (14 dec 2024):
 * bug fixes.
 v2.1.2 (15 oct 2024):
